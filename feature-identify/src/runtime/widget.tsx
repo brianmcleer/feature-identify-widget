@@ -6,7 +6,7 @@ import type { Config, IMConfig } from '../config'
 import { defaultConfig } from '../config'
 import defaultMessages from './translations/default'
 
-type WidgetProps = AllWidgetProps<IMConfig> & { useMapWidgetIds: string[] }
+type WidgetProps = AllWidgetProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
 
 interface ResultRow {
   label: string
@@ -1116,7 +1116,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
   const isConfiguredEndpointLayer = (layer: any): boolean => {
     if (!layer) return false
-    return Object.values(layerEntriesRef.current).some(entry => {
+    return Object.values(layerEntriesRef.current).some((entry: LayerEntry) => {
       if (!entry.runtimeRegistered) return false
       return entry.layer === layer ||
         (!!entry.layer?.id && !!layer?.id && entry.layer.id === layer.id)
@@ -2247,7 +2247,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
   const resetLayerCache = (): void => {
     ++layerCacheVersionRef.current
-    Object.values(layerEntriesRef.current).forEach(entry => disposeLayerEntry(entry))
+    Object.values(layerEntriesRef.current).forEach((entry: LayerEntry) => disposeLayerEntry(entry))
     layerEntriesRef.current = {}
     layerLoadsRef.current = {}
     configuredUrlByGraphicRef.current = new WeakMap()
@@ -2256,11 +2256,11 @@ const Widget = (props: WidgetProps): React.ReactElement => {
   const destroyRuntimeDataSources = (): void => {
     ++runtimeDataSourceVersionRef.current
     const manager: any = DataSourceManager.getInstance()
-    const entries = Object.values(runtimeDataSourcesRef.current)
+    const entries = Object.values(runtimeDataSourcesRef.current) as RuntimeDataSourceEntry[]
     runtimeDataSourcesRef.current = {}
     runtimeDataSourceLoadsRef.current = {}
 
-    entries.forEach(entry => {
+    entries.forEach((entry: RuntimeDataSourceEntry) => {
       try { entry.dataSource?.clearRecords?.() } catch (e) {}
 
       let destroyedByManager = false

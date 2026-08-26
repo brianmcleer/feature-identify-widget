@@ -1,10 +1,11 @@
 {
   "name": "feature-identify",
-  "version": "2.0.10",
+  "version": "1.0.2",
   "description": "Coordinates native map popups and configured REST identify layers in one seamless popup workflow.",
   "keywords": [
     "exb-widget",
     "experience-builder",
+    "exb",
     "identify",
     "popup",
     "rest",

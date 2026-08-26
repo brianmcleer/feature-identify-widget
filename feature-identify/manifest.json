@@ -2,7 +2,7 @@
   "name": "feature-identify",
   "type": "widget",
   "label": "Feature Identify",
-  "version": "2.0.10",
+  "version": "1.0.2",
   "exbVersion": "1.21.0",
   "author": "Brian McLeer",
   "description": "Coordinates native map popups and configured REST identify layers in one seamless popup workflow.",
