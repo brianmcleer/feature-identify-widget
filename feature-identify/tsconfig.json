@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "jsxFactory": "jsx",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "jimu-core": ["../../../jimu-core"],
+      "jimu-core/*": ["../../../jimu-core/*"],
+      "jimu-arcgis": ["../../../jimu-arcgis"],
+      "jimu-ui": ["../../../jimu-ui"],
+      "jimu-ui/*": ["../../../jimu-ui/*"],
+      "jimu-for-builder": ["../../../jimu-for-builder"],
+      "esri/*": ["../../../node_modules/@arcgis/core/*"]
+    }
+  },
+  "include": ["src/**/*", "manifest.json", "config.json"]
+}

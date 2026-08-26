@@ -1,0 +1,25 @@
+{
+  "name": "feature-identify",
+  "type": "widget",
+  "label": "Feature Identify",
+  "version": "2.0.10",
+  "exbVersion": "1.21.0",
+  "author": "Brian McLeer",
+  "description": "Coordinates native map popups and configured REST identify layers in one seamless popup workflow.",
+  "copyright": "City of Grand Junction, CO",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "dependency": [
+    "jimu-arcgis"
+  ],
+  "properties": {
+    "supportAutoSize": false,
+    "needHiddenState": true
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 340,
+    "height": 480
+  }
+}

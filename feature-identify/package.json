@@ -1,0 +1,16 @@
+{
+  "name": "feature-identify",
+  "version": "2.0.10",
+  "description": "Coordinates native map popups and configured REST identify layers in one seamless popup workflow.",
+  "keywords": [
+    "exb-widget",
+    "experience-builder",
+    "identify",
+    "popup",
+    "rest",
+    "query"
+  ],
+  "license": "Apache-2.0",
+  "author": "Brian McLeer",
+  "dependencies": {}
+}
