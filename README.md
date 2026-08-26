@@ -44,4 +44,4 @@ Version tags must increase and never repeat: bug fix `v1.0.1`, new feature `v1.1
 
 ## License
 
-Apache-2.0. Copyright 2026 City of Grand Junction, CO.
+Apache-2.0. Copyright City of Grand Junction, CO.
