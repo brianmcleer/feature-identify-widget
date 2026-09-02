@@ -149,8 +149,9 @@ const Widget = (props: WidgetProps): React.ReactElement => {
   }
 
   const debugLog = (message: string): void => {
-    try { console.log(`[FeatureIdentify] ${message}`) } catch (e) {}
+    // Silent unless diagnostics are enabled; the console is not a log file.
     if (!isDebugEnabled()) return
+    try { console.log(`[FeatureIdentify] ${message}`) } catch (e) {}
     let stamp = ''
     try { stamp = new Date().toISOString().slice(11, 23) } catch (e) {}
     setDebugLines(previous => [...previous.slice(-39), `${stamp} ${message}`])
@@ -2062,6 +2063,15 @@ const Widget = (props: WidgetProps): React.ReactElement => {
   const identify = async (event: any): Promise<void> => {
     if (!isWidgetActive()) {
       debugLog(`click ignored: widget state is ${String(widgetStateRef.current)}`)
+      return
+    }
+    // Only the primary button identifies. The MapView click event also fires
+    // for middle and right clicks (button 1 and 2), which belong to context
+    // menus and other widgets. Touch and pen taps report button 0.
+    const detail = event?.detail || event || {}
+    const buttonValue = Number(detail.button ?? detail.native?.button ?? detail.originalEvent?.button ?? 0)
+    if (isFinite(buttonValue) && buttonValue !== 0) {
+      debugLog(`click ignored: mouse button ${buttonValue}`)
       return
     }
     const cfg = getConfig()

@@ -1,7 +1,7 @@
 import type { ImmutableObject } from 'jimu-core'
 
 /** Shown in the settings panel footer. Keep in step with manifest.json. */
-export const WIDGET_VERSION = '1.1.0'
+export const WIDGET_VERSION = '1.1.2'
 
 export interface ArcadeExpression {
   /** Row label. Leave blank when the expression returns a full Popup Element dictionary. */

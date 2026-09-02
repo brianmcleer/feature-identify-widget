@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.2 (2026-09-02)
+
+### Fixed
+
+- The widget no longer writes to the browser console unless the diagnostic overlay is enabled (settings switch or fi_debug=1).
+
+## 1.1.1 (2026-09-02)
+
+### Fixed
+
+- Right-click and middle-click on the map no longer trigger identify or open a popup. Only the primary mouse button (and touch or pen taps) identifies, so context menus and other widgets can use the secondary buttons.
+
 ## 1.1.0 (2026-09-02)
 
 ### Added
