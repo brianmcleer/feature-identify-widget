@@ -3,8 +3,8 @@ import { React, jsx, css } from 'jimu-core'
 import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { MapWidgetSelector, SettingSection, SettingRow } from 'jimu-ui/advanced/setting-components'
 import { TextInput, TextArea, NumericInput, Switch, Label, Button, Select, Option } from 'jimu-ui'
-import type { IMConfig, ArcadeExpression } from '../config'
-import { defaultConfig } from '../config'
+import type { IMConfig, ArcadeExpression, IdentifyLayerConfig, FieldFormat, FieldFormatType } from '../config'
+import { defaultConfig, resolveLayers, migrateLegacyLayers, createLayerConfig, normalizeUrl, WIDGET_VERSION } from '../config'
 import defaultMessages from './translations/default'
 
 type SettingProps = AllWidgetSettingProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
@@ -30,6 +30,8 @@ const CONFIG_KEYS = [
   'deduplicateResults',
   'highlightSelectedFeature',
   'showNoResultPopup',
+  'publishSelection',
+  'resultCacheSeconds',
   'debugOverlay'
 ]
 
@@ -40,6 +42,7 @@ const BOOLEAN_KEYS = new Set([
   'deduplicateResults',
   'highlightSelectedFeature',
   'showNoResultPopup',
+  'publishSelection',
   'debugOverlay'
 ])
 
@@ -47,13 +50,22 @@ const NUMBER_KEYS = new Set([
   'outlineWidth',
   'clickTolerance',
   'maxConfiguredResults',
-  'maxTotalResults'
+  'maxTotalResults',
+  'resultCacheSeconds'
 ])
+
+const FORMAT_TYPES: FieldFormatType[] = ['number', 'integer', 'currency', 'percent', 'date', 'datetime', 'link']
+
+interface TestStatus {
+  state: 'idle' | 'running' | 'ok' | 'error'
+  message: string
+}
 
 const Setting = (props: SettingProps): React.ReactElement => {
   const { config, id, useMapWidgetIds, onSettingChange, intl } = props
   const fileInputRef = React.useRef<HTMLInputElement>(null)
   const [importStatus, setImportStatus] = React.useState('')
+  const [testStatus, setTestStatus] = React.useState<Record<string, TestStatus>>({})
 
   const set = (key: string, value: any): void => {
     onSettingChange({ id, config: config.set(key, value) })
@@ -69,28 +81,169 @@ const Setting = (props: SettingProps): React.ReactElement => {
       : (defaultMessages as any)[msgId] || msgId
   }
 
-  const getExpressions = (): ArcadeExpression[] => {
-    const raw: any = config.expressions
-    if (!raw) return []
-    return typeof raw.asMutable === 'function' ? raw.asMutable({ deep: true }) : [...raw]
+  const plainConfig = (): any => {
+    const raw: any = config
+    return raw && typeof raw.asMutable === 'function' ? raw.asMutable({ deep: true }) : { ...(raw || {}) }
   }
 
-  const addExpression = (): void => {
-    const list = getExpressions()
-    list.push({ label: '', expression: '' })
-    set('expressions', list)
+  const getLayers = (): IdentifyLayerConfig[] => resolveLayers(plainConfig())
+
+  const setLayers = (layers: IdentifyLayerConfig[]): void => {
+    set('layers', layers)
   }
 
-  const removeExpression = (index: number): void => {
-    const list = getExpressions()
-    list.splice(index, 1)
-    set('expressions', list)
+  // Older configurations stored one URL list plus widget-wide fields. Convert
+  // them once into explicit per-layer settings so the new UI edits real data.
+  React.useEffect(() => {
+    const current: any = config.layers
+    const hasLayers = current && current.length > 0
+    if (!hasLayers && String(config.layerUrl || '').trim()) {
+      setLayers(migrateLegacyLayers(plainConfig()))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const updateLayer = (index: number, patch: Partial<IdentifyLayerConfig>): void => {
+    const layers = getLayers()
+    layers[index] = { ...layers[index], ...patch }
+    setLayers(layers)
   }
 
-  const updateExpression = (index: number, key: 'label' | 'expression', value: string): void => {
-    const list = getExpressions()
-    list[index] = { ...list[index], [key]: value }
-    set('expressions', list)
+  const addLayer = (): void => {
+    const layers = getLayers()
+    layers.push(createLayerConfig({}))
+    setLayers(layers)
+  }
+
+  const removeLayer = (index: number): void => {
+    const layers = getLayers()
+    layers.splice(index, 1)
+    setLayers(layers)
+  }
+
+  const moveLayer = (index: number, direction: -1 | 1): void => {
+    const layers = getLayers()
+    const target = index + direction
+    if (target < 0 || target >= layers.length) return
+    const [item] = layers.splice(index, 1)
+    layers.splice(target, 0, item)
+    setLayers(layers)
+  }
+
+  const updateExpression = (layerIndex: number, exprIndex: number, patch: Partial<ArcadeExpression>): void => {
+    const layers = getLayers()
+    const expressions = [...(layers[layerIndex].expressions || [])]
+    expressions[exprIndex] = { ...expressions[exprIndex], ...patch }
+    layers[layerIndex] = { ...layers[layerIndex], expressions }
+    setLayers(layers)
+  }
+
+  const addExpression = (layerIndex: number): void => {
+    const layers = getLayers()
+    layers[layerIndex] = {
+      ...layers[layerIndex],
+      expressions: [...(layers[layerIndex].expressions || []), { label: '', expression: '' }]
+    }
+    setLayers(layers)
+  }
+
+  const removeExpression = (layerIndex: number, exprIndex: number): void => {
+    const layers = getLayers()
+    const expressions = [...(layers[layerIndex].expressions || [])]
+    expressions.splice(exprIndex, 1)
+    layers[layerIndex] = { ...layers[layerIndex], expressions }
+    setLayers(layers)
+  }
+
+  const updateFormat = (layerIndex: number, formatIndex: number, patch: Partial<FieldFormat>): void => {
+    const layers = getLayers()
+    const formats = [...(layers[layerIndex].formats || [])]
+    formats[formatIndex] = { ...formats[formatIndex], ...patch }
+    layers[layerIndex] = { ...layers[layerIndex], formats }
+    setLayers(layers)
+  }
+
+  const addFormat = (layerIndex: number): void => {
+    const layers = getLayers()
+    layers[layerIndex] = {
+      ...layers[layerIndex],
+      formats: [...(layers[layerIndex].formats || []), { field: '', type: 'number', decimals: 2, prefix: '', suffix: '', linkTemplate: '', linkText: '' }]
+    }
+    setLayers(layers)
+  }
+
+  const removeFormat = (layerIndex: number, formatIndex: number): void => {
+    const layers = getLayers()
+    const formats = [...(layers[layerIndex].formats || [])]
+    formats.splice(formatIndex, 1)
+    layers[layerIndex] = { ...layers[layerIndex], formats }
+    setLayers(layers)
+  }
+
+  /** Static checks that catch the most common deployment mistakes before anyone clicks a map. */
+  const lintUrl = (url: string): string[] => {
+    const warnings: string[] = []
+    const trimmed = normalizeUrl(url)
+    if (!trimmed) return warnings
+    try {
+      const parsed = new URL(trimmed)
+      if (parsed.port && parsed.port !== '443' && parsed.port !== '80') {
+        warnings.push(nls('lintPort').replace('{port}', parsed.port))
+      }
+      if (parsed.protocol === 'http:') warnings.push(nls('lintHttp'))
+    } catch (e) {
+      warnings.push(nls('lintInvalid'))
+      return warnings
+    }
+    if (!/\/\d+$/.test(trimmed)) warnings.push(nls('lintLayerId'))
+    if (!/\/rest\/services\//i.test(trimmed)) warnings.push(nls('lintRest'))
+    return warnings
+  }
+
+  const setLayerTest = (layerId: string, status: TestStatus): void => {
+    setTestStatus(previous => ({ ...previous, [layerId]: status }))
+  }
+
+  const fetchJson = async (url: string, timeoutMs: number): Promise<any> => {
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), timeoutMs)
+    try {
+      const response = await fetch(url, { signal: controller.signal, credentials: 'include' })
+      if (!response.ok) throw new Error(`HTTP ${response.status}`)
+      const json = await response.json()
+      if (json?.error) throw new Error(String(json.error.message || json.error.code || 'service error'))
+      return json
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
+  const testLayer = async (layer: IdentifyLayerConfig): Promise<void> => {
+    const url = normalizeUrl(layer.url)
+    if (!url) {
+      setLayerTest(layer.id, { state: 'error', message: nls('testNoUrl') })
+      return
+    }
+    setLayerTest(layer.id, { state: 'running', message: nls('testRunning') })
+    const started = performance.now()
+    try {
+      const metadata = await fetchJson(`${url}?f=json`, 10000)
+      const count = await fetchJson(`${url}/query?where=1%3D1&returnCountOnly=true&f=json`, 15000)
+      const elapsed = Math.round(performance.now() - started)
+      const capabilities = String(metadata?.capabilities || '')
+      const queryable = /query/i.test(capabilities)
+      const parts = [
+        String(metadata?.name || nls('testUnnamed')),
+        String(metadata?.geometryType || '').replace('esriGeometry', ''),
+        typeof count?.count === 'number' ? nls('testRecords').replace('{count}', count.count.toLocaleString()) : '',
+        nls('testElapsed').replace('{ms}', String(elapsed))
+      ].filter(Boolean)
+      if (!queryable && capabilities) parts.push(nls('testNoQuery'))
+      setLayerTest(layer.id, { state: queryable || !capabilities ? 'ok' : 'error', message: parts.join(' | ') })
+    } catch (error: any) {
+      const reason = error?.name === 'AbortError' ? nls('testTimeout') : String(error?.message || error)
+      setLayerTest(layer.id, { state: 'error', message: `${nls('testFailed')} ${reason}` })
+    }
   }
 
   const xmlEscape = (value: string): string => {
@@ -103,23 +256,51 @@ const Setting = (props: SettingProps): React.ReactElement => {
   }
 
   const exportXml = (): void => {
-    const raw: any = config
-    const current = raw && typeof raw.asMutable === 'function'
-      ? raw.asMutable({ deep: true })
-      : raw
-    const values: any = { ...defaultConfig, ...(current || {}), resultOrder: 'map-first' }
-    const parts: string[] = ['<?xml version="1.0" encoding="UTF-8"?>', '<featureIdentify version="2">']
+    const values: any = { ...defaultConfig, ...plainConfig(), resultOrder: 'map-first' }
+    const layers = getLayers()
+    const parts: string[] = ['<?xml version="1.0" encoding="UTF-8"?>', '<featureIdentify version="3">']
 
+    // Legacy scalar fields are still written so version 1 and 2 readers keep working.
+    values.layerUrl = layers.map(layer => layer.url).join('\n')
     CONFIG_KEYS.forEach(key => {
       const value = values[key]
       parts.push(`  <${key}>${xmlEscape(value === undefined || value === null ? '' : String(value))}</${key}>`)
     })
 
     parts.push('  <expressions>')
-    getExpressions().forEach(expression => {
+    ;(layers[0]?.expressions || []).forEach(expression => {
       parts.push(`    <expression label="${xmlEscape(expression.label || '')}">${xmlEscape(expression.expression || '')}</expression>`)
     })
     parts.push('  </expressions>')
+
+    parts.push('  <layers>')
+    layers.forEach(layer => {
+      parts.push(`    <layer enabled="${layer.enabled ? 'true' : 'false'}" label="${xmlEscape(layer.label || '')}" titleField="${xmlEscape(layer.titleField || '')}">`)
+      parts.push(`      <url>${xmlEscape(layer.url || '')}</url>`)
+      parts.push(`      <titleExpression>${xmlEscape(layer.titleExpression || '')}</titleExpression>`)
+      parts.push(`      <excludedFields>${xmlEscape(layer.excludedFields || '')}</excludedFields>`)
+      parts.push('      <expressions>')
+      ;(layer.expressions || []).forEach(expression => {
+        parts.push(`        <expression label="${xmlEscape(expression.label || '')}">${xmlEscape(expression.expression || '')}</expression>`)
+      })
+      parts.push('      </expressions>')
+      parts.push('      <formats>')
+      ;(layer.formats || []).forEach(format => {
+        const attributes = [
+          `field="${xmlEscape(format.field || '')}"`,
+          `type="${xmlEscape(format.type || 'number')}"`,
+          format.decimals === undefined || format.decimals === null ? '' : `decimals="${Number(format.decimals)}"`,
+          `prefix="${xmlEscape(format.prefix || '')}"`,
+          `suffix="${xmlEscape(format.suffix || '')}"`,
+          `linkTemplate="${xmlEscape(format.linkTemplate || '')}"`,
+          `linkText="${xmlEscape(format.linkText || '')}"`
+        ].filter(Boolean).join(' ')
+        parts.push(`        <format ${attributes} />`)
+      })
+      parts.push('      </formats>')
+      parts.push('    </layer>')
+    })
+    parts.push('  </layers>')
     parts.push('</featureIdentify>')
 
     const blob = new Blob([parts.join('\n')], { type: 'application/xml' })
@@ -131,6 +312,18 @@ const Setting = (props: SettingProps): React.ReactElement => {
     anchor.click()
     document.body.removeChild(anchor)
     URL.revokeObjectURL(url)
+  }
+
+  const readExpressions = (parent: Element | null): ArcadeExpression[] => {
+    if (!parent) return []
+    const expressions: ArcadeExpression[] = []
+    parent.querySelectorAll(':scope > expression').forEach(node => {
+      expressions.push({
+        label: node.getAttribute('label') || '',
+        expression: node.textContent || ''
+      })
+    })
+    return expressions
   }
 
   const importXml = (file: File): void => {
@@ -156,18 +349,45 @@ const Setting = (props: SettingProps): React.ReactElement => {
             next = next.set(key, text)
           }
         })
-
         next = next.set('resultOrder', 'map-first')
 
-        const expressionNodes = root.querySelectorAll('expressions > expression')
-        const expressions: ArcadeExpression[] = []
-        expressionNodes.forEach(node => {
-          expressions.push({
-            label: node.getAttribute('label') || '',
-            expression: node.textContent || ''
+        const legacyExpressions = readExpressions(root.querySelector(':scope > expressions'))
+        next = next.set('expressions', legacyExpressions)
+
+        const layerNodes = root.querySelectorAll(':scope > layers > layer')
+        let layers: IdentifyLayerConfig[]
+        if (layerNodes.length > 0) {
+          layers = []
+          layerNodes.forEach(node => {
+            const formats: FieldFormat[] = []
+            node.querySelectorAll(':scope > formats > format').forEach(formatNode => {
+              const decimalsText = formatNode.getAttribute('decimals')
+              formats.push({
+                field: formatNode.getAttribute('field') || '',
+                type: (formatNode.getAttribute('type') || 'number') as FieldFormatType,
+                decimals: decimalsText === null || decimalsText === '' ? undefined : Number(decimalsText),
+                prefix: formatNode.getAttribute('prefix') || '',
+                suffix: formatNode.getAttribute('suffix') || '',
+                linkTemplate: formatNode.getAttribute('linkTemplate') || '',
+                linkText: formatNode.getAttribute('linkText') || ''
+              })
+            })
+            layers.push(createLayerConfig({
+              url: node.querySelector(':scope > url')?.textContent || '',
+              label: node.getAttribute('label') || '',
+              enabled: node.getAttribute('enabled') !== 'false',
+              titleField: node.getAttribute('titleField') || '',
+              titleExpression: node.querySelector(':scope > titleExpression')?.textContent || '',
+              excludedFields: node.querySelector(':scope > excludedFields')?.textContent ?? undefined,
+              expressions: readExpressions(node.querySelector(':scope > expressions')),
+              formats
+            }))
           })
-        })
-        next = next.set('expressions', expressions)
+        } else {
+          const imported: any = typeof next.asMutable === 'function' ? next.asMutable({ deep: true }) : next
+          layers = migrateLegacyLayers(imported)
+        }
+        next = next.set('layers', layers)
 
         onSettingChange({ id, config: next })
         setImportStatus(nls('importOk'))
@@ -189,6 +409,19 @@ const Setting = (props: SettingProps): React.ReactElement => {
       font-size: 12px;
       line-height: 1.4;
     }
+    .warn {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 4px;
+      background: #fff6d9;
+      color: #6f4e00;
+      font-size: 12px;
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+    .test-ok { color: #2e7d32; font-size: 12px; margin-top: 4px; word-break: break-word; }
+    .test-error { color: #8e2600; font-size: 12px; margin-top: 4px; word-break: break-word; }
+    .test-running { color: var(--dark-400, #808080); font-size: 12px; margin-top: 4px; }
     .color-row { display: flex; align-items: center; gap: 8px; }
     .swatch {
       width: 24px;
@@ -197,11 +430,29 @@ const Setting = (props: SettingProps): React.ReactElement => {
       border: 1px solid var(--light-500, #c5c5c5);
       flex: 0 0 24px;
     }
+    .layer-card {
+      border: 1px solid var(--light-500, #c5c5c5);
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 12px;
+      background: var(--light-100, #fafafa);
+    }
+    .layer-head {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .layer-head .grow { flex: 1; }
+    .row-gap { display: flex; gap: 6px; align-items: center; }
+    .row-gap .grow { flex: 1; }
+    .sub-label { font-size: 12px; font-weight: 600; margin: 10px 0 4px; }
     .expr-item {
       border: 1px solid var(--light-400, #d5d5d5);
       border-radius: 4px;
       padding: 8px;
       margin-bottom: 8px;
+      background: #ffffff;
     }
     .expr-head {
       display: flex;
@@ -210,15 +461,182 @@ const Setting = (props: SettingProps): React.ReactElement => {
       margin-bottom: 6px;
       gap: 8px;
     }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
+    .version { font-size: 11px; color: var(--dark-400, #808080); margin-top: 8px; }
   `
 
-  const expressions = getExpressions()
+  const layers = getLayers()
   const displayMode = config.displayMode || defaultConfig.displayMode
   const sourceMode = config.sourceMode || defaultConfig.sourceMode
   const popupMode = displayMode === 'popup'
   const usesMapLayers = popupMode && sourceMode !== 'configured'
   const usesConfiguredLayers = !popupMode || sourceMode !== 'map'
   const combinedMode = popupMode && sourceMode === 'combined'
+
+  const renderLayer = (layer: IdentifyLayerConfig, index: number): React.ReactElement => {
+    const warnings = lintUrl(layer.url)
+    const status = testStatus[layer.id]
+    return (
+      <div className='layer-card' key={layer.id}>
+        <div className='layer-head'>
+          <TextInput
+            className='grow'
+            value={layer.label}
+            placeholder={nls('layerLabelPlaceholder')}
+            onChange={(event) => updateLayer(index, { label: event.target.value })}
+          />
+          <Switch
+            checked={layer.enabled}
+            title={nls('layerEnabled')}
+            onChange={(event) => updateLayer(index, { enabled: event.target.checked })}
+          />
+          <Button size='sm' type='tertiary' disabled={index === 0} onClick={() => moveLayer(index, -1)} title={nls('moveUp')}>&#9650;</Button>
+          <Button size='sm' type='tertiary' disabled={index === layers.length - 1} onClick={() => moveLayer(index, 1)} title={nls('moveDown')}>&#9660;</Button>
+          <Button size='sm' type='tertiary' onClick={() => removeLayer(index)}>{nls('removeLayer')}</Button>
+        </div>
+
+        <Label className='full'>{nls('layerUrl')}</Label>
+        <div className='row-gap'>
+          <TextInput
+            className='grow'
+            value={layer.url}
+            placeholder='https://server/arcgis/rest/services/Folder/Service/MapServer/0'
+            onChange={(event) => updateLayer(index, { url: event.target.value })}
+            onBlur={(event) => updateLayer(index, { url: normalizeUrl(event.target.value) })}
+          />
+          <Button size='sm' onClick={() => { testLayer(layer) }} disabled={status?.state === 'running'}>
+            {nls('testConnection')}
+          </Button>
+        </div>
+        {warnings.map((warning, warningIndex) => (
+          <div className='warn' key={warningIndex}>{warning}</div>
+        ))}
+        {status && (
+          <div className={status.state === 'ok' ? 'test-ok' : status.state === 'error' ? 'test-error' : 'test-running'}>
+            {status.message}
+          </div>
+        )}
+        <div className='hint'>{nls('layerUrlHint')}</div>
+
+        <div className='sub-label'>{nls('titleField')}</div>
+        <TextInput
+          className='full'
+          value={layer.titleField}
+          placeholder='PARCEL_NUM'
+          onChange={(event) => updateLayer(index, { titleField: event.target.value })}
+        />
+        <div className='hint'>{nls('titleFieldHint')}</div>
+
+        <div className='sub-label'>{nls('titleExpression')}</div>
+        <TextArea
+          className='full'
+          height={56}
+          value={layer.titleExpression}
+          placeholder='"Parcel " + $feature.PARCEL_NUM'
+          onChange={(event) => updateLayer(index, { titleExpression: event.target.value })}
+        />
+        <div className='hint'>{nls('titleExpressionHint')}</div>
+
+        <div className='sub-label'>{nls('excludedFields')}</div>
+        <TextArea
+          className='full'
+          height={56}
+          value={layer.excludedFields}
+          onChange={(event) => updateLayer(index, { excludedFields: event.target.value })}
+        />
+        <div className='hint'>{nls('excludedFieldsHint')}</div>
+
+        <div className='sub-label'>{nls('formatsSection')}</div>
+        <div className='hint'>{nls('formatsHint')}</div>
+        {(layer.formats || []).map((format, formatIndex) => (
+          <div className='expr-item' key={formatIndex}>
+            <div className='expr-head'>
+              <TextInput
+                className='full'
+                value={format.field}
+                placeholder={nls('formatFieldPlaceholder')}
+                onChange={(event) => updateFormat(index, formatIndex, { field: event.target.value })}
+              />
+              <Select
+                value={format.type}
+                onChange={(event) => updateFormat(index, formatIndex, { type: event.target.value as FieldFormatType })}
+              >
+                {FORMAT_TYPES.map(type => (
+                  <Option value={type} key={type}>{nls(`format_${type}`)}</Option>
+                ))}
+              </Select>
+              <Button size='sm' type='tertiary' onClick={() => removeFormat(index, formatIndex)}>
+                {nls('removeExpression')}
+              </Button>
+            </div>
+            {format.type === 'link' ? (
+              <div className='grid-2'>
+                <TextInput
+                  value={format.linkTemplate || ''}
+                  placeholder='https://assessor.example.gov/parcel/{PARCEL_NUM}'
+                  onChange={(event) => updateFormat(index, formatIndex, { linkTemplate: event.target.value })}
+                />
+                <TextInput
+                  value={format.linkText || ''}
+                  placeholder={nls('formatLinkTextPlaceholder')}
+                  onChange={(event) => updateFormat(index, formatIndex, { linkText: event.target.value })}
+                />
+              </div>
+            ) : (
+              <div className='grid-2'>
+                {['number', 'currency', 'percent'].includes(format.type) && (
+                  <NumericInput
+                    size='sm'
+                    min={0}
+                    max={10}
+                    value={format.decimals ?? 2}
+                    onChange={(value) => updateFormat(index, formatIndex, { decimals: value ?? undefined })}
+                  />
+                )}
+                <TextInput
+                  value={format.prefix || ''}
+                  placeholder={nls('formatPrefix')}
+                  onChange={(event) => updateFormat(index, formatIndex, { prefix: event.target.value })}
+                />
+                <TextInput
+                  value={format.suffix || ''}
+                  placeholder={nls('formatSuffix')}
+                  onChange={(event) => updateFormat(index, formatIndex, { suffix: event.target.value })}
+                />
+              </div>
+            )}
+          </div>
+        ))}
+        <Button size='sm' onClick={() => addFormat(index)}>{nls('addFormat')}</Button>
+
+        <div className='sub-label'>{nls('arcadeSection')}</div>
+        <div className='hint'>{nls('arcadeHint')}</div>
+        {(layer.expressions || []).map((expression, exprIndex) => (
+          <div className='expr-item' key={exprIndex}>
+            <div className='expr-head'>
+              <TextInput
+                className='full'
+                value={expression.label}
+                placeholder={nls('exprLabelPlaceholder')}
+                onChange={(event) => updateExpression(index, exprIndex, { label: event.target.value })}
+              />
+              <Button size='sm' type='tertiary' onClick={() => removeExpression(index, exprIndex)}>
+                {nls('removeExpression')}
+              </Button>
+            </div>
+            <TextArea
+              className='full'
+              height={72}
+              value={expression.expression}
+              placeholder='Round($feature.Acres, 2) + " acres"'
+              onChange={(event) => updateExpression(index, exprIndex, { expression: event.target.value })}
+            />
+          </div>
+        ))}
+        <Button size='sm' onClick={() => addExpression(index)}>{nls('addExpression')}</Button>
+      </div>
+    )
+  }
 
   return (
     <div css={style}>
@@ -328,15 +746,13 @@ const Setting = (props: SettingProps): React.ReactElement => {
       {usesConfiguredLayers && (
         <SettingSection title={nls('layerSection')}>
           <SettingRow flow='wrap'>
-            <Label className='full'>{nls('layerUrl')}</Label>
-            <TextArea
-              className='full'
-              height={90}
-              value={config.layerUrl || ''}
-              placeholder={'https://server/arcgis/rest/services/Folder/Service/MapServer/0\nhttps://server/arcgis/rest/services/Folder/Other/FeatureServer/2'}
-              onChange={(event) => set('layerUrl', event.target.value)}
-            />
-            <div className='hint'>{nls('layerUrlHint')}</div>
+            <div className='hint'>{nls('layersIntro')}</div>
+          </SettingRow>
+
+          {layers.map((layer, index) => renderLayer(layer, index))}
+
+          <SettingRow>
+            <Button size='sm' onClick={addLayer}>{nls('addLayer')}</Button>
           </SettingRow>
 
           <SettingRow flow='wrap'>
@@ -364,40 +780,6 @@ const Setting = (props: SettingProps): React.ReactElement => {
           </SettingRow>
 
           <SettingRow flow='wrap'>
-            <Label className='full'>{nls('titleField')}</Label>
-            <TextInput
-              className='full'
-              value={config.titleField || ''}
-              placeholder='PARCEL_NUM'
-              onChange={(event) => set('titleField', event.target.value)}
-            />
-            <div className='hint'>{nls('titleFieldHint')}</div>
-          </SettingRow>
-
-          <SettingRow flow='wrap'>
-            <Label className='full'>{nls('titleExpression')}</Label>
-            <TextArea
-              className='full'
-              height={60}
-              value={config.titleExpression || ''}
-              placeholder='"Parcel " + $feature.PARCEL_NUM'
-              onChange={(event) => set('titleExpression', event.target.value)}
-            />
-            <div className='hint'>{nls('titleExpressionHint')}</div>
-          </SettingRow>
-
-          <SettingRow flow='wrap'>
-            <Label className='full'>{nls('excludedFields')}</Label>
-            <TextArea
-              className='full'
-              height={80}
-              value={config.excludedFields || ''}
-              onChange={(event) => set('excludedFields', event.target.value)}
-            />
-            <div className='hint'>{nls('excludedFieldsHint')}</div>
-          </SettingRow>
-
-          <SettingRow flow='wrap'>
             <Label className='full'>{nls('linkText')}</Label>
             <TextInput
               className='full'
@@ -412,41 +794,6 @@ const Setting = (props: SettingProps): React.ReactElement => {
               checked={config.useFieldAliases ?? defaultConfig.useFieldAliases}
               onChange={(event) => set('useFieldAliases', event.target.checked)}
             />
-          </SettingRow>
-        </SettingSection>
-      )}
-
-      {usesConfiguredLayers && (
-        <SettingSection title={nls('arcadeSection')}>
-          <SettingRow flow='wrap'>
-            <div className='hint'>{nls('arcadeHint')}</div>
-          </SettingRow>
-          {expressions.map((expression, index) => (
-            <SettingRow flow='wrap' key={index}>
-              <div className='expr-item full'>
-                <div className='expr-head'>
-                  <TextInput
-                    className='full'
-                    value={expression.label}
-                    placeholder={nls('exprLabelPlaceholder')}
-                    onChange={(event) => updateExpression(index, 'label', event.target.value)}
-                  />
-                  <Button size='sm' type='tertiary' onClick={() => removeExpression(index)}>
-                    {nls('removeExpression')}
-                  </Button>
-                </div>
-                <TextArea
-                  className='full'
-                  height={80}
-                  value={expression.expression}
-                  placeholder='Round($feature.Acres, 2) + " acres"'
-                  onChange={(event) => updateExpression(index, 'expression', event.target.value)}
-                />
-              </div>
-            </SettingRow>
-          ))}
-          <SettingRow>
-            <Button size='sm' onClick={addExpression}>{nls('addExpression')}</Button>
           </SettingRow>
         </SettingSection>
       )}
@@ -484,9 +831,20 @@ const Setting = (props: SettingProps): React.ReactElement => {
         </SettingRow>
 
         {popupMode && (
-          <SettingRow flow='wrap'>
-            <div className='hint'>{nls('navigationNotice')}</div>
-          </SettingRow>
+          <React.Fragment>
+            <SettingRow label={nls('publishSelection')}>
+              <Switch
+                checked={config.publishSelection ?? defaultConfig.publishSelection}
+                onChange={(event) => set('publishSelection', event.target.checked)}
+              />
+            </SettingRow>
+            <SettingRow flow='wrap'>
+              <div className='hint'>{nls('publishSelectionHint')}</div>
+            </SettingRow>
+            <SettingRow flow='wrap'>
+              <div className='hint'>{nls('navigationNotice')}</div>
+            </SettingRow>
+          </React.Fragment>
         )}
       </SettingSection>
 
@@ -498,6 +856,20 @@ const Setting = (props: SettingProps): React.ReactElement => {
             value={config.noResultMessage || defaultConfig.noResultMessage}
             onChange={(event) => set('noResultMessage', event.target.value)}
           />
+        </SettingRow>
+      </SettingSection>
+
+      <SettingSection title={nls('performanceSection')}>
+        <SettingRow flow='wrap'>
+          <Label className='full'>{nls('resultCacheSeconds')}</Label>
+          <NumericInput
+            className='full'
+            min={0}
+            max={600}
+            value={config.resultCacheSeconds ?? defaultConfig.resultCacheSeconds}
+            onChange={(value) => set('resultCacheSeconds', value ?? defaultConfig.resultCacheSeconds)}
+          />
+          <div className='hint'>{nls('resultCacheSecondsHint')}</div>
         </SettingRow>
       </SettingSection>
 
@@ -534,6 +906,9 @@ const Setting = (props: SettingProps): React.ReactElement => {
         </SettingRow>
         <SettingRow flow='wrap'>
           <div className='hint'>{nls('configHint')}</div>
+        </SettingRow>
+        <SettingRow flow='wrap'>
+          <div className='version'>{nls('versionLabel').replace('{version}', WIDGET_VERSION)}</div>
         </SettingRow>
       </SettingSection>
     </div>

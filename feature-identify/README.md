@@ -31,7 +31,11 @@ For each click the widget:
 
 - One coordinated popup pipeline per click, with request cancellation and stale-click protection.
 - Native web map popup templates, field formatting, Arcade content, media, and popup actions are preserved for map results.
-- Multiple configured REST layer URLs, separated by new lines or semicolons.
+- Per-layer configuration: each configured REST layer has its own name, title field or title expression, hidden fields, format rules, and Arcade expressions. Layers can be enabled, disabled, and reordered. Older single-URL configurations are converted automatically.
+- A Test button next to each layer URL that queries the service from the browser and reports the layer name, geometry type, record count, and response time, plus inline warnings for the most common deployment mistakes (direct ArcGIS Server ports such as :6443, http URLs, missing layer numbers).
+- Field format rules: number, integer, currency, percent, date, and date-time formatting with decimals, prefix, and suffix, or link rules that build a URL from a template with {FIELD_NAME} tokens.
+- Selection messaging: the selected result is published as a records-selection-changed message so Table, Property Report, and other widgets can respond to the identify click.
+- Speed: Arcade expressions are compiled once at startup and evaluated in parallel for every feature, all configured layers and map sources are queried concurrently, a slow configured layer is bounded to 8 seconds, and a repeat click at the same place is answered from a short-lived cache.
 - Point, line, and polygon identify support with configurable screen-pixel click tolerance.
 - Duplicate removal by layer URL and ObjectID, REST service path and ObjectID, or GlobalID. The map's graphic is preferred only when it can actually render a popup.
 - Time-bounded popup opening and time-bounded map sources, so one slow layer cannot block the popup. If no popup path succeeds, the first result is shown in the widget body with a notice.
@@ -39,9 +43,10 @@ For each click the widget:
 - Selected-feature highlighting with a configurable transparent-fill outline.
 - Field aliases, coded-value descriptions, date formatting, hyperlinks, title fields, and hidden fields for configured REST results.
 - Custom Arcade title expressions, scalar row expressions, and full Popup Element expressions.
-- XML configuration export and import.
+- XML configuration export and import (version 3 format; version 1 and 2 files still import and are converted to per-layer settings).
+- English and Spanish user interface strings.
 - Legacy panel display mode for configured-layer-only workflows.
-- A diagnostic overlay (settings switch, or fi_debug=1 in the app URL) that shows a live on-screen event log on any device, including phones, for troubleshooting.
+- A diagnostic overlay (settings switch, or fi_debug=1 in the app URL) that shows a live on-screen event log on any device, including phones, with a Copy button for sharing the log.
 
 ## Requirements
 
@@ -74,7 +79,9 @@ For each click the widget:
 - Popup sources: Map layers and configured REST layers.
 - Remove duplicate records: enabled.
 - Highlight selected popup feature: enabled.
+- Notify other widgets of the selected result: enabled when a Table, Property Report, or similar widget should react to identify clicks.
 - Include layers without configured popups: disabled unless those layers should participate.
+- Press Test next to each layer URL after entering it, and fix any warning it shows before publishing.
 
 If the app has separate desktop, tablet, and phone layouts, remember that each layout can hold its own Feature Identify instance. Configure the layer URL in every instance, and place the widget directly in the phone layout (it can be small) rather than inside a closed widget controller if identify should always work on phones.
 

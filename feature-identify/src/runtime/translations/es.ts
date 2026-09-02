@@ -1,0 +1,20 @@
+export default {
+  _widgetLabel: 'Identificar entidades',
+  clickHint: 'Haga clic en una entidad del mapa para ver sus detalles.',
+  noMap: 'No hay ningún mapa seleccionado. Abra la configuración del widget y elija un mapa.',
+  noUrl: 'La fuente de capas configuradas está habilitada, pero no se ha configurado ninguna URL REST de capa.',
+  noResult: 'No se encontró ninguna entidad en esa ubicación.',
+  noResultTitle: 'Sin resultados',
+  queryFailed: 'No se pudo consultar una capa configurada. Revise la URL de la capa y el acceso al servicio.',
+  queryTimedOut: 'La capa configurada no respondió a tiempo.',
+  mapPopupFailed: 'No se pudieron consultar las capas de ventana emergente del mapa.',
+  partialResults: 'No se pudieron consultar algunas fuentes. Los resultados obtenidos se muestran de todos modos.',
+  exprError: '(error de expresión)',
+  exprDefaultLabel: 'Expresión',
+  defaultTitle: 'Entidad',
+  close: 'Cerrar',
+  popupModeHint: 'Haga clic en el mapa. Los resultados de las capas del mapa aparecen primero y los de los servicios REST configurados aparecen al final.',
+  popupUnavailable: 'No se pudo abrir la ventana emergente del mapa en este dispositivo, por lo que el primer resultado se muestra aquí.',
+  copyLog: 'Copiar registro',
+  clearLog: 'Borrar'
+}

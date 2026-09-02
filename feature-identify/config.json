@@ -20,5 +20,8 @@
   "deduplicateResults": true,
   "highlightSelectedFeature": true,
   "showNoResultPopup": false,
-  "debugOverlay": false
+  "debugOverlay": false,
+  "layers": [],
+  "publishSelection": true,
+  "resultCacheSeconds": 60
 }

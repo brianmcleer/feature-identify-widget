@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.1.0 (2026-09-02)
+
+### Added
+
+- Per-layer configuration. Each configured REST layer now has its own name, enabled switch, title field, title expression, hidden fields, format rules, and Arcade expressions, and layers can be reordered. Existing single-URL configurations are converted automatically the first time the settings panel opens, and version 1 and 2 XML files convert on import.
+- Test button beside each layer URL. It queries the service from the browser and reports the layer name, geometry type, record count, and response time. Inline warnings flag direct ArcGIS Server ports (such as :6443), http URLs, URLs without a layer number, and URLs that are not ArcGIS REST endpoints.
+- Field format rules per layer: number, integer, currency (USD), percent, date, and date-time with decimals, prefix, and suffix, plus link rules that build a URL from a template using {FIELD_NAME} tokens.
+- Selection messaging. The selected result is published as a DataRecordsSelectionChange message (new "Notify other widgets of the selected result" setting, on by default) so Table, Property Report, and other widgets can respond to identify clicks.
+- Spanish (es) translations for the runtime and settings panel.
+- Copy and Clear buttons on the diagnostic overlay.
+- A "Reuse results for repeated clicks" performance setting, and the widget version shown in the settings panel footer.
+- XML configuration format version 3 with a layers section.
+
+### Changed
+
+- Arcade expressions are compiled once at startup (and after settings changes) and evaluated concurrently for every feature; features returned by a query build their popup content in parallel.
+- Each configured layer query is bounded to 8 seconds and reported as a partial failure if it stalls, so one slow endpoint cannot hold the popup.
+- A repeat click at the same place at the same scale is answered from a short-lived result cache (60 seconds by default, configurable, 0 disables).
+- Changing titles, expressions, hidden fields, or formats no longer tears down and rebuilds the runtime layers; only a change to the set of layer URLs does.
+- Manifest and package version updated to 1.1.0.
+
 ## 1.0.3 (2026-09-02)
 
 ### Fixed

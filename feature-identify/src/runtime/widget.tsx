@@ -1,9 +1,12 @@
 /** @jsx jsx */
-import { React, ReactDOM, jsx, css, DataSourceManager, dataSourceUtils, type AllWidgetProps } from 'jimu-core'
+import {
+  React, ReactDOM, jsx, css, DataSourceManager, dataSourceUtils, MessageManager,
+  DataRecordsSelectionChangeMessage, type AllWidgetProps
+} from 'jimu-core'
 import { JimuMapViewComponent, type JimuMapView, loadArcGISJSAPIModules } from 'jimu-arcgis'
 import { Loading, LoadingType } from 'jimu-ui'
-import type { Config, IMConfig } from '../config'
-import { defaultConfig } from '../config'
+import type { Config, IMConfig, IdentifyLayerConfig, FieldFormat } from '../config'
+import { defaultConfig, resolveLayers, createLayerConfig } from '../config'
 import defaultMessages from './translations/default'
 
 type WidgetProps = AllWidgetProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
@@ -213,25 +216,40 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     return arcade
   }
 
-  const hasExpressions = (): boolean => {
-    const cfg = getConfig()
-    if (cfg.titleExpression?.trim()) return true
-    return (cfg.expressions || []).some(item => !!item?.expression?.trim())
-  }
-
   const normalizeUrl = (url: string): string => String(url || '').trim().replace(/\/+$/, '')
 
-  const getConfiguredUrls = (): string[] => {
-    const cfg = getConfig()
+  // Per-layer configuration, memoized on the immutable config object so the
+  // per-feature hot path never re-normalizes the settings.
+  const layersMemoRef = React.useRef<{ source: any, layers: IdentifyLayerConfig[] } | null>(null)
+  const getConfiguredLayers = (): IdentifyLayerConfig[] => {
+    const source = configRef.current
+    if (layersMemoRef.current && layersMemoRef.current.source === source) {
+      return layersMemoRef.current.layers
+    }
     const seen = new Set<string>()
-    return String(cfg.layerUrl || '')
-      .split(/[\r\n;]+/)
-      .map(normalizeUrl)
-      .filter(url => {
-        if (!url || seen.has(url.toLowerCase())) return false
-        seen.add(url.toLowerCase())
-        return true
-      })
+    const layers = resolveLayers(getConfig()).filter(layer => {
+      const url = normalizeUrl(layer.url)
+      if (!layer.enabled || !url || seen.has(url.toLowerCase())) return false
+      seen.add(url.toLowerCase())
+      return true
+    }).map(layer => ({ ...layer, url: normalizeUrl(layer.url) }))
+    layersMemoRef.current = { source, layers }
+    return layers
+  }
+
+  const getLayerConfigForUrl = (url: string): IdentifyLayerConfig => {
+    const target = normalizeUrl(url).toLowerCase()
+    return getConfiguredLayers().find(layer => layer.url.toLowerCase() === target) ||
+      createLayerConfig({ url })
+  }
+
+  const getConfiguredUrls = (): string[] => getConfiguredLayers().map(layer => layer.url)
+
+  const hasExpressions = (): boolean => {
+    return getConfiguredLayers().some(layer =>
+      !!layer.titleExpression?.trim() ||
+      (layer.expressions || []).some(item => !!item?.expression?.trim())
+    )
   }
 
   const getMapComponent = (): any => (jmvRef.current as any)?.mapComponent || null
@@ -262,10 +280,11 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       .replace(/\\([\\"'])/g, '$1')
   }
 
-  const getRuntimeDataSourceLabel = (): string => {
-    const cfg = getConfig()
-    return getConstantArcadeString(cfg.titleExpression) ||
-      String(cfg.titleField || '').trim() ||
+  const getRuntimeDataSourceLabel = (url: string): string => {
+    const layer = getLayerConfigForUrl(url)
+    return String(layer.label || '').trim() ||
+      getConstantArcadeString(layer.titleExpression) ||
+      String(layer.titleField || '').trim() ||
       'Configured identify layer'
   }
 
@@ -324,7 +343,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       }
 
       const { FeatureLayer } = await getCore()
-      const label = getRuntimeDataSourceLabel()
+      const label = getRuntimeDataSourceLabel(normalized)
       const sourceLayer = new FeatureLayer({
         id: `${dataSourceId}-source`,
         url: normalized,
@@ -402,12 +421,12 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     }
   }
 
-  const configureEndpointLayer = (layer: any, runtimeRegistered: boolean, starveDrawing = false): void => {
+  const configureEndpointLayer = (layer: any, url: string, runtimeRegistered: boolean, starveDrawing = false): void => {
     if (!layer) return
     try { layer.outFields = ['*'] } catch (e) {}
     try { layer.listMode = 'hide' } catch (e) {}
     try { layer.legendEnabled = false } catch (e) {}
-    try { layer.title = getRuntimeDataSourceLabel() } catch (e) {}
+    try { layer.title = getRuntimeDataSourceLabel(url) } catch (e) {}
 
     if (runtimeRegistered) {
       // The layer must remain active in the JimuMapView so the Map widget can
@@ -544,7 +563,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
           } catch (e) {}
           const runtimeSourceLayer = runtimeEntry.sourceLayer
           const hasSeparateQueryLayer = !!runtimeSourceLayer && runtimeSourceLayer !== layer
-          configureEndpointLayer(layer, true, hasSeparateQueryLayer)
+          configureEndpointLayer(layer, normalized, true, hasSeparateQueryLayer)
           await layer.load?.()
 
           if (cacheVersion !== layerCacheVersionRef.current || jmvRef.current !== activeJimuMapView) {
@@ -596,7 +615,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
           popupEnabled: true
         })
         await layer.load()
-        configureEndpointLayer(layer, false)
+        configureEndpointLayer(layer, normalized, false)
       }
 
       if (cacheVersion !== layerCacheVersionRef.current ||
@@ -675,22 +694,121 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     return String(raw)
   }
 
+  // Executors are compiled once per expression and shared. The cache stores the
+  // compile promise, so concurrent evaluations of the same expression (several
+  // features in parallel) never compile twice.
+  const getExecutor = (expression: string): Promise<any> => {
+    const cacheKey = `feature:${expression}`
+    let pending = executorCacheRef.current[cacheKey]
+    if (!pending) {
+      pending = getArcade().then(arcade => arcade.createArcadeExecutor(expression, {
+        variables: [{ name: '$feature', type: 'feature' }]
+      }))
+      pending.catch(() => { delete executorCacheRef.current[cacheKey] })
+      executorCacheRef.current[cacheKey] = pending
+    }
+    return pending
+  }
+
   const evalArcadeRaw = async (expression: string, feature: any): Promise<ArcadeEvaluation> => {
     if (!expression?.trim()) return { ok: true, value: null }
     try {
-      const arcade = await getArcade()
-      const cacheKey = `feature:${expression}`
-      let executor = executorCacheRef.current[cacheKey]
-      if (!executor) {
-        executor = await arcade.createArcadeExecutor(expression, {
-          variables: [{ name: '$feature', type: 'feature' }]
-        })
-        executorCacheRef.current[cacheKey] = executor
-      }
+      const executor = await getExecutor(expression)
       const value = await executor.executeAsync({ $feature: feature })
       return { ok: true, value }
     } catch (e) {
       return { ok: false, value: null }
+    }
+  }
+
+  const precompileExpressions = (): void => {
+    getConfiguredLayers().forEach(layer => {
+      const expressions = [layer.titleExpression, ...(layer.expressions || []).map(item => item?.expression)]
+      expressions.forEach(expression => {
+        const text = String(expression || '').trim()
+        if (text && !getConstantArcadeString(text)) getExecutor(text).catch(() => {})
+      })
+    })
+  }
+
+  const getLocale = (): string => {
+    try { return intl?.locale || navigator.language || 'en-US' } catch (e) { return 'en-US' }
+  }
+
+  const fillTemplate = (template: string, attributes: any): string => {
+    return String(template || '').replace(/\{([^}]+)\}/g, (_match, name) => {
+      const value = getAttributeCaseInsensitive(attributes, String(name).trim())
+      return value === undefined || value === null ? '' : encodeURIComponent(String(value))
+    })
+  }
+
+  /** Apply a configured per-field format rule. Returns null when the rule does not apply. */
+  const applyFieldFormat = (raw: any, rule: FieldFormat, attributes: any): ResultRow | null => {
+    if (!rule || raw === null || raw === undefined || raw === '') return null
+    const decimals = rule.decimals === undefined || rule.decimals === null || isNaN(Number(rule.decimals))
+      ? undefined
+      : Math.max(0, Math.min(10, Number(rule.decimals)))
+    const wrap = (value: string): ResultRow => ({ label: '', value: `${rule.prefix || ''}${value}${rule.suffix || ''}` })
+    const locale = getLocale()
+
+    try {
+      switch (rule.type) {
+        case 'number': {
+          const numberValue = Number(raw)
+          if (isNaN(numberValue)) return null
+          return wrap(new Intl.NumberFormat(locale, {
+            minimumFractionDigits: decimals,
+            maximumFractionDigits: decimals === undefined ? 2 : decimals
+          }).format(numberValue))
+        }
+        case 'integer': {
+          const numberValue = Number(raw)
+          if (isNaN(numberValue)) return null
+          return wrap(new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(numberValue))
+        }
+        case 'currency': {
+          const numberValue = Number(raw)
+          if (isNaN(numberValue)) return null
+          return wrap(new Intl.NumberFormat(locale, {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: decimals === undefined ? 0 : decimals,
+            maximumFractionDigits: decimals === undefined ? 0 : decimals
+          }).format(numberValue))
+        }
+        case 'percent': {
+          const numberValue = Number(raw)
+          if (isNaN(numberValue)) return null
+          // Values above 1 are treated as already-scaled percentages.
+          const scaled = Math.abs(numberValue) > 1 ? numberValue / 100 : numberValue
+          return wrap(new Intl.NumberFormat(locale, {
+            style: 'percent',
+            minimumFractionDigits: decimals,
+            maximumFractionDigits: decimals === undefined ? 1 : decimals
+          }).format(scaled))
+        }
+        case 'date':
+        case 'datetime': {
+          const date = raw instanceof Date ? raw : new Date(raw)
+          if (isNaN(date.getTime())) return null
+          return wrap(rule.type === 'date' ? date.toLocaleDateString(locale) : date.toLocaleString(locale))
+        }
+        case 'link': {
+          const url = rule.linkTemplate?.trim()
+            ? fillTemplate(rule.linkTemplate, attributes)
+            : String(raw)
+          if (!/^https?:\/\//i.test(url)) return null
+          return {
+            label: '',
+            value: rule.linkText?.trim() || getConfig().linkText || String(raw),
+            url
+          }
+        }
+        default:
+          return null
+      }
+    } catch (e) {
+      return null
     }
   }
 
@@ -809,45 +927,65 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
   const buildRows = async (feature: any, entry: LayerEntry): Promise<BuiltResult> => {
     const cfg = getConfig()
+    const layerConfig = getLayerConfigForUrl(entry.url)
     const excluded = new Set(
-      String(cfg.excludedFields || '')
+      String(layerConfig.excludedFields || '')
         .split(',')
         .map(value => value.trim().toUpperCase())
         .filter(Boolean)
     )
     const fieldByName: Record<string, FieldInfo> = {}
     entry.fields.forEach(field => { fieldByName[field.name.toUpperCase()] = field })
+    const formatByField: Record<string, FieldFormat> = {}
+    ;(layerConfig.formats || []).forEach(rule => {
+      const name = String(rule?.field || '').trim().toUpperCase()
+      if (name) formatByField[name] = rule
+    })
 
     const attributes = feature.attributes || {}
-    const titleFieldName = String(cfg.titleField || entry.displayField || '').trim()
-    const titleKey = Object.keys(attributes).find(key => key.toUpperCase() === titleFieldName.toUpperCase())
+    const attributeKeys = Object.keys(attributes)
+    const findKey = (name: string): string | undefined => {
+      const upper = String(name || '').toUpperCase()
+      return attributeKeys.find(key => key.toUpperCase() === upper)
+    }
+
+    const titleFieldName = String(layerConfig.titleField || entry.displayField || '').trim()
+    const titleKey = findKey(titleFieldName)
     let resultTitle = titleKey
       ? formatValue(attributes[titleKey], fieldByName[titleKey.toUpperCase()])
       : ''
 
-    if (cfg.titleExpression?.trim()) {
+    // Every Arcade expression for this feature is evaluated concurrently. The
+    // title and each row expression are independent, so there is no reason to
+    // pay for them one after another.
+    const titleExpression = String(layerConfig.titleExpression || '').trim()
+    const constantTitle = titleExpression ? getConstantArcadeString(titleExpression) : ''
+    const titlePromise: Promise<ArcadeEvaluation | null> = titleExpression && !constantTitle
+      ? evalArcadeRaw(titleExpression, feature)
+      : Promise.resolve(null)
+
+    const expressionItems = (layerConfig.expressions || []).filter(item => !!item?.expression?.trim())
+    const evaluationPromises = expressionItems.map(item => evalArcadeRaw(item.expression, feature))
+    const [titleEvaluation, ...evaluations] = await Promise.all([titlePromise, ...evaluationPromises])
+
+    if (constantTitle) {
       // Constant title expressions are common in imported XML. Resolve them
       // directly so a service title can never replace an intended literal.
-      const constantTitle = getConstantArcadeString(cfg.titleExpression)
-      if (constantTitle) {
-        resultTitle = constantTitle
-      } else {
-        const titleEvaluation = await evalArcadeRaw(cfg.titleExpression, feature)
-        const expressionTitle = titleEvaluation.ok ? arcadeScalarText(titleEvaluation.value) : ''
-        if (expressionTitle) resultTitle = expressionTitle
-      }
+      resultTitle = constantTitle
+    } else if (titleEvaluation) {
+      const expressionTitle = titleEvaluation.ok ? arcadeScalarText(titleEvaluation.value) : ''
+      if (expressionTitle) resultTitle = expressionTitle
     }
 
     const resultRows: ResultRow[] = []
     const popupContent: any[] = []
     let usesFullPopupExpression = false
 
-    for (const item of cfg.expressions || []) {
-      const expression = item?.expression?.trim()
-      if (!expression) continue
-
+    for (let index = 0; index < expressionItems.length; index++) {
+      const item = expressionItems[index]
+      const evaluation = evaluations[index]
       const label = String(item.label || '').trim()
-      const evaluation = await evalArcadeRaw(item.expression, feature)
+
       if (evaluation.ok) {
         const popupElements = arcadePopupElements(evaluation.value)
         if (popupElements.length > 0) {
@@ -893,21 +1031,31 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     // prevents the same service attributes from being appended a second time.
     if (!usesFullPopupExpression) {
       const orderedNames = entry.fields.map(field => field.name)
-      Object.keys(attributes).forEach(name => {
+      attributeKeys.forEach(name => {
         if (!orderedNames.some(fieldName => fieldName.toUpperCase() === name.toUpperCase())) {
           orderedNames.push(name)
         }
       })
 
       orderedNames.forEach(name => {
-        const attributeKey = Object.keys(attributes).find(key => key.toUpperCase() === name.toUpperCase())
+        const attributeKey = findKey(name)
         if (!attributeKey) return
         const upper = attributeKey.toUpperCase()
         if (excluded.has(upper)) return
         const field = fieldByName[upper]
+        const label = cfg.useFieldAliases && field ? field.alias : attributeKey
+
+        const rule = formatByField[upper]
+        if (rule) {
+          const formatted = applyFieldFormat(attributes[attributeKey], rule, attributes)
+          if (formatted) {
+            resultRows.push({ ...formatted, label })
+            return
+          }
+        }
+
         const value = formatValue(attributes[attributeKey], field)
         if (value === '') return
-        const label = cfg.useFieldAliases && field ? field.alias : attributeKey
         if (/^https?:\/\//i.test(value)) {
           resultRows.push({ label, value: cfg.linkText || value, url: value })
         } else {
@@ -1024,68 +1172,47 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     }
   }
 
-  const queryConfiguredLayer = async (
-    url: string,
-    click: NormalizedClick,
-    signal: AbortSignal
-  ): Promise<ConfiguredResult[]> => {
-    const cfg = getConfig()
-    const entry = await getLayerEntry(url)
-    if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
+  // Short-lived identify cache: a repeat click at the same place at the same
+  // scale is answered instantly instead of re-querying the service.
+  const resultCacheRef = React.useRef<Map<string, { at: number, results: ConfiguredResult[] }>>(new Map())
+  const RESULT_CACHE_MAX = 40
 
-    const component = getMapComponent()
-    const view = getView()
-    const queryTarget = (entry.queryLayer && !entry.queryLayer.destroyed)
-      ? entry.queryLayer
-      : entry.layer
-    const query = queryTarget.createQuery()
-    query.geometry = await getQueryGeometry(click)
-    query.spatialRelationship = 'intersects'
-    query.returnGeometry = true
-    query.outFields = ['*']
-    query.num = Math.max(1, Number(cfg.maxConfiguredResults) || defaultConfig.maxConfiguredResults)
+  const getResultCacheKey = (url: string, click: NormalizedClick, resolution: number): string => {
+    const point = click.mapPoint
+    if (!point) return ''
+    const cell = isFinite(resolution) && resolution > 0 ? resolution : 1
+    const gx = Math.round(Number(point.x) / cell)
+    const gy = Math.round(Number(point.y) / cell)
+    const tolerance = Math.max(0, Number(getConfig().clickTolerance) || 0)
+    return `${url}|${gx}|${gy}|${cell.toPrecision(4)}|${tolerance}`
+  }
 
-    const resolution = Number(component?.resolution ?? view?.resolution)
-    if (isFinite(resolution) && resolution > 0) query.maxAllowableOffset = resolution
-    const spatialReference = component?.spatialReference || view?.spatialReference
-    if (spatialReference) query.outSpatialReference = spatialReference
-
-    const featureSet = await queryTarget.queryFeatures(query, { signal })
-    if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
-
-    const { PopupTemplate } = await getCore()
-    const results: ConfiguredResult[] = []
-    for (const graphic of featureSet.features || []) {
-      if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
-      if (graphic && typeof graphic === 'object') {
-        configuredUrlByGraphicRef.current.set(graphic, entry.url)
-      }
-      const built = await buildRows(graphic, entry)
-      if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
-      const content: any[] = []
-      if (built.rows.length > 0) {
-        content.push({ type: 'text', text: buildContentHtml(built.rows) })
-      }
-      content.push(...built.popupContent)
-
-      const popupTemplate = new PopupTemplate({
-        title: built.title || getRuntimeDataSourceLabel() || entry.layer.title || nls('defaultTitle'),
-        content,
-        outFields: ['*']
-      })
-      graphic.popupTemplate = popupTemplate
-
-      // The selected graphic uses its own template. Mirroring the template to
-      // both layers also gives Experience Builder consistent popup metadata
-      // while it resolves the graphic into a DataRecord for native data actions.
-      if (entry.runtimeRegistered) {
-        try { entry.layer.popupTemplate = popupTemplate } catch (e) {}
-        const runtimeEntry = runtimeDataSourcesRef.current[entry.url]
-        try { runtimeEntry?.sourceLayer && (runtimeEntry.sourceLayer.popupTemplate = popupTemplate) } catch (e) {}
-      }
-      results.push({ graphic, built, url: entry.url })
+  const readResultCache = (key: string): ConfiguredResult[] | null => {
+    const ttlSeconds = Number(getConfig().resultCacheSeconds)
+    if (!key || !isFinite(ttlSeconds) || ttlSeconds <= 0) return null
+    const hit = resultCacheRef.current.get(key)
+    if (!hit) return null
+    if (Date.now() - hit.at > ttlSeconds * 1000) {
+      resultCacheRef.current.delete(key)
+      return null
     }
+    return hit.results
+  }
 
+  const writeResultCache = (key: string, results: ConfiguredResult[]): void => {
+    const ttlSeconds = Number(getConfig().resultCacheSeconds)
+    if (!key || !isFinite(ttlSeconds) || ttlSeconds <= 0) return
+    const cache = resultCacheRef.current
+    if (cache.size >= RESULT_CACHE_MAX) {
+      const oldest = cache.keys().next().value
+      if (oldest !== undefined) cache.delete(oldest)
+    }
+    cache.set(key, { at: Date.now(), results })
+  }
+
+  const clearResultCache = (): void => { resultCacheRef.current.clear() }
+
+  const cacheRecordsForResults = (entry: LayerEntry, results: ConfiguredResult[]): void => {
     if (entry.runtimeRegistered && entry.dataSource && results.length > 0 &&
         typeof entry.dataSource.buildRecord === 'function' &&
         typeof entry.dataSource.setRecords === 'function') {
@@ -1099,9 +1226,87 @@ const Widget = (props: WidgetProps): React.ReactElement => {
         // record. The JimuLayerView link is still retained for data actions.
       }
     }
+  }
 
+  const queryConfiguredLayer = async (
+    url: string,
+    click: NormalizedClick,
+    signal: AbortSignal
+  ): Promise<ConfiguredResult[]> => {
+    const cfg = getConfig()
+    const entry = await getLayerEntry(url)
+    if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
+
+    const component = getMapComponent()
+    const view = getView()
+    const resolution = Number(component?.resolution ?? view?.resolution)
+
+    const cacheKey = getResultCacheKey(entry.url, click, resolution)
+    const cached = readResultCache(cacheKey)
+    if (cached) {
+      debugLog(`identify cache hit for ${entry.url}`)
+      cacheRecordsForResults(entry, cached)
+      return cached
+    }
+
+    const queryTarget = (entry.queryLayer && !entry.queryLayer.destroyed)
+      ? entry.queryLayer
+      : entry.layer
+    const query = queryTarget.createQuery()
+    query.geometry = await getQueryGeometry(click)
+    query.spatialRelationship = 'intersects'
+    query.returnGeometry = true
+    query.outFields = ['*']
+    query.num = Math.max(1, Number(cfg.maxConfiguredResults) || defaultConfig.maxConfiguredResults)
+
+    if (isFinite(resolution) && resolution > 0) query.maxAllowableOffset = resolution
+    const spatialReference = component?.spatialReference || view?.spatialReference
+    if (spatialReference) query.outSpatialReference = spatialReference
+
+    const featureSet = await queryTarget.queryFeatures(query, { signal })
+    if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
+
+    const { PopupTemplate } = await getCore()
+    const graphics: any[] = (featureSet.features || []).filter((graphic: any) => graphic && typeof graphic === 'object')
+    graphics.forEach(graphic => configuredUrlByGraphicRef.current.set(graphic, entry.url))
+
+    // Every returned feature builds its content concurrently.
+    const builtAll = await Promise.all(graphics.map(graphic => buildRows(graphic, entry)))
+    if (signal.aborted) throw new DOMException('Aborted', 'AbortError')
+
+    const fallbackTitle = getRuntimeDataSourceLabel(entry.url) || entry.layer.title || nls('defaultTitle')
+    const results: ConfiguredResult[] = graphics.map((graphic, index) => {
+      const built = builtAll[index]
+      const content: any[] = []
+      if (built.rows.length > 0) {
+        content.push({ type: 'text', text: buildContentHtml(built.rows) })
+      }
+      content.push(...built.popupContent)
+
+      const popupTemplate = new PopupTemplate({
+        title: built.title || fallbackTitle,
+        content,
+        outFields: ['*']
+      })
+      graphic.popupTemplate = popupTemplate
+
+      // The selected graphic uses its own template. Mirroring the template to
+      // both layers also gives Experience Builder consistent popup metadata
+      // while it resolves the graphic into a DataRecord for native data actions.
+      if (entry.runtimeRegistered) {
+        try { entry.layer.popupTemplate = popupTemplate } catch (e) {}
+        const runtimeEntry = runtimeDataSourcesRef.current[entry.url]
+        try { runtimeEntry?.sourceLayer && (runtimeEntry.sourceLayer.popupTemplate = popupTemplate) } catch (e) {}
+      }
+      return { graphic, built, url: entry.url }
+    })
+
+    cacheRecordsForResults(entry, results)
+    writeResultCache(cacheKey, results)
     return results
   }
+
+  const CONFIGURED_QUERY_TIMEOUT_MS = 8000
 
   const queryConfiguredLayers = async (
     urls: string[],
@@ -1109,10 +1314,20 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     signal: AbortSignal
   ): Promise<{ results: ConfiguredResult[], errors: string[] }> => {
     const settled = await Promise.all(
-      urls.map(async url => ({
-        url,
-        outcome: await settle(queryConfiguredLayer(url, click, signal))
-      }))
+      urls.map(async url => {
+        // One slow endpoint must not hold the whole popup. The bound turns a
+        // stalled query into a reported partial failure for this click.
+        const bounded = new Promise<ConfiguredResult[]>((resolve, reject) => {
+          const timer = setTimeout(() => {
+            reject(new Error(nls('queryTimedOut')))
+          }, CONFIGURED_QUERY_TIMEOUT_MS)
+          queryConfiguredLayer(url, click, signal).then(
+            value => { clearTimeout(timer); resolve(value) },
+            reason => { clearTimeout(timer); reject(reason) }
+          )
+        })
+        return { url, outcome: await settle(bounded) }
+      })
     )
     const results: ConfiguredResult[] = []
     const errors: string[] = []
@@ -1752,12 +1967,63 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     return true
   }
 
+  const buildRecordForFeature = (feature: any): any => {
+    if (!feature) return null
+    // Configured REST results carry their runtime data source.
+    const configuredUrl = configuredUrlByGraphicRef.current.get(feature)
+    if (configuredUrl) {
+      const entry = layerEntriesRef.current[normalizeUrl(configuredUrl)]
+      const dataSource = entry?.dataSource
+      if (dataSource && typeof dataSource.buildRecord === 'function') {
+        try { return dataSource.buildRecord(feature) } catch (e) {}
+      }
+      return null
+    }
+    // Map features resolve through the Map widget's JimuLayerView.
+    const jmv: any = jmvRef.current
+    const apiLayer = feature.layer || feature.sourceLayer
+    if (!jmv || !apiLayer) return null
+    try {
+      const jimuLayerView = typeof jmv.getJimuLayerViewByAPILayer === 'function'
+        ? jmv.getJimuLayerViewByAPILayer(apiLayer)
+        : null
+      let dataSource: any = typeof jimuLayerView?.getLayerDataSource === 'function'
+        ? jimuLayerView.getLayerDataSource()
+        : null
+      if (!dataSource && jimuLayerView?.layerDataSourceId) {
+        dataSource = (DataSourceManager.getInstance() as any).getDataSource(jimuLayerView.layerDataSourceId)
+      }
+      if (dataSource && typeof dataSource.buildRecord === 'function') {
+        return dataSource.buildRecord(feature)
+      }
+    } catch (e) {}
+    return null
+  }
+
+  const lastPublishedFeatureRef = React.useRef<any>(null)
+  const publishSelectedFeature = (feature: any): void => {
+    if (!getConfig().publishSelection) return
+    if (lastPublishedFeatureRef.current === feature) return
+    lastPublishedFeatureRef.current = feature || null
+    try {
+      const record = buildRecordForFeature(feature)
+      const records = record ? [record] : []
+      MessageManager.getInstance().publishMessage(
+        new DataRecordsSelectionChangeMessage(String(widgetId || 'feature-identify'), records)
+      )
+      debugLog(`published selection change (${records.length} record)`)
+    } catch (e) {
+      debugLog(`selection publish failed: ${String((e as any)?.message || e)}`)
+    }
+  }
+
   const handleSelectedPopupFeature = (feature: any): void => {
     // Popup selection changes are presentation-only. The native Zoom To action
     // remains the sole owner of intentional map navigation.
     if (selectedFeatureRef.current === feature) return
     selectedFeatureRef.current = feature || null
     highlightFeature(feature)
+    publishSelectedFeature(feature)
   }
 
   const normalizeClick = (event: any): NormalizedClick => {
@@ -1912,6 +2178,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
             setNoResult(false)
             setError('')
             setWarning(errors.length > 0 ? `${nls('partialResults')} ${errors[0]}` : '')
+            publishSelectedFeature(merged[0])
 
             // A strategy can report success while the popup is closed again
             // (or never actually presented) by the host app. Verify shortly
@@ -2192,7 +2459,8 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
     getCore().catch(() => {})
     configuredUrls.forEach(url => { getLayerEntry(url).catch(() => {}) })
-    if (configuredUrls.length > 0 && hasExpressions()) getArcade().catch(() => {})
+    // Compile every Arcade expression now so the first click pays nothing.
+    if (configuredUrls.length > 0 && hasExpressions()) precompileExpressions()
     if (cfg.displayMode === 'popup') resolvePopupElement().catch(() => {})
   }
 
@@ -2278,6 +2546,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     layerEntriesRef.current = {}
     layerLoadsRef.current = {}
     configuredUrlByGraphicRef.current = new WeakMap()
+    clearResultCache()
   }
 
   const destroyRuntimeDataSources = (): void => {
@@ -2313,6 +2582,10 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     })
   }
 
+  // Structural key: only a change in which endpoints are configured should
+  // tear down and rebuild the runtime layers and data sources.
+  const configuredUrlsKey = getConfiguredUrls().join('|')
+
   React.useEffect(() => {
     ++clickSeqRef.current
     abortRef.current?.abort()
@@ -2330,7 +2603,17 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     setNoResult(false)
     if (jmvRef.current && isWidgetActive()) prewarm()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [config.layerUrl, config.titleField, config.titleExpression])
+  }, [configuredUrlsKey])
+
+  React.useEffect(() => {
+    // Content settings changed (titles, expressions, hidden fields, formats).
+    // Cached identify results and compiled expressions are stale; the layer
+    // entries themselves are still valid and are kept.
+    clearResultCache()
+    executorCacheRef.current = {}
+    if (jmvRef.current && isWidgetActive() && hasExpressions()) precompileExpressions()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [config.layers, config.expressions, config.titleField, config.titleExpression, config.excludedFields, config.linkText, config.useFieldAliases, config.maxConfiguredResults, config.clickTolerance])
 
   React.useEffect(() => {
     ++clickSeqRef.current
@@ -2491,7 +2774,40 @@ const Widget = (props: WidgetProps): React.ReactElement => {
               wordBreak: 'break-word'
             }}
           >
-            <div style={{ color: '#ffffff', fontWeight: 600 }}>Feature Identify debug (newest first)</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#ffffff', fontWeight: 600 }}>
+              <span style={{ flex: 1 }}>Feature Identify debug (newest first)</span>
+              <button
+                type='button'
+                style={{ pointerEvents: 'auto', fontSize: '11px', padding: '2px 8px', cursor: 'pointer' }}
+                onClick={() => {
+                  const text = debugLines.join('\n')
+                  try {
+                    if (navigator.clipboard?.writeText) {
+                      navigator.clipboard.writeText(text).then(() => debugLog('log copied to clipboard'))
+                    } else {
+                      const area = document.createElement('textarea')
+                      area.value = text
+                      document.body.appendChild(area)
+                      area.select()
+                      document.execCommand('copy')
+                      document.body.removeChild(area)
+                      debugLog('log copied to clipboard')
+                    }
+                  } catch (e) {
+                    debugLog('clipboard copy failed')
+                  }
+                }}
+              >
+                {nls('copyLog')}
+              </button>
+              <button
+                type='button'
+                style={{ pointerEvents: 'auto', fontSize: '11px', padding: '2px 8px', cursor: 'pointer' }}
+                onClick={() => setDebugLines([])}
+              >
+                {nls('clearLog')}
+              </button>
+            </div>
             {[...debugLines].reverse().map((line, index) => (
               <div key={index}>{line}</div>
             ))}
