@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.3 (2026-09-02)
+
+### Fixed
+
+- Intermittent missing configured results on the first app load, recoverable only by reloading the app. A runtime data source left half-built or destroyed by a startup race or page navigation was reused unvalidated under its fixed id, poisoning every later click in the session. The widget now health-checks a reused data source with a bounded wait and rebuilds it when it is destroyed, unready, or carries a destroyed layer.
+- A failed configured-layer query now evicts its cached layer entry, so the next click rebuilds it fresh instead of failing for the rest of the session.
+- Identify queries fall back to the map bridge layer if the dedicated query layer has been destroyed.
+
+### Changed
+
+- Visual Studio type errors resolved (1.0.2): id declared on WidgetProps, and Object.values results typed at all three call sites. No runtime behavior change.
+- Manifest and package version updated to 1.0.3.
+
 ## 1.0.0 (2026-08-26)
 
 First public release on GitHub.

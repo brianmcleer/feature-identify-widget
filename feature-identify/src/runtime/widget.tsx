@@ -295,17 +295,32 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       const dataSourceId = getRuntimeDataSourceId(normalized)
       const existing = manager.getDataSource?.(dataSourceId)
       if (existing) {
-        if (typeof existing.ready === 'function') await existing.ready()
+        // A data source left over from an earlier page visit or an interrupted
+        // first load can be destroyed or permanently unready. Reusing it
+        // unvalidated poisons every later click until the app is reloaded, so
+        // health-check it with a bounded wait and rebuild it when it is sick.
+        let reusable = !existing.destroyed && !existing.layer?.destroyed
+        if (reusable && typeof existing.ready === 'function') {
+          const readyOutcome = await awaitWithTimeout(
+            Promise.resolve(existing.ready()).then(() => true),
+            5000
+          )
+          reusable = readyOutcome === true
+        }
         if (version !== runtimeDataSourceVersionRef.current) {
           throw createAbortError('Endpoint configuration changed while reusing its data source.')
         }
-        const reused: RuntimeDataSourceEntry = {
-          id: dataSourceId,
-          dataSource: existing,
-          sourceLayer: existing.layer || null
+        if (reusable) {
+          const reused: RuntimeDataSourceEntry = {
+            id: dataSourceId,
+            dataSource: existing,
+            sourceLayer: existing.layer || null
+          }
+          runtimeDataSourcesRef.current[normalized] = reused
+          return reused
         }
-        runtimeDataSourcesRef.current[normalized] = reused
-        return reused
+        debugLog('existing runtime data source is unhealthy; rebuilding it')
+        try { manager.destroyDataSource?.(dataSourceId) } catch (e) {}
       }
 
       const { FeatureLayer } = await getCore()
@@ -623,7 +638,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       const entry: LayerEntry = {
         url: normalized,
         layer,
-        queryLayer: (runtimeSource && runtimeSource !== layer) ? runtimeSource : layer,
+        queryLayer: (runtimeSource && runtimeSource !== layer && !runtimeSource.destroyed) ? runtimeSource : layer,
         displayField: layer.displayField || '',
         fields,
         dataSourceId,
@@ -1020,7 +1035,9 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
     const component = getMapComponent()
     const view = getView()
-    const queryTarget = entry.queryLayer || entry.layer
+    const queryTarget = (entry.queryLayer && !entry.queryLayer.destroyed)
+      ? entry.queryLayer
+      : entry.layer
     const query = queryTarget.createQuery()
     query.geometry = await getQueryGeometry(click)
     query.spatialRelationship = 'intersects'
@@ -1106,6 +1123,16 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       } else {
         const reason: any = outcome.reason
         if (reason?.name !== 'AbortError' && reason?.name !== 'aborted') {
+          // Evict the cached layer entry so the next click rebuilds it fresh.
+          // Without this, an entry poisoned by a first-load race keeps failing
+          // for the rest of the session and only an app reload recovers.
+          const normalized = normalizeUrl(url)
+          const stale = layerEntriesRef.current[normalized]
+          if (stale) {
+            delete layerEntriesRef.current[normalized]
+            try { disposeLayerEntry(stale) } catch (e) {}
+          }
+          debugLog(`configured layer failed and was evicted for retry: ${String(reason?.message || reason)}`)
           const message = reason?.message ? String(reason.message) : nls('queryFailed')
           errors.push(`${url}: ${message}`)
         }
