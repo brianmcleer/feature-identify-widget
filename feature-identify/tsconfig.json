@@ -1,27 +1,22 @@
 {
+  "//": "Mode B (self-contained) per WIDGETHANDOFF Section 12 item 3: Visual Studio cannot read client\\node_modules under the EB 1.21 pnpm layout (IDE1100), so nothing here reaches outside the widget. Every import is declared ambiently in src/exb-editor-shims.d.ts (shared master, copied byte for byte from widgets\\_vs, never edited per widget) and src/vendor-shims.d.ts (this widget's own additions, including the global JSX namespace classic mode needs). This widget already compiled with classic jsx (its css-prop files carry the /** @jsx jsx */ pragma), so jsx stays \"react\": ts-loader reads this file and a different jsx setting would change what webpack emits. Check with: npx tsc -p . (0 errors expected; add --ignoreDeprecations 6.0 on TypeScript 6).",
   "compilerOptions": {
-    "target": "es2018",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "jsx": "react",
-    "jsxFactory": "jsx",
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    "types": [],
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": false,
-    "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "jimu-core": ["../../../jimu-core"],
-      "jimu-core/*": ["../../../jimu-core/*"],
-      "jimu-arcgis": ["../../../jimu-arcgis"],
-      "jimu-ui": ["../../../jimu-ui"],
-      "jimu-ui/*": ["../../../jimu-ui/*"],
-      "jimu-for-builder": ["../../../jimu-for-builder"],
-      "esri/*": ["../../../node_modules/@arcgis/core/*"]
-    }
+    "noEmit": true
   },
-  "include": ["src/**/*", "manifest.json", "config.json"]
+  "//files": "Order matters: the master shim declares jimu-for-builder and jimu-ui/* in shorthand form (declare module 'x';) and the first ambient declaration of a module id wins, so vendor-shims.d.ts must be seen first to give those modules real shapes. files and include are unioned.",
+  "files": ["src/vendor-shims.d.ts", "src/exb-editor-shims.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", ".vs", "Claude outputs"]
 }

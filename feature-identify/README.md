@@ -29,6 +29,7 @@ For each click the widget:
 
 ## Key features
 
+- Help guide: a question button at the top right opens a short, searchable, plain-language guide that adapts to the options the app author enabled, and a one-time hint points new users at it.
 - One coordinated popup pipeline per click, with request cancellation and stale-click protection.
 - Native web map popup templates, field formatting, Arcade content, media, and popup actions are preserved for map results.
 - Per-layer configuration: each configured REST layer has its own name, title field or title expression, hidden fields, format rules, and Arcade expressions. Layers can be enabled, disabled, and reordered. Older single-URL configurations are converted automatically.
@@ -72,6 +73,12 @@ For each click the widget:
 
 5. From the Experience Builder `client` folder, install dependencies (pnpm on 1.21 and later) and start the client.
 6. Add Feature Identify to a page that contains a Map widget and select that map in the widget settings.
+
+### The release zip and the editor shims
+
+The zip is the widget only. The Visual Studio type shims in the repo (`feature-identify/src/exb-editor-shims.d.ts`, `feature-identify/src/vendor-shims.d.ts`) are left out on purpose: their ambient `declare module` blocks are not file-scoped and would rewrite the react, jimu and esri types for every other widget in your `your-extensions` folder.
+
+If you clone the repository instead of using the zip, delete `feature-identify/src/exb-editor-shims.d.ts` and the other shim files listed above before building; nothing else depends on them.
 
 ## Recommended configuration
 

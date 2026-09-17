@@ -4,10 +4,14 @@ import {
   DataRecordsSelectionChangeMessage, type AllWidgetProps
 } from 'jimu-core'
 import { JimuMapViewComponent, type JimuMapView, loadArcGISJSAPIModules } from 'jimu-arcgis'
-import { Loading, LoadingType } from 'jimu-ui'
+import { Button, Loading, LoadingType } from 'jimu-ui'
+import { CalciteIcon } from 'calcite-components'
 import type { Config, IMConfig, IdentifyLayerConfig, FieldFormat } from '../config'
 import { defaultConfig, resolveLayers, createLayerConfig } from '../config'
 import defaultMessages from './translations/default'
+import HelpPopup from './components/HelpPopup'
+import FirstRunHint from './components/FirstRunHint'
+import { buildHelpSections, type HelpFeatures } from './helpSections'
 
 type WidgetProps = AllWidgetProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
 
@@ -162,6 +166,48 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       ? intl.formatMessage({ id: msgId, defaultMessage: (defaultMessages as any)[msgId] })
       : (defaultMessages as any)[msgId] || msgId
   }
+
+  /** Like nls, but fills {token} values. Used by the help guide. */
+  const t = (msgId: string, values?: Record<string, string>): string => {
+    const fallback = (defaultMessages as any)[msgId] ?? msgId
+    try {
+      return intl ? intl.formatMessage({ id: msgId, defaultMessage: fallback }, values) : fallback
+    } catch (e) {
+      return fallback
+    }
+  }
+
+  // -- Help guide -------------------------------------------------------------
+  // The dismissal is kept per browser and named after this copy of the widget,
+  // so two copies in one app do not share it. Reads and writes are guarded
+  // because private browsing throws on both, and the guide is not worth
+  // breaking a widget over.
+  const [helpOpen, setHelpOpen] = React.useState(false)
+  const hintKey = `featureIdentify.helpHintDismissed.${widgetId}`
+  const [showFirstRunHint, setShowFirstRunHint] = React.useState<boolean>(() => {
+    try {
+      return window.localStorage.getItem(hintKey) !== '1'
+    } catch (e) {
+      return true
+    }
+  })
+
+  const dismissFirstRunHint = (): void => {
+    setShowFirstRunHint(false)
+    try {
+      window.localStorage.setItem(hintKey, '1')
+    } catch (e) {
+      /* private browsing */
+    }
+  }
+
+  // Opening the guide counts as answering the hint.
+  const openHelp = (): void => {
+    setHelpOpen(true)
+    dismissFirstRunHint()
+  }
+
+  const closeHelp = (): void => { setHelpOpen(false) }
 
   const getConfig = (): Config => {
     const raw: any = configRef.current
@@ -2681,6 +2727,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     background: #ffffff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 
+    .fi-help-row { display: flex; justify-content: flex-end; flex-shrink: 0; padding: 6px 6px 0 6px; }
     .fi-header { display: flex; align-items: flex-start; flex-shrink: 0; padding: 12px 7px 8px 15px; }
     .fi-header-title { flex: 1; font-size: 14px; font-weight: 600; line-height: 20px; word-break: break-word; }
     .fi-close { flex-shrink: 0; border: none; background: transparent; color: #6e6e6e; font-size: 16px; line-height: 20px; width: 32px; height: 24px; cursor: pointer; padding: 0; }
@@ -2701,6 +2748,22 @@ const Widget = (props: WidgetProps): React.ReactElement => {
   const popupMode = cfg.displayMode === 'popup'
   const hasResult = rows.length > 0
 
+  // The guide reads the same checks the click pipeline uses (see runIdentify),
+  // so it never describes something the widget is not currently doing.
+  const helpSourceMode = cfg.sourceMode || defaultConfig.sourceMode
+  const helpFeatures: HelpFeatures = {
+    mapConnected: !!mapSelected,
+    popupMode,
+    mapLayerSource: popupMode && helpSourceMode !== 'configured',
+    configuredLayerSource: helpSourceMode !== 'map' && getConfiguredUrls().length > 0,
+    deduplicate: !!cfg.deduplicateResults,
+    featureMenu: !!cfg.openFeatureMenu,
+    highlight: !!cfg.highlightSelectedFeature,
+    publishSelection: !!cfg.publishSelection,
+    noResultPopup: !!cfg.showNoResultPopup,
+    diagnosticOverlay: isDebugEnabled()
+  }
+
   return (
     <div css={style} className='jimu-widget'>
       {mapSelected && (
@@ -2709,6 +2772,43 @@ const Widget = (props: WidgetProps): React.ReactElement => {
           onActiveViewChange={onActiveViewChange}
         />
       )}
+
+      {/* Help button, top right of the widget. */}
+      <div className='fi-help-row'>
+        <Button
+          size='sm'
+          type='tertiary'
+          icon
+          onClick={openHelp}
+          title={t('helpTitle')}
+          aria-label={t('helpTitle')}
+          style={{ flexShrink: 0 }}
+        >
+          <CalciteIcon icon='question' scale='s' />
+        </Button>
+      </div>
+
+      {showFirstRunHint && (
+        <FirstRunHint
+          title={t('firstRunTitle')}
+          body={t('firstRunBody')}
+          linkLabel={t('firstRunHelpLink')}
+          dismissLabel={t('firstRunDismiss')}
+          onOpenHelp={openHelp}
+          onDismiss={dismissFirstRunHint}
+        />
+      )}
+
+      <HelpPopup
+        open={helpOpen}
+        onClose={closeHelp}
+        sections={buildHelpSections(t, helpFeatures)}
+        title={t('helpTitle')}
+        intro={t('helpIntro')}
+        searchPlaceholder={t('helpSearchPlaceholder')}
+        noMatches={t('helpNoMatches')}
+        closeLabel={t('close')}
+      />
 
       {!mapSelected && <div className='fi-msg fi-error'>{nls('noMap')}</div>}
 

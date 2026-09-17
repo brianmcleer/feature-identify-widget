@@ -68,7 +68,7 @@ const Setting = (props: SettingProps): React.ReactElement => {
   const [testStatus, setTestStatus] = React.useState<Record<string, TestStatus>>({})
 
   const set = (key: string, value: any): void => {
-    onSettingChange({ id, config: config.set(key, value) })
+    onSettingChange({ id, config: config.set(key as any, value) })
   }
 
   const onMapWidgetSelected = (ids: string[]): void => {

@@ -31,6 +31,12 @@ feature-identify-widget/         the repo
 
 Download the zip from the latest release, extract it, and drop the `feature-identify` folder into `client\your-extensions\widgets` so that `manifest.json` sits directly inside `your-extensions\widgets\feature-identify`, never nested a second level deep. Then run the standard client install (pnpm on Experience Builder 1.21 and later) and restart the client. Full steps are in the widget-level README.
 
+### The release zip and the editor shims
+
+The zip is the widget only. The Visual Studio type shims in the repo (`feature-identify/src/exb-editor-shims.d.ts`, `feature-identify/src/vendor-shims.d.ts`) are left out on purpose: their ambient `declare module` blocks are not file-scoped and would rewrite the react, jimu and esri types for every other widget in your `your-extensions` folder.
+
+If you clone the repository instead of using the zip, delete `feature-identify/src/exb-editor-shims.d.ts` and the other shim files listed above before building; nothing else depends on them.
+
 ## Publishing workflow (for the maintainer)
 
 The Experience Builder widget folder is the single source of truth. `publish.ps1` mirrors it into this repo with robocopy /MIR, commits, pushes, and optionally cuts a release. Any change you want to keep, including dependency and security fixes, must be made in the EB widget folder first; a repo-only edit is overwritten on the next publish.

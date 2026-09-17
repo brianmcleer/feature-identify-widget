@@ -16,5 +16,66 @@ export default {
   popupModeHint: 'Click the map. Native map popup results appear first, and configured REST endpoint results appear last.',
   popupUnavailable: 'The map popup could not be opened on this device, so the first result is shown here instead.',
   copyLog: 'Copy log',
-  clearLog: 'Clear'
+  clearLog: 'Clear',
+
+  // ---- In-widget help guide -------------------------------------------------
+  helpTitle: 'Help',
+  helpIntro: 'Feature Identify tells you about whatever you click on the map.',
+  helpSearchPlaceholder: 'Search the guide (try "click" or "popup")',
+  helpNoMatches: 'Nothing in the guide matches that word. Try another, or open the sections above.',
+  helpAnd: 'and',
+
+  firstRunTitle: 'New here?',
+  firstRunBody: 'Click a feature on the map and its details open for you to read.',
+  firstRunHelpLink: 'Open the guide.',
+  firstRunDismiss: 'Dismiss',
+
+  helpStartTitle: 'Start here: three steps',
+  helpStart1: 'Find the feature you want on the map, such as a parcel, a road or a point.',
+  helpStart2: 'Click it once. Give it a moment while the details are collected.',
+  helpStart3Popup: 'Read the details in the window that opens over the map.',
+  helpStart3Panel: 'Read the details here in the widget.',
+
+  helpResultsTitle: 'Reading the details',
+  helpResultsIntroPopup: 'The details open in a small window over the map.',
+  helpResultsIntroPanel: 'The details are listed in the widget, under a title.',
+  helpResultsTitleLinePopup: 'The line at the top of the window names the feature you clicked.',
+  helpResultsTitleLinePanel: 'The line at the top of the widget names the feature you clicked.',
+  helpResultsRows: 'Under the title is a list. Each line has a label on the left and the value for that feature on the right.',
+  helpResultsLinks: 'A value that is a web address shows as a link. Click it and the page opens in a new tab, so the map stays as you left it.',
+  helpResultsMany: 'If your click finds more than one feature, small arrows at the top of the window step you through them, one at a time.',
+  helpResultsList: 'You can also open the list at the top of the window and pick the feature you want by name.',
+  helpResultsEmptyPopup: 'If nothing is found where you clicked, a short window says so.',
+  helpResultsEmptyPanel: 'If nothing is found where you clicked, a short note appears in the widget.',
+  helpResultsClose: 'Close the window with the small x at its top right when you are done.',
+
+  helpSourcesTitle: 'Where the details come from',
+  helpSourcesIntro: 'One click asks {sources}.',
+  helpSourceMapName: 'the layers drawn on the map',
+  helpSourceExtraName: 'the extra layers set up for this app',
+  helpSourcesMap: 'Map layers: any layer that is turned on and drawn on the map can answer, using the wording set up in the map itself.',
+  helpSourcesExtra: 'Extra layers: the person who built the app can add layers that are not drawn on the map. Their details are written for this app, so the labels can read differently.',
+  helpSourcesOrder: 'Results from the map come first. Results from the extra layers come after them.',
+  helpSourcesDuplicates: 'When the same record comes back from both, you see it once, not twice.',
+
+  helpSelectionTitle: 'The feature you are looking at',
+  helpSelectionHighlight: 'The feature you are reading is outlined on the map, so you can see which one it is.',
+  helpSelectionOther: 'Other parts of the app, such as a table, can follow along and show the same record.',
+  helpSelectionNoMove: 'The map does not move or change scale by itself. Use the zoom action in the details when you want the map to go there.',
+
+  helpTroubleTitle: 'If something looks wrong',
+  helpTroubleNoMap: 'The widget says no map is selected: it has not been joined to a map yet. Ask the person who built the app to pick the map in the widget settings.',
+  helpTroubleNothing: 'Nothing happens when you click the map: the widget is closed or was not placed on this screen size. Open Feature Identify from the app, then click the map again.',
+  helpTroubleMissed: 'Nothing is found where you know a feature is: the click landed just off the edge. Zoom in and click again, nearer the middle of the feature.',
+  helpTroubleLayerOff: 'A layer you expected is missing from the results: that layer is turned off in the map. Turn it back on in the layer list and click again.',
+  helpTroubleSlow: 'The details take a long time: a service is busy answering. Wait a few seconds, then click again in the same place.',
+  helpTroublePartial: 'A note says some sources could not be read: one service did not answer in time. What did arrive is still shown. Try the same click again in a moment.',
+  helpTroubleNoPopup: 'The details show in the widget instead of over the map: the map window could not open on this device. This happens on some phones and the first result is shown in the widget instead.',
+  helpTroubleDiagnostic: 'A black box of small text sits at the bottom of the screen: the diagnostic view is on. Ask the person who built the app to turn it off in the widget settings.',
+  helpTroubleContact: 'Still stuck? Contact the GIS Division and mention the Feature Identify widget and this app.',
+
+  helpTipsTitle: 'Good to know',
+  helpTips1: 'Clicking the same place again brings the details straight back.',
+  helpTips2: 'Zoom in before you click where features sit close together. You get a shorter, clearer list.',
+  helpTips3: 'Nothing you click here changes the data. You are only reading it.'
 }
