@@ -2784,20 +2784,22 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
       {/* Help button, top right of the widget. */}
       <div className='fi-help-row'>
-        <Button
-          size='sm'
-          type='tertiary'
-          icon
-          onClick={openHelp}
-          title={t('helpTitle')}
-          aria-label={t('helpTitle')}
-          style={{ flexShrink: 0 }}
-        >
-          <CalciteIcon icon='question' scale='s' />
-        </Button>
+        {props.config?.showHelp !== false && (
+            <Button
+              size='sm'
+              type='tertiary'
+              icon
+              onClick={openHelp}
+              title={t('helpTitle')}
+              aria-label={t('helpTitle')}
+              style={{ flexShrink: 0 }}
+            >
+              <CalciteIcon icon='question' scale='s' />
+            </Button>
+        )}
       </div>
 
-      {showFirstRunHint && (
+      {props.config?.showHelp !== false && showFirstRunHint && (
         <FirstRunHint
           title={t('firstRunTitle')}
           body={t('firstRunBody')}

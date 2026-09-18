@@ -1,5 +1,7 @@
 # feature-identify-widget
 
+[![License](https://img.shields.io/github/license/brianmcleer/feature-identify-widget)](LICENSE) [![Release](https://img.shields.io/github/v/release/brianmcleer/=tag)](https://github.com/brianmcleer/feature-identify-widget/releases) [![Issues](https://img.shields.io/github/issues/brianmcleer/feature-identify-widget)](https://github.com/brianmcleer/feature-identify-widget/issues)
+
 Repository for the Feature Identify custom widget for ArcGIS Experience Builder Developer Edition 1.21.
 
 Feature Identify coordinates native web map popups and one or more REST-only identify layers so a single map click produces one predictable popup, with duplicate removal, native popup data actions on configured REST results, and on-screen diagnostics for troubleshooting on any device. The full feature list, requirements, and install steps are in the widget-level README inside the `feature-identify` folder, which is what ships in each release zip.
@@ -11,20 +13,20 @@ Feature Identify coordinates native web map popups and one or more REST-only ide
 
 ```
 feature-identify-widget/         the repo
-├── README.md                    this file, the GitHub landing page
-├── LICENSE                      Apache-2.0
-├── .gitignore                   ignores node_modules, .vs, etc.
-├── publish.ps1                  one-command publish/update automation
-└── feature-identify/            the actual widget (drops into your-extensions/widgets)
-    ├── manifest.json
-    ├── package.json
-    ├── config.json
-    ├── tsconfig.json
-    ├── icon.svg
-    ├── README.md                install steps and troubleshooting travel with the widget
-    ├── LICENSE
-    ├── CHANGELOG.md
-    └── src/ ...
+â”œâ”€â”€ README.md                    this file, the GitHub landing page
+â”œâ”€â”€ LICENSE                      Apache-2.0
+â”œâ”€â”€ .gitignore                   ignores node_modules, .vs, etc.
+â”œâ”€â”€ publish.ps1                  one-command publish/update automation
+â””â”€â”€ feature-identify/            the actual widget (drops into your-extensions/widgets)
+    â”œâ”€â”€ manifest.json
+    â”œâ”€â”€ package.json
+    â”œâ”€â”€ config.json
+    â”œâ”€â”€ tsconfig.json
+    â”œâ”€â”€ icon.svg
+    â”œâ”€â”€ README.md                install steps and troubleshooting travel with the widget
+    â”œâ”€â”€ LICENSE
+    â”œâ”€â”€ CHANGELOG.md
+    â””â”€â”€ src/ ...
 ```
 
 ## Quick install (for widget users)

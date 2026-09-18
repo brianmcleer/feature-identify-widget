@@ -51,6 +51,9 @@ export type PopupSourceMode = 'map' | 'configured' | 'combined'
 export type ResultOrder = 'configured-first' | 'map-first'
 
 export interface Config {
+  /** Show the question-mark button that opens the help guide. Undefined means on,
+   *  so apps configured before this setting existed keep their help button. */
+  showHelp?: boolean
   /** Popup is the primary mode. Panel is retained for legacy configured-layer use. */
   displayMode: DisplayMode
 
