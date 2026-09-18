@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 (2026-09-18)
+
+- Added: anonymous usage and error telemetry (shared beacon module; off unless the portal publishes an exb-beacon-sink table; telemetry: false in config disables it).
+
 ## 1.3.0 (2026-09-17)
 
 ### Added

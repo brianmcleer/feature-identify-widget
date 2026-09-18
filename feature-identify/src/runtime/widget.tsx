@@ -12,6 +12,8 @@ import defaultMessages from './translations/default'
 import HelpPopup from './components/HelpPopup'
 import FirstRunHint from './components/FirstRunHint'
 import { buildHelpSections, type HelpFeatures } from './helpSections'
+import { beacon } from '../shared/beacon'
+import type { BeaconHandle } from '../shared/beacon'
 
 type WidgetProps = AllWidgetProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
 
@@ -128,6 +130,9 @@ const Widget = (props: WidgetProps): React.ReactElement => {
 
   const configRef = React.useRef(config)
   configRef.current = config
+
+  const beaconRef = React.useRef<BeaconHandle | null>(null)
+  React.useEffect(() => { beaconRef.current = beacon.init(props) }, [])
 
   const settle = async <T,>(promise: Promise<T>): Promise<SettledResult<T>> => {
     try {
@@ -2052,6 +2057,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     if (!getConfig().publishSelection) return
     if (lastPublishedFeatureRef.current === feature) return
     lastPublishedFeatureRef.current = feature || null
+    beaconRef.current?.action('select')
     try {
       const record = buildRecordForFeature(feature)
       const records = record ? [record] : []
@@ -2060,6 +2066,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       )
       debugLog(`published selection change (${records.length} record)`)
     } catch (e) {
+      beaconRef.current?.error(e, 'select')
       debugLog(`selection publish failed: ${String((e as any)?.message || e)}`)
     }
   }
@@ -2120,6 +2127,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
       debugLog(`click ignored: mouse button ${buttonValue}`)
       return
     }
+    beaconRef.current?.action('identify')
     const cfg = getConfig()
     const popupMode = cfg.displayMode === 'popup'
     const click = await resolveClickMapPoint(normalizeClick(event))
@@ -2283,6 +2291,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
         }
       }
     } catch (err: any) {
+      beaconRef.current?.error(err, 'identify')
       if (err?.name === 'AbortError' || err?.name === 'aborted') return
       if (sequence !== clickSeqRef.current) return
       setRows([])

@@ -92,6 +92,10 @@ If you clone the repository instead of using the zip, delete `feature-identify/s
 
 If the app has separate desktop, tablet, and phone layouts, remember that each layout can hold its own Feature Identify instance. Configure the layer URL in every instance, and place the widget directly in the phone layout (it can be small) rather than inside a closed widget controller if identify should always work on phones.
 
+## Usage telemetry
+
+This widget records anonymous usage counts and errors so the GIS Division can see which widgets and versions are in use and which errors users hit. It records the app id and title, widget name and version, the action name, a truncated error message, the site host name and browser family. It never records usernames, coordinates, addresses, attribute values or URLs with query strings. Where the data goes: on page load the widget asks the app's portal for a public item tagged `exb-beacon-sink` and posts to that table. If your portal has no such item, nothing is sent anywhere. To turn it off for an app, set `"telemetry": false` in the widget's config, or users can enable Do Not Track in their browser. The shared module is `src/shared/beacon.ts`.
+
 ## Troubleshooting
 
 **`feature-identify is duplicated` on client start.** Experience Builder registers each widget by the `name` in its `manifest.json` and throws this error when the same name is found twice. A second copy is hiding somewhere: a nested `widgets\feature-identify\feature-identify` folder from extracting a zip into a folder that already had the widget's name, a leftover or renamed copy of the folder, or a stale compiled build under `client\dist\widgets`. Remove the extra copy (or delete the matching `dist\widgets` folder and rebuild) and start again.
