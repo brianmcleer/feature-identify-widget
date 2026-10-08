@@ -2896,7 +2896,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#ffffff', fontWeight: 600 }}>
-              <span style={{ flex: 1 }}>Feature Identify debug (newest first)</span>
+              <span style={{ flex: 1 }}>{nls('featureIdentifyDebugNewestFirst')}</span>
               <button
                 type='button'
                 style={{ pointerEvents: 'auto', fontSize: '11px', padding: '2px 8px', cursor: 'pointer' }}

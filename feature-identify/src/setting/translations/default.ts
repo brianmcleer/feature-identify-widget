@@ -99,5 +99,10 @@ export default {
   noResultMessage: 'No result message',
   debugSection: 'Troubleshooting',
   debugOverlay: 'Show diagnostic overlay',
-  debugOverlayHint: 'Shows a live event log at the bottom of the screen on every device, with a Copy button. Turn on only while troubleshooting, then turn back off. The overlay can also be enabled per-session by adding fi_debug=1 to the app URL.'
+  debugOverlayHint: 'Shows a live event log at the bottom of the screen on every device, with a Copy button. Turn on only while troubleshooting, then turn back off. The overlay can also be enabled per-session by adding fi_debug=1 to the app URL.',
+  parcelFeatureParcelNum: '"Parcel " + $feature.PARCEL_NUM',
+  roundFeatureAcres2Acres: 'Round($feature.Acres, 2) + " acres"',
+  help: 'Help',
+  showHelpGuide: 'Show help guide',
+  showTheQuestionMarkButtonThat: 'Show the question-mark button that opens the widget help guide'
 }

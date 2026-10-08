@@ -532,7 +532,7 @@ const Setting = (props: SettingProps): React.ReactElement => {
           className='full'
           height={56}
           value={layer.titleExpression}
-          placeholder='"Parcel " + $feature.PARCEL_NUM'
+          placeholder={nls('parcelFeatureParcelNum')}
           onChange={(event) => updateLayer(index, { titleExpression: event.target.value })}
         />
         <div className='hint'>{nls('titleExpressionHint')}</div>
@@ -628,7 +628,7 @@ const Setting = (props: SettingProps): React.ReactElement => {
               className='full'
               height={72}
               value={expression.expression}
-              placeholder='Round($feature.Acres, 2) + " acres"'
+              placeholder={nls('roundFeatureAcres2Acres')}
               onChange={(event) => updateExpression(index, exprIndex, { expression: event.target.value })}
             />
           </div>
@@ -911,12 +911,12 @@ const Setting = (props: SettingProps): React.ReactElement => {
           <div className='version'>{nls('versionLabel').replace('{version}', WIDGET_VERSION)}</div>
         </SettingRow>
       </SettingSection>
-      <SettingSection title='Help'>
-        <SettingRow tag='label' label='Show help guide'>
+      <SettingSection title={nls('help')}>
+        <SettingRow tag='label' label={nls('showHelpGuide')}>
           <Switch
             checked={props.config?.showHelp !== false}
             onChange={(evt) => { props.onSettingChange({ id: (props as any).id, config: (props.config as any).set('showHelp', evt.target.checked) }) }}
-            aria-label='Show the question-mark button that opens the widget help guide'
+            aria-label={nls('showTheQuestionMarkButtonThat')}
           />
         </SettingRow>
       </SettingSection>

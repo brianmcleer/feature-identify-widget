@@ -77,5 +77,6 @@ export default {
   helpTipsTitle: 'Good to know',
   helpTips1: 'Clicking the same place again brings the details straight back.',
   helpTips2: 'Zoom in before you click where features sit close together. You get a shorter, clearer list.',
-  helpTips3: 'Nothing you click here changes the data. You are only reading it.'
+  helpTips3: 'Nothing you click here changes the data. You are only reading it.',
+  featureIdentifyDebugNewestFirst: 'Feature Identify debug (newest first)'
 }
