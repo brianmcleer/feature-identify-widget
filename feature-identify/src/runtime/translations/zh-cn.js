@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "在单击特性相近之处之前放大。 你得到一个更短,更清晰的清单。",
         helpTips3: "您点击这里不会改变数据 。 你只读它。",
         featureIdentifyDebugNewestFirst: "特性识别调试( 最新第一个)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "配置的标识层",
+        unknownError: "未知错误",
+        unserializableError: "无序错误"
       })
     }
   }

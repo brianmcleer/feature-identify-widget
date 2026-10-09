@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Εστίασε πριν κάνεις κλικ εκεί που τα χαρακτηριστικά κάθονται κοντά. Παίρνεις μια μικρότερη, πιο καθαρή λίστα.",
         helpTips3: "Τίποτα που κάνετε κλικ εδώ δεν αλλάζει τα δεδομένα. Το διαβάζεις μόνο.",
         featureIdentifyDebugNewestFirst: "Αποσφαλμάτωση αναγνώρισης χαρακτηριστικών (νέα πρώτη)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Ρυθμισμένο επίπεδο αναγνώρισης",
+        unknownError: "άγνωστο σφάλμα",
+        unserializableError: "σφάλμα μη ανιχνεύσιμο"
       })
     }
   }

@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "機能が閉じる場所をクリックする前にズームインします。 あなたはより短い、より明確にリストを取得します。",
         helpTips3: "ここをクリックしてデータを変更することはできません。 読むだけです。",
         featureIdentifyDebugNewestFirst: "特徴 デバッグを識別して下さい(最初に新しい)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "構成された特定層",
+        unknownError: "未知のエラー",
+        unserializableError: "unserializable エラー"
       })
     }
   }

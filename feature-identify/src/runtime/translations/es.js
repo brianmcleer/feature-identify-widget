@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Acérquese antes de hacer clic en donde las funciones se sientan juntas. Tienes una lista más corta y más clara.",
         helpTips3: "Nada que haga clic aquí cambia los datos. Sólo lo estás leyendo.",
         featureIdentifyDebugNewestFirst: "Característica Identifique depuración (no menor primero)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Capa de identificación configurada",
+        unknownError: "error desconocido",
+        unserializableError: "error unserializable"
       })
     }
   }

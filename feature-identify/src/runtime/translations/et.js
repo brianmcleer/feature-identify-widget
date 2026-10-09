@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Suurendage, enne kui klõpsate, kus funktsioonid asuvad lähedal. Sa saad lühema ja selgema nimekirja.",
         helpTips3: "Miski, millele klõpsad, ei muuda andmeid. Sa ainult loed seda.",
         featureIdentifyDebugNewestFirst: "Funktsioon Identifitseeri silumine (uusim esimene)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Määratud identifitseerimiskiht",
+        unknownError: "tundmatu viga",
+        unserializableError: "seeriaviisiline viga"
       })
     }
   }

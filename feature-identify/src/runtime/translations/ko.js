@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "줌을 클릭하기 전에 기능을 함께 앉아. 더 짧고, 더 명확한 목록.",
         helpTips3: "이 페이지는 자동으로 번역되었습니다. 당신은 단지 그것을 읽습니다.",
         featureIdentifyDebugNewestFirst: "debug를 식별하는 기능 (최신 첫 번째)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "구성 레이어 식별",
+        unknownError: "알 수없는 오류",
+        unserializableError: "unserializable 오류"
       })
     }
   }

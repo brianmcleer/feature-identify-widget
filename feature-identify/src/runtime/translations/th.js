@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "ซูมเข้าไปก่อนที่จะคลิกที่ที่คุณลักษณะนั่งใกล้กัน คุณได้รายชื่อที่สั้นกว่า ชัดเจนกว่า",
         helpTips3: "ไม่มีอะไรที่คุณคลิกที่นี่เปลี่ยนข้อมูล คุณเพียงแค่อ่านมัน",
         featureIdentifyDebugNewestFirst: "ระบุตัวดีบั๊ก (ใหม่สุด)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "ปรับแต่งเลเยอร์",
+        unknownError: "ข้อผิดพลาดไม่ทราบสาเหตุ",
+        unserializableError: "ข้อผิดพลาดที่ไม่สามารถตรวจสอบได้"
       })
     }
   }

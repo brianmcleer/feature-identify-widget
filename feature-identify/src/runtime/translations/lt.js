@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Priartinti prieš paspausite, kur funkcijos sėdėti arti. Gavai trumpesnį, aiškesnį sąrašą.",
         helpTips3: "Nieko, ką paspausite čia, nekeičia duomenų. Tu tik skaitai.",
         featureIdentifyDebugNewestFirst: "Atvaizdas Nustatyti derinimo (naujausias pirmas)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Konstruotas identifikacinis sluoksnis",
+        unknownError: "nežinoma klaida",
+        unserializableError: "nenustatoma klaida"
       })
     }
   }

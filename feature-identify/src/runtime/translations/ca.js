@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Apropa abans de clicar on s' asseuen les característiques. Tens una llista més curta, més clara.",
         helpTips3: "No hi ha res que cliqueu aquí canvia les dades. Només l'estàs llegint.",
         featureIdentifyDebugNewestFirst: "Identificació de depuració (més primera)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "S' ha configurat la capa",
+        unknownError: "error desconegut",
+        unserializableError: "Error no llegible"
       })
     }
   }

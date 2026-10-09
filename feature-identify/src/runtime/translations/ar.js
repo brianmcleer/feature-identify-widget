@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "كبروا قبل أن تنقروا حيث تغلق المعالم لديك قائمة أقصر وأوضح",
         helpTips3: "لا شيء تضغطه هنا يغير البيانات أنت تقرأه فقط",
         featureIdentifyDebugNewestFirst: "تحديد الهوية (الأول الجديد)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "طبقة تحديد مؤمنة",
+        unknownError: "خطأ مجهول",
+        unserializableError: "خطأ غير معقول"
       })
     }
   }

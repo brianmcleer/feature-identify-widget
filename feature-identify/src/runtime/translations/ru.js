@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Введите Zoom, прежде чем щелкнуть, где функции находятся близко друг к другу. Вы получите более короткий и четкий список.",
         helpTips3: "Ничто из того, что вы нажимаете здесь, не изменяет данные. Вы только читаете его.",
         featureIdentifyDebugNewestFirst: "Функция Identify debug (сначала новая)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Настроенный идентифицирующий слой",
+        unknownError: "Неизвестная ошибка",
+        unserializableError: "несериализируемая ошибка"
       })
     }
   }

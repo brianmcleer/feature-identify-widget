@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Zoom înainte de a face clic pe unde caracteristicile stau aproape împreună. Ai o listă mai scurtă, mai clară.",
         helpTips3: "Nimic din ce faceți clic aici schimbă datele. O citeşti doar.",
         featureIdentifyDebugNewestFirst: "Caracteristici Identificați depanarea (cea mai nouă primă)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Strat de identificare configurat",
+        unknownError: "Eroare necunoscută",
+        unserializableError: "eroare inoperabilă"
       })
     }
   }

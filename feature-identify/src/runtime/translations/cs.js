@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Přiblížit před klepnutím, kde funkce sedí blízko sebe. Dostaneš kratší, jasnější seznam.",
         helpTips3: "Nic, co zde kliknete, nezmění data. Jen to čteš.",
         featureIdentifyDebugNewestFirst: "Funkce Identifikovat ladění (nejnovější první)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Konfigurovaná identifikační vrstva",
+        unknownError: "neznámá chyba",
+        unserializableError: "neserializovatelná chyba"
       })
     }
   }

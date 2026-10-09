@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Phóng to trước khi bạn nhấn vào nơi tính năng ngồi gần nhau. Bạn có một danh sách ngắn hơn, rõ ràng hơn.",
         helpTips3: "Không có gì bạn nhấp vào ở đây thay đổi dữ liệu. Anh chỉ đọc nó thôi.",
         featureIdentifyDebugNewestFirst: "Đặc điểm nhận diện lỗi (trước tiên mới nhất)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Cấu hình lớp nhận diện",
+        unknownError: "lỗi không rõ",
+        unserializableError: "Lỗi không thể gửi đi được"
       })
     }
   }

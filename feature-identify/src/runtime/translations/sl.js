@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Povečajte, preden kliknete, kjer so funkcije tesno skupaj. Dobiš krajši in jasnejši seznam.",
         helpTips3: "Nič ne spremeni podatkov. Samo bereš jo.",
         featureIdentifyDebugNewestFirst: "Funkcija Identificiraj razhroščevanje (najprej novo)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Nastavljena plast za identifikacijo",
+        unknownError: "neznana napaka",
+        unserializableError: "Neizvedljiva napaka"
       })
     }
   }

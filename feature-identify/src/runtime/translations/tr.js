@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Daha önce, özelliklerin birlikte yakın olduğu yere tıklayın. Daha kısa, daha net bir liste alırsınız.",
         helpTips3: "Buraya tıkladığınız hiçbir şey verileri değiştirir. Sadece okuyorsunuz.",
         featureIdentifyDebugNewestFirst: "Özel Açıklama debug (newest first)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Configured define",
+        unknownError: "Bilinmeyen hata",
+        unserializableError: "Başarısız olmayan hata"
       })
     }
   }

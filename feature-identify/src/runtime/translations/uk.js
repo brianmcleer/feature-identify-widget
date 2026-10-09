@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Зомбі перед тим як натиснути, де функції сидять разом. Ви отримуєте коротший, чіткий список.",
         helpTips3: "Ніщо ви натиснете тут зміни даних. Ви тільки прочитаєте його.",
         featureIdentifyDebugNewestFirst: "Функція Визначте дебюг (незахідний перший)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Конфігурований ідентифікаційний шар",
+        unknownError: "Невідома помилка",
+        unserializableError: "несеріалізована помилка"
       })
     }
   }

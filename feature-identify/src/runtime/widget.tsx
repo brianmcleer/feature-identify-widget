@@ -14,7 +14,7 @@ import FirstRunHint from './components/FirstRunHint'
 import { buildHelpSections, type HelpFeatures } from './helpSections'
 import { beacon } from '../shared/beacon'
 import type { BeaconHandle } from '../shared/beacon'
-import { __setIntl, __t } from './i18n-t'
+import { __locale, __setIntl, __t } from './i18n-t'
 
 type WidgetProps = AllWidgetProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
 
@@ -743,7 +743,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     const fieldType = String(field?.type || '').toLowerCase()
     if (fieldType.includes('date') || fieldType.includes('timestamp')) {
       const date = raw instanceof Date ? raw : new Date(raw)
-      if (!isNaN(date.getTime())) return date.toLocaleDateString()
+      if (!isNaN(date.getTime())) return date.toLocaleDateString(__locale())
     }
     return String(raw)
   }
@@ -915,7 +915,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
       return String(value)
     }
-    if (value instanceof Date) return value.toLocaleDateString()
+    if (value instanceof Date) return value.toLocaleDateString(__locale())
     if (value instanceof String || value instanceof Number || value instanceof Boolean) {
       return String(value.valueOf())
     }

@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "זום לפני שאתה לוחץ על אילו תכונות יושבות יחד. אתה מקבל רשימה קצרה וברורה יותר.",
         helpTips3: "אין מה ללחוץ כאן משנה את הנתונים. אתה רק קורא את זה.",
         featureIdentifyDebugNewestFirst: "זיהוי bug (חדש ביותר)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "זיהוי שכבת",
+        unknownError: "טעות לא ידועה",
+        unserializableError: "טעות בלתי אפשרית"
       })
     }
   }

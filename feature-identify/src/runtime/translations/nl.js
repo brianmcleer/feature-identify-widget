@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Zoom in voordat u klikt waar functies zitten dicht bij elkaar. Je krijgt een kortere, duidelijkere lijst.",
         helpTips3: "Niets wat je hier klikt verandert de gegevens. Je leest het alleen maar.",
         featureIdentifyDebugNewestFirst: "Functie Identificeer debug (nieuwste eerste)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Geconfigureerde identificatielaag",
+        unknownError: "onbekende fout",
+        unserializableError: "onuitwisbare fout"
       })
     }
   }

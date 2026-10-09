@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Увеличи, преди да кликнеш къде характеристиките седят близо един до друг. Получаваш по-кратък и ясен списък.",
         helpTips3: "Нищо, което кликнете тук променя данните. Само го четеш.",
         featureIdentifyDebugNewestFirst: "Идентифициране на функции (най-новото първо)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Конфигуриран идентифициращ слой",
+        unknownError: "неизвестна грешка",
+        unserializableError: "несериозна грешка"
       })
     }
   }

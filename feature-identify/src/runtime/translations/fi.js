@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Lähennä ennen kuin klikkaat missä ominaisuudet istuvat lähellä toisiaan. Saat lyhyemmän ja selkeämmän listan.",
         helpTips3: "Mikään ei muuta tietoja. Luet vain sitä.",
         featureIdentifyDebugNewestFirst: "Ominaisuus Tunnista vianetsintä (uusin ensin)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Määritelty tunnistuskerros",
+        unknownError: "tuntematon virhe",
+        unserializableError: "epätavallinen virhe"
       })
     }
   }

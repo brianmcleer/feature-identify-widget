@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Közelíts rá, mielőtt rákattintasz arra, ahol a funkciók közel ülnek egymáshoz. Kapsz egy rövidebb, tisztább listát.",
         helpTips3: "Semmi, amire rákattint, nem változtatja meg az adatokat. Csak olvasod.",
         featureIdentifyDebugNewestFirst: "Jellemzők Azonosító (legújabb)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Beállított azonosító réteg",
+        unknownError: "ismeretlen hiba",
+        unserializableError: "nem sorozható hiba"
       })
     }
   }

@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Perbesar sebelum Anda mengklik di mana fitur duduk berdekatan. Kau dapat daftar yang lebih pendek dan jelas.",
         helpTips3: "Tidak ada yang Anda klik di sini mengubah data. Kau hanya membacanya.",
         featureIdentifyDebugNewestFirst: "Fitur Identifikasi debug (pertama terbaru)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "undo-type",
+        unknownError: "galat tak dikenal",
+        unserializableError: "kesalahan tidak serialisasi"
       })
     }
   }

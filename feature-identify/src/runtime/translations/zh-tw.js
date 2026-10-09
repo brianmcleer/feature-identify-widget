@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "放大后再點擊特性的位置 。 你得到一個更短,更清晰的清單。",
         helpTips3: "您點擊這裡的數據不會改變 。 你只看它。",
         featureIdentifyDebugNewestFirst: "特性辨識除錯( 最新第一 )",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "已配置的身份層",
+        unknownError: "未知的錯誤",
+        unserializableError: "不串連的錯誤"
       })
     }
   }

@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Zoom in, bevor Sie klicken, wo Features dicht beieinander sitzen. Sie erhalten eine kürzere, klarere Liste.",
         helpTips3: "Nichts, was Sie hier klicken, ändert die Daten. Du liest es nur.",
         featureIdentifyDebugNewestFirst: "Feature Identifizieren Debug (neueste zuerst)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Konfigurierte Identifikationsschicht",
+        unknownError: "Unbekannter Fehler",
+        unserializableError: "nichtialisierbarer Fehler"
       })
     }
   }

@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Pietuvināt pirms jūs noklikšķiniet uz, kur funkcijas sēdēt cieši kopā. Jūs saņemsiet īsāku, skaidrāku sarakstu.",
         helpTips3: "Šeit nekas nemaina datus. Tu tikai to lasi.",
         featureIdentifyDebugNewestFirst: "Funkcija Identificēt atkļūdošanu (newest first)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Konfigurēts identifikācijas slānis",
+        unknownError: "nezināma kļūda",
+        unserializableError: "nepārspējama kļūda"
       })
     }
   }

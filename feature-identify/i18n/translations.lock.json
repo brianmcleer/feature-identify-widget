@@ -83,16 +83,16 @@
       },
       "locales": {
         "ar": {
-          "file": "65d97b4947cf",
+          "file": "88c207208aad",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -379,20 +379,25 @@
               "t": "تحديد الهوية (الأول الجديد)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "طبقة تحديد مؤمنة",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "bg": {
-          "file": "495e40a49be7",
+          "file": "55ab77e80de4",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -679,6 +684,11 @@
               "t": "Идентифициране на функции (най-новото първо)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Конфигуриран идентифициращ слой",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
@@ -697,16 +707,16 @@
           "entries": {}
         },
         "ca": {
-          "file": "8bc16bce4a21",
+          "file": "81775e46f46d",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -993,20 +1003,25 @@
               "t": "Identificació de depuració (més primera)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "S' ha configurat la capa",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "cs": {
-          "file": "971afb3e9a1b",
+          "file": "f5fd746d916e",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -1293,20 +1308,25 @@
               "t": "Funkce Identifikovat ladění (nejnovější první)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurovaná identifikační vrstva",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "da": {
-          "file": "ff2246a1894c",
+          "file": "f87d503cc7a6",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -1593,20 +1613,25 @@
               "t": "Feature Identify debug (nyeste først)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurationslag",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "de": {
-          "file": "f309b919af85",
+          "file": "ff7730a7c0f2",
           "counts": {
-            "esri": 13,
+            "esri": 15,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 58,
+            "machine": 59,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -1898,20 +1923,25 @@
               "t": "Feature Identifizieren Debug (neueste zuerst)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurierte Identifikationsschicht",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "el": {
-          "file": "12b8bc463a9d",
+          "file": "78a65a4c3d47",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -2198,20 +2228,25 @@
               "t": "Αποσφαλμάτωση αναγνώρισης χαρακτηριστικών (νέα πρώτη)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Ρυθμισμένο επίπεδο αναγνώρισης",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "es": {
-          "file": "289ac1d2ab23",
+          "file": "b883b2188252",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -2498,20 +2533,25 @@
               "t": "Característica Identifique depuración (no menor primero)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Capa de identificación configurada",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "et": {
-          "file": "cbc9d215c716",
+          "file": "77a5850409cc",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -2798,20 +2838,25 @@
               "t": "Funktsioon Identifitseeri silumine (uusim esimene)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Määratud identifitseerimiskiht",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "fi": {
-          "file": "85ef33a65d3e",
+          "file": "11502c6c7891",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -3098,20 +3143,25 @@
               "t": "Ominaisuus Tunnista vianetsintä (uusin ensin)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Määritelty tunnistuskerros",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "fr": {
-          "file": "e0ede058ca51",
+          "file": "a50df3ce6502",
           "counts": {
-            "esri": 13,
+            "esri": 15,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 58,
+            "machine": 59,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -3403,20 +3453,25 @@
               "t": "Fonction Identifier le débogage (le plus récent en premier)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Calque d'identification configuré",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "he": {
-          "file": "5ffee483ec14",
+          "file": "24a964c9d645",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -3703,6 +3758,11 @@
               "t": "זיהוי bug (חדש ביותר)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "זיהוי שכבת",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
@@ -3721,16 +3781,16 @@
           "entries": {}
         },
         "hu": {
-          "file": "9bc7a89aa26a",
+          "file": "dbafdf77a56e",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -4017,20 +4077,25 @@
               "t": "Jellemzők Azonosító (legújabb)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Beállított azonosító réteg",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "id": {
-          "file": "b29c73b1402c",
+          "file": "ca3d23f6299d",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -4317,20 +4382,25 @@
               "t": "Fitur Identifikasi debug (pertama terbaru)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "undo-type",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "it": {
-          "file": "453c09a353fe",
+          "file": "d8e7d799da0b",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -4617,20 +4687,25 @@
               "t": "Caratteristica Identificare il debug (newest first)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Livello di identificazione configurato",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "ja": {
-          "file": "4722809d492e",
+          "file": "30033d2554e1",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -4917,20 +4992,25 @@
               "t": "特徴 デバッグを識別して下さい(最初に新しい)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "構成された特定層",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "ko": {
-          "file": "e2b8dcc95bdd",
+          "file": "36084bbcb161",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -5217,20 +5297,25 @@
               "t": "debug를 식별하는 기능 (최신 첫 번째)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "구성 레이어 식별",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "lt": {
-          "file": "f0da3e7205e9",
+          "file": "89e5654a7db5",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -5517,20 +5602,25 @@
               "t": "Atvaizdas Nustatyti derinimo (naujausias pirmas)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konstruotas identifikacinis sluoksnis",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "lv": {
-          "file": "f1307d7d2d44",
+          "file": "8766007dd3a5",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -5817,20 +5907,25 @@
               "t": "Funkcija Identificēt atkļūdošanu (newest first)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurēts identifikācijas slānis",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "no": {
-          "file": "e8b24bec0f8c",
+          "file": "b44e9776e492",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -6117,20 +6212,25 @@
               "t": "Funksjon Identifiser feilsøking (nyeste først)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurert identifikasjonslag",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "nl": {
-          "file": "9045e14a58cd",
+          "file": "50f948ec6f55",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -6417,20 +6517,25 @@
               "t": "Functie Identificeer debug (nieuwste eerste)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Geconfigureerde identificatielaag",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "pl": {
-          "file": "2c0bea33a829",
+          "file": "df7a835edf7f",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -6717,20 +6822,25 @@
               "t": "Cecha Identyfikacja debug (najnowszy pierwszy)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Skonfigurowana warstwa identyfikacyjna",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "pt-br": {
-          "file": "0253eb080a3b",
+          "file": "29042ca82cb6",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -7017,20 +7127,25 @@
               "t": "Característica Identifique depuração",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Camada de identificação configurada.",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "pt-pt": {
-          "file": "c5b0d32f7b10",
+          "file": "5c9087b89068",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -7317,20 +7432,25 @@
               "t": "Característica Identificar a depuração (primeiro mais recente)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Camada de identificação configurada",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "ro": {
-          "file": "408bdcfbc977",
+          "file": "8f162bd93d48",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -7617,20 +7737,25 @@
               "t": "Caracteristici Identificați depanarea (cea mai nouă primă)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Strat de identificare configurat",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "ru": {
-          "file": "b74da994a575",
+          "file": "bef019f86cf0",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -7917,20 +8042,25 @@
               "t": "Функция Identify debug (сначала новая)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Настроенный идентифицирующий слой",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "sk": {
-          "file": "3592fb3f5056",
+          "file": "3f5efb4266fd",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -8217,20 +8347,25 @@
               "t": "Funkcia Identifikovať debug (najnovší prvý)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurovaná identifikačná vrstva",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "sl": {
-          "file": "6f5b72be382b",
+          "file": "519a68c2a906",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -8517,6 +8652,11 @@
               "t": "Funkcija Identificiraj razhroščevanje (najprej novo)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Nastavljena plast za identifikacijo",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
@@ -8535,16 +8675,16 @@
           "entries": {}
         },
         "sv": {
-          "file": "3b48c85d956b",
+          "file": "45143fb9ca7e",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -8831,20 +8971,25 @@
               "t": "Funktion Identify debug (nyaste först)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurerad identifiera lager",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "th": {
-          "file": "6408ab9a5077",
+          "file": "90462877e6b9",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -9131,20 +9276,25 @@
               "t": "ระบุตัวดีบั๊ก (ใหม่สุด)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "ปรับแต่งเลเยอร์",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "tr": {
-          "file": "d735a17e088d",
+          "file": "c70153342d60",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -9431,20 +9581,25 @@
               "t": "Özel Açıklama debug (newest first)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Configured define",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "zh-cn": {
-          "file": "5847578ad319",
+          "file": "bb8d42259794",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -9731,20 +9886,25 @@
               "t": "特性识别调试( 最新第一个)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "配置的标识层",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "uk": {
-          "file": "77b9a984b0cc",
+          "file": "b829952e107e",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -10031,20 +10191,25 @@
               "t": "Функція Визначте дебюг (незахідний перший)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Конфігурований ідентифікаційний шар",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "vi": {
-          "file": "61cd8e2c428e",
+          "file": "7570e6ecec62",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -10331,20 +10496,25 @@
               "t": "Đặc điểm nhận diện lỗi (trước tiên mới nhất)",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Cấu hình lớp nhận diện",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "zh-hk": {
-          "file": "44a47c87e4b7",
+          "file": "df7bbc5c4489",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -10631,20 +10801,25 @@
               "t": "特性辨識除錯( 最新第一 )",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "已配置的身份層",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         },
         "zh-tw": {
-          "file": "44a47c87e4b7",
+          "file": "df7bbc5c4489",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 57,
+            "machine": 58,
             "stale": 0,
-            "missing": 3
+            "missing": 0
           },
           "entries": {
             "_widgetLabel": {
@@ -10931,6 +11106,11 @@
               "t": "特性辨識除錯( 最新第一 )",
               "src": "machine",
               "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "已配置的身份層",
+              "src": "machine",
+              "h": "01ed1cf4d370"
             }
           }
         }

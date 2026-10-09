@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Zoomez avant de cliquer sur l'endroit où les fonctionnalités se trouvent. Vous obtenez une liste plus courte et plus claire.",
         helpTips3: "Rien de ce que vous cliquez ici ne change les données. Vous le lisez seulement.",
         featureIdentifyDebugNewestFirst: "Fonction Identifier le débogage (le plus récent en premier)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Calque d'identification configuré",
+        unknownError: "erreur inconnue",
+        unserializableError: "Erreur non sérialisable"
       })
     }
   }

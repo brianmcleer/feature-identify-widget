@@ -6,6 +6,7 @@ import { TextInput, TextArea, NumericInput, Switch, Label, Button, Select, Optio
 import type { IMConfig, ArcadeExpression, IdentifyLayerConfig, FieldFormat, FieldFormatType } from '../config'
 import { defaultConfig, resolveLayers, migrateLegacyLayers, createLayerConfig, normalizeUrl, WIDGET_VERSION } from '../config'
 import defaultMessages from './translations/default'
+import { __locale, __setIntl } from './i18n-t'
 
 type SettingProps = AllWidgetSettingProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
 
@@ -62,6 +63,7 @@ interface TestStatus {
 }
 
 const Setting = (props: SettingProps): React.ReactElement => {
+  __setIntl((props as any).intl)
   const { config, id, useMapWidgetIds, onSettingChange, intl } = props
   const fileInputRef = React.useRef<HTMLInputElement>(null)
   const [importStatus, setImportStatus] = React.useState('')
@@ -235,7 +237,7 @@ const Setting = (props: SettingProps): React.ReactElement => {
       const parts = [
         String(metadata?.name || nls('testUnnamed')),
         String(metadata?.geometryType || '').replace('esriGeometry', ''),
-        typeof count?.count === 'number' ? nls('testRecords').replace('{count}', count.count.toLocaleString()) : '',
+        typeof count?.count === 'number' ? nls('testRecords').replace('{count}', count.count.toLocaleString(__locale())) : '',
         nls('testElapsed').replace('{ms}', String(elapsed))
       ].filter(Boolean)
       if (!queryable && capabilities) parts.push(nls('testNoQuery'))

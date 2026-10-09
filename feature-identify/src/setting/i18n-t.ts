@@ -7,6 +7,14 @@ let intl: any = null
 /** Called by the entry component on every render. */
 export function __setIntl (i: any): void { if (i && typeof i.formatMessage === 'function') intl = i }
 
+/** Current app locale for number/date formatting; browser locale before intl is available. */
+export function __locale (): string | undefined {
+  const locale = intl && intl.locale
+  if (typeof locale !== 'string' || !locale) return undefined
+  try { return Intl.getCanonicalLocales(locale)[0] } catch (e) { return undefined }
+}
+
+
 /** App-language text for a key in translations/default.ts; English (with {values} filled) when there is none. */
 export function __t (id: string, values?: { [key: string]: any }): string {
   const msg: string = (__messages as any)[id] ?? id
@@ -35,10 +43,3 @@ export const __m: any = new Proxy(__messages as any, {
     return typeof m === 'string' ? m : v
   }
 })
-
-/** Current app locale for number/date formatting; browser locale before intl is available. */
-export function __locale (): string | undefined {
-  const locale = intl && intl.locale
-  if (typeof locale !== 'string' || !locale) return undefined
-  try { return Intl.getCanonicalLocales(locale)[0] } catch (e) { return undefined }
-}

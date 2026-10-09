@@ -74,9 +74,9 @@ System.register([], function (e) {
         helpTips2: "Zoom pred kliknutím, kde funkcie sedia blízko seba. Dostanete kratší, jasnejší zoznam.",
         helpTips3: "Nič, čo kliknete, nezmení dáta. Len to čítaš.",
         featureIdentifyDebugNewestFirst: "Funkcia Identifikovať debug (najnovší prvý)",
-        configuredIdentifyLayer: "Configured identify layer",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        configuredIdentifyLayer: "Konfigurovaná identifikačná vrstva",
+        unknownError: "neznáma chyba",
+        unserializableError: "neserializovateľná chyba"
       })
     }
   }
