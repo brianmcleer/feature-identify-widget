@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "חפש את המדריך (נסו \"לחץ\" או \"פופאפ\")",
         helpNoMatches: "שום דבר במדריך לא מתאים למילה הזאת. נסה עוד, או לפתוח את החלקים לעיל.",
         helpAnd: "וגם",
-        firstRunTitle: "New here?",
+        firstRunTitle: "חדש כאן?",
         firstRunBody: "לחץ על תכונה על המפה ופרטיה פתוח לך לקרוא.",
-        firstRunHelpLink: "פתח את המדריך",
-        firstRunDismiss: "Dismiss",
+        firstRunHelpLink: "פתח את המדריך.",
+        firstRunDismiss: "משמעת",
         helpStartTitle: "התחל כאן: שלושה צעדים",
         helpStart1: "מצא את התכונה שאתה רוצה במפה, כגון חבילה, דרך או נקודה.",
         helpStart2: "לחץ על זה פעם. תן לזה רגע בזמן שהפרטים נאספים.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "לחיצה על אותו מקום שוב מחזירה את הפרטים.",
         helpTips2: "זום לפני שאתה לוחץ על אילו תכונות יושבות יחד. אתה מקבל רשימה קצרה וברורה יותר.",
         helpTips3: "אין מה ללחוץ כאן משנה את הנתונים. אתה רק קורא את זה.",
-        featureIdentifyDebugNewestFirst: "זיהוי bug (חדש ביותר)"
+        featureIdentifyDebugNewestFirst: "זיהוי bug (חדש ביותר)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

@@ -73,7 +73,7 @@ System.register([], function (e) {
         format_percent: "Procent",
         format_date: "Data",
         format_datetime: "Data i godzina",
-        format_link: "Link",
+        format_link: "Związek",
         arcadeSection: "Wyrażenia arkadowe",
         arcadeHint: "Użyj etykiety do wyrażenia wiersza skalarnego. Pozostaw etykietę pustą, gdy Arcade zwraca pełny słownik Popup Element, taki jak {type: 'text', tekst: content}. Pełne wyrażenia wyskakujące zastępują automatycznie generowane wiersze atrybutów.",
         exprLabelPlaceholder: "Etykieta wiersza lub pusta dla pełnej zawartości wyskakującej",

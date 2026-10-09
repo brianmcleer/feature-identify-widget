@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "ابحثي عن الدليل (ابحثي عن (اللعق) أو (البوب)",
         helpNoMatches: "لا شيء في الدليل يطابق تلك الكلمة جرّبْ آخر، أَو يَفْتحُ الأقسامَ أعلاه.",
         helpAnd: "و",
-        firstRunTitle: "New here?",
+        firstRunTitle: "جديد هنا؟",
         firstRunBody: "اضغطي سمة على الخريطة وتفاصيلها مفتوحة لك لتقرأيها",
-        firstRunHelpLink: "افتح الدليل",
-        firstRunDismiss: "Dismiss",
+        firstRunHelpLink: "افتح الدليل.",
+        firstRunDismiss: "الانصراف",
         helpStartTitle: "ابدأ هنا: ثلاث خطوات",
         helpStart1: "ابحثي عن المميزة التي تريدينها على الخريطة مثل الطرد أو الطريق أو النقطة",
         helpStart2: "لعقه مرة واحدة. أعطها لحظة بينما يتم جمع التفاصيل",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "لعق نفس المكان مرة أخرى يعيد التفاصيل مباشرة.",
         helpTips2: "كبروا قبل أن تنقروا حيث تغلق المعالم لديك قائمة أقصر وأوضح",
         helpTips3: "لا شيء تضغطه هنا يغير البيانات أنت تقرأه فقط",
-        featureIdentifyDebugNewestFirst: "تحديد الهوية (الأول الجديد)"
+        featureIdentifyDebugNewestFirst: "تحديد الهوية (الأول الجديد)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

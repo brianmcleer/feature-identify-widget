@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Cari panduan (coba \"klik\" atau \"popup\")",
         helpNoMatches: "Tidak ada dalam panduan cocok kata itu. Coba yang lain, atau buka bagian di atas.",
         helpAnd: "dan",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Baru di sini?",
         firstRunBody: "Klik fitur pada peta dan rinciannya terbuka bagi Anda untuk membaca.",
         firstRunHelpLink: "Buka panduannya.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Bubarkan",
         helpStartTitle: "Mulai dari sini: tiga langkah",
         helpStart1: "Cari fitur yang Anda inginkan pada peta, seperti bingkisan, jalan atau titik.",
         helpStart2: "Klik sekali. Tunggu sebentar sementara rincian dikumpulkan.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Mengklik tempat yang sama lagi membawa rincian langsung kembali.",
         helpTips2: "Perbesar sebelum Anda mengklik di mana fitur duduk berdekatan. Kau dapat daftar yang lebih pendek dan jelas.",
         helpTips3: "Tidak ada yang Anda klik di sini mengubah data. Kau hanya membacanya.",
-        featureIdentifyDebugNewestFirst: "Fitur Identifikasi debug (pertama terbaru)"
+        featureIdentifyDebugNewestFirst: "Fitur Identifikasi debug (pertama terbaru)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

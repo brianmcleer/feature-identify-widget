@@ -15,7 +15,7 @@ System.register([], function (e) {
         partialResults: "Einige Popup-Quellen konnten nicht abgefragt werden. Erfolgreiche Ergebnisse werden immer noch gezeigt.",
         exprError: "(Ausdrucksfehler)",
         exprDefaultLabel: "Ausdruck",
-        defaultTitle: "Feature",
+        defaultTitle: "Merkmal",
         close: "Schließen",
         popupModeHint: "Klicken Sie auf die Karte. Native Map Popup Ergebnisse erscheinen zuerst und konfigurierte REST Endpunkt Ergebnisse erscheinen zuletzt.",
         popupUnavailable: "Das Karten-Popup konnte auf diesem Gerät nicht geöffnet werden, daher wird das erste Ergebnis hier angezeigt.",
@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Durchsuchen Sie den Leitfaden (versuchen Sie \"Klick\" oder \"Popup\")",
         helpNoMatches: "Nichts im Guide passt zu diesem Wort. Versuchen Sie es mit einem anderen oder öffnen Sie die obigen Abschnitte.",
         helpAnd: "und",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Neu hier?",
         firstRunBody: "Klicken Sie auf eine Funktion auf der Karte und ihre Details sind für Sie zum Lesen geöffnet.",
         firstRunHelpLink: "Öffne den Guide.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Entlassung",
         helpStartTitle: "Beginnen Sie hier: drei Schritte",
         helpStart1: "Finden Sie die gewünschte Funktion auf der Karte, z. B. ein Paket, eine Straße oder einen Punkt.",
         helpStart2: "Klicken Sie einmal darauf. Geben Sie ihm einen Moment, während die Details gesammelt werden.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Klicken Sie wieder auf die gleiche Stelle bringt die Details direkt zurück.",
         helpTips2: "Zoom in, bevor Sie klicken, wo Features dicht beieinander sitzen. Sie erhalten eine kürzere, klarere Liste.",
         helpTips3: "Nichts, was Sie hier klicken, ändert die Daten. Du liest es nur.",
-        featureIdentifyDebugNewestFirst: "Feature Identifizieren Debug (neueste zuerst)"
+        featureIdentifyDebugNewestFirst: "Feature Identifizieren Debug (neueste zuerst)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

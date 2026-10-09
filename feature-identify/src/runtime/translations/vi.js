@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Tìm hướng dẫn (hãy thử \"click\" or \"popup\")",
         helpNoMatches: "Không có gì phù hợp với từ đó. Thử cái khác, hoặc mở phần trên.",
         helpAnd: "và",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Mới đến à?",
         firstRunBody: "Hãy nhắp vào một tính năng trên bản đồ và các chi tiết của nó để bạn đọc.",
         firstRunHelpLink: "Mở sách hướng dẫn ra.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Giải tán!",
         helpStartTitle: "Bắt đầu ở đây: ba bước",
         helpStart1: "Hãy tìm mục trên bản đồ, chẳng hạn như một bưu kiện, một con đường hoặc một điểm.",
         helpStart2: "Ấn một lần. Cho nó một chút thời gian khi các chi tiết được thu thập.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Ấn vào cùng một nơi một lần nữa mang lại các chi tiết thẳng trở lại.",
         helpTips2: "Phóng to trước khi bạn nhấn vào nơi tính năng ngồi gần nhau. Bạn có một danh sách ngắn hơn, rõ ràng hơn.",
         helpTips3: "Không có gì bạn nhấp vào ở đây thay đổi dữ liệu. Anh chỉ đọc nó thôi.",
-        featureIdentifyDebugNewestFirst: "Đặc điểm nhận diện lỗi (trước tiên mới nhất)"
+        featureIdentifyDebugNewestFirst: "Đặc điểm nhận diện lỗi (trước tiên mới nhất)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

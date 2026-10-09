@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "ค้นหาคําแนะนํา (พยายาม \"คลิก\" หรือ \"พ้อพ\")",
         helpNoMatches: "ไม่มีอะไรในคู่มือที่ตรงกับคํานั้น ลอง เปิด อีก ส่วน หนึ่ง ข้าง บน.",
         helpAnd: "และ",
-        firstRunTitle: "New here?",
+        firstRunTitle: "ใหม่ที่นี่?",
         firstRunBody: "คลิกคุณสมบัติบนแผนที่ และรายละเอียดของแผนที่ เปิดให้คุณอ่านได้",
-        firstRunHelpLink: "เปิดคู่มือ",
-        firstRunDismiss: "Dismiss",
+        firstRunHelpLink: "เปิดคู่มือ.",
+        firstRunDismiss: "ไม่สนใจ",
         helpStartTitle: "เริ่มที่นี่: สามขั้นตอน",
         helpStart1: "หา จุด เด่น ที่ คุณ ต้องการ ใน แผนที่ เช่น พัสดุ, ถนน หรือ จุด.",
         helpStart2: "คลิกหนึ่งครั้ง ให้มันสักครู่ในขณะที่รายละเอียดถูกเก็บ",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "การคลิกตําแหน่งเดิมอีกครั้ง นํารายละเอียดกลับมา",
         helpTips2: "ซูมเข้าไปก่อนที่จะคลิกที่ที่คุณลักษณะนั่งใกล้กัน คุณได้รายชื่อที่สั้นกว่า ชัดเจนกว่า",
         helpTips3: "ไม่มีอะไรที่คุณคลิกที่นี่เปลี่ยนข้อมูล คุณเพียงแค่อ่านมัน",
-        featureIdentifyDebugNewestFirst: "ระบุตัวดีบั๊ก (ใหม่สุด)"
+        featureIdentifyDebugNewestFirst: "ระบุตัวดีบั๊ก (ใหม่สุด)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

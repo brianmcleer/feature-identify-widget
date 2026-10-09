@@ -25,11 +25,11 @@ System.register([], function (e) {
         helpIntro: "機能識別は、マップをクリックするかどうかについてあなたに知らせます。",
         helpSearchPlaceholder: "ガイドを検索(「クリック」または「ポップアップ」)",
         helpNoMatches: "ガイドがその単語と一致するわけではありません。 別のセクションを試し、または上記のセクションを開きます。",
-        helpAnd: "and",
-        firstRunTitle: "New here?",
+        helpAnd: "および",
+        firstRunTitle: "詳しくはこちら",
         firstRunBody: "地図上の機能をクリックすると、その詳細が表示されます。",
         firstRunHelpLink: "ガイドを開きます。",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "免責事項",
         helpStartTitle: "ここから: 3 つのステップ",
         helpStart1: "パーセル、道路、ポイントなどのマップ上で必要な機能を見つけます。",
         helpStart2: "一度クリックしてください。 詳細が収集される間、その瞬間を与えます。",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "同じ場所をクリックすると、詳細をまっすぐに戻すことができます。",
         helpTips2: "機能が閉じる場所をクリックする前にズームインします。 あなたはより短い、より明確にリストを取得します。",
         helpTips3: "ここをクリックしてデータを変更することはできません。 読むだけです。",
-        featureIdentifyDebugNewestFirst: "特徴 デバッグを識別して下さい(最初に新しい)"
+        featureIdentifyDebugNewestFirst: "特徴 デバッグを識別して下さい(最初に新しい)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

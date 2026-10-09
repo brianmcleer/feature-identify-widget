@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Sök guiden (försök \"klicka\" eller \"popup\")",
         helpNoMatches: "Ingenting i guiden matchar det ordet. Prova en annan, eller öppna avsnitten ovan.",
         helpAnd: "och",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Ny här?",
         firstRunBody: "Klicka på en funktion på kartan och dess detaljer öppna för dig att läsa.",
         firstRunHelpLink: "Öppna guiden.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Avfärda",
         helpStartTitle: "Börja här: tre steg",
         helpStart1: "Hitta den funktion du vill ha på kartan, till exempel ett paket, en väg eller en punkt.",
         helpStart2: "Klicka på den en gång. Ge det ett ögonblick medan detaljerna samlas in.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Klicka på samma plats igen ger detaljerna rakt tillbaka.",
         helpTips2: "Zooma in innan du klickar på var funktionerna sitter nära varandra. Du får en kortare, tydligare lista.",
         helpTips3: "Inget du klickar här ändrar data. Du läser det bara.",
-        featureIdentifyDebugNewestFirst: "Funktion Identify debug (nyaste först)"
+        featureIdentifyDebugNewestFirst: "Funktion Identify debug (nyaste först)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

@@ -21,15 +21,15 @@ System.register([], function (e) {
         popupUnavailable: "De kaartpopup kon niet geopend worden op dit apparaat, dus het eerste resultaat wordt hier getoond.",
         copyLog: "Logboek kopiëren",
         clearLog: "Wissen",
-        helpTitle: "Help",
+        helpTitle: "Hulp",
         helpIntro: "Functie Identificeren vertelt u over wat u klikt op de kaart.",
         helpSearchPlaceholder: "De hulplijn doorzoeken (probeer \"klik\" of \"popup\")",
         helpNoMatches: "Niets in de gids komt overeen met dat woord. Probeer een andere, of open de bovenstaande secties.",
         helpAnd: "en",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nieuw hier?",
         firstRunBody: "Klik op een functie op de kaart en de details openen voor u om te lezen.",
         firstRunHelpLink: "Open de gids.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Ingetrokken",
         helpStartTitle: "Begin hier: drie stappen",
         helpStart1: "Vind de functie die u wilt op de kaart, zoals een pakket, een weg of een punt.",
         helpStart2: "Klik er één keer op. Geef het even de tijd om de details te verzamelen.",
@@ -59,7 +59,7 @@ System.register([], function (e) {
         helpSelectionHighlight: "De functie die u leest wordt beschreven op de kaart, zodat u kunt zien welke het is.",
         helpSelectionOther: "Andere delen van de app, zoals een tabel, kunnen volgen en dezelfde plaat tonen.",
         helpSelectionNoMove: "De kaart beweegt of verandert de schaal niet zelf. Gebruik de zoomactie in de details wanneer u wilt dat de kaart erheen gaat.",
-        helpTroubleTitle: "Als er iets mis lijkt.",
+        helpTroubleTitle: "Als er iets mis lijkt",
         helpTroubleNoMap: "Het widget zegt dat er geen kaart is geselecteerd: het is nog niet verbonden met een kaart. Vraag de persoon die de app heeft gebouwd om de kaart in de widget-instellingen te kiezen.",
         helpTroubleNothing: "Er gebeurt niets als u op de kaart klikt: het widget is gesloten of niet op deze schermgrootte geplaatst. Open Feature Identifier van de app, klik vervolgens weer op de kaart.",
         helpTroubleMissed: "Niets wordt gevonden waar je weet dat een functie is: de klik landde net van de rand. Zoom in en klik opnieuw, dichter bij het midden van de functie.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Door weer op dezelfde plaats te klikken komen de details terug.",
         helpTips2: "Zoom in voordat u klikt waar functies zitten dicht bij elkaar. Je krijgt een kortere, duidelijkere lijst.",
         helpTips3: "Niets wat je hier klikt verandert de gegevens. Je leest het alleen maar.",
-        featureIdentifyDebugNewestFirst: "Functie Identificeer debug (nieuwste eerste)"
+        featureIdentifyDebugNewestFirst: "Functie Identificeer debug (nieuwste eerste)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

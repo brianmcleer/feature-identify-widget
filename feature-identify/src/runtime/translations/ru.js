@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Поиск в руководстве (попробуйте «click» или «popup»)",
         helpNoMatches: "Ничто в руководстве не соответствует этому слову. Попробуйте другой или откройте разделы выше.",
         helpAnd: "и",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Здесь новый?",
         firstRunBody: "Нажмите на функцию на карте, и ее детали откроются для чтения.",
         firstRunHelpLink: "Откройте проводник.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Увольнение",
         helpStartTitle: "Начните здесь: три шага",
         helpStart1: "Найдите нужную вам функцию на карте, такую как посылка, дорога или точка.",
         helpStart2: "Нажмите один раз. Дайте ему время, пока будут собраны детали.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Нажатие на одно и то же место снова возвращает детали.",
         helpTips2: "Введите Zoom, прежде чем щелкнуть, где функции находятся близко друг к другу. Вы получите более короткий и четкий список.",
         helpTips3: "Ничто из того, что вы нажимаете здесь, не изменяет данные. Вы только читаете его.",
-        featureIdentifyDebugNewestFirst: "Функция Identify debug (сначала новая)"
+        featureIdentifyDebugNewestFirst: "Функция Identify debug (сначала новая)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

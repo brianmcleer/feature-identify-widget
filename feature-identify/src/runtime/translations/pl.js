@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Szukaj przewodnika (spróbuj \"kliknij\" lub \"popup\")",
         helpNoMatches: "Nic w przewodniku nie pasuje do tego słowa. Spróbuj innego, albo otwórz powyższe sekcje.",
         helpAnd: "i aplikacja",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nowy?",
         firstRunBody: "Kliknij funkcję na mapie i jej szczegóły otwarte, aby przeczytać.",
         firstRunHelpLink: "Otwórz przewodnik.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Rozejść się",
         helpStartTitle: "Zacznij tutaj: trzy kroki",
         helpStart1: "Znajdź funkcję chcesz na mapie, takich jak paczka, droga lub punkt.",
         helpStart2: "Kliknij raz. Daj mu chwilę na zebranie szczegółów.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Szczegóły pokazują widżet zamiast mapy: okno mapy nie mogło się otworzyć na tym urządzeniu. Zdarza się to na niektórych telefonach, a pierwszy wynik jest pokazany w widżecie.",
         helpTroubleDiagnostic: "Czarne pudełko małego tekstu siedzi na dole ekranu: widok diagnostyczny jest włączony. Poproś osobę, która zbudowała aplikację, aby wyłączyła ją w ustawieniach widgetu.",
         helpTroubleContact: "Nadal utknąłeś? Skontaktuj się z Wydziałem GIS i wspomnij o widżecie identyfikacji funkcji i tej aplikacji.",
-        helpTipsTitle: "Dobrze wiedzieć.",
+        helpTipsTitle: "Dobrze wiedzieć",
         helpTips1: "Kliknięcie w to samo miejsce ponownie przywraca szczegóły.",
         helpTips2: "Powiększ zanim klikniesz, gdzie funkcje siedzą blisko siebie. Masz krótszą, jaśniejszą listę.",
         helpTips3: "Nic tutaj nie zmienia danych. Tylko czytasz.",
-        featureIdentifyDebugNewestFirst: "Cecha Identyfikacja debug (najnowszy pierwszy)"
+        featureIdentifyDebugNewestFirst: "Cecha Identyfikacja debug (najnowszy pierwszy)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

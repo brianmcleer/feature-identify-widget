@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "搜索指南(尝试“ 点击” 或“ 弹出” )",
         helpNoMatches: "指南中没有任何内容与这个词相符。 尝试另一个,或者打开上面的部分。",
         helpAnd: "和",
-        firstRunTitle: "New here?",
+        firstRunTitle: "新来的?",
         firstRunBody: "单击地图上的特性及其细节打开供您阅读。",
         firstRunHelpLink: "开导.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "开除",
         helpStartTitle: "从这里开始: 三步",
         helpStart1: "在地图上查找您想要的特性, 如包裹、 道路或点 。",
         helpStart2: "点击一次。 请稍候详细情况",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "再次点击同一地点,可以直接返回细节。",
         helpTips2: "在单击特性相近之处之前放大。 你得到一个更短,更清晰的清单。",
         helpTips3: "您点击这里不会改变数据 。 你只读它。",
-        featureIdentifyDebugNewestFirst: "特性识别调试( 最新第一个)"
+        featureIdentifyDebugNewestFirst: "特性识别调试( 最新第一个)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

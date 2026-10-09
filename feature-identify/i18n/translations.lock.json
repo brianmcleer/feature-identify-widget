@@ -3,8 +3,8 @@
   "generator": "exb-i18n-kit",
   "parts": {
     "runtime": {
-      "en": "ab7684183c08",
-      "keys": 71,
+      "en": "e0c1d0a1f305",
+      "keys": 74,
       "hashes": {
         "_widgetLabel": "62edad677097",
         "clickHint": "b07b3297c210",
@@ -76,20 +76,23 @@
         "helpTips1": "e445abe53312",
         "helpTips2": "f2c4f173acbd",
         "helpTips3": "d0dc939214e6",
-        "featureIdentifyDebugNewestFirst": "8b8f06b8dd39"
+        "featureIdentifyDebugNewestFirst": "8b8f06b8dd39",
+        "configuredIdentifyLayer": "01ed1cf4d370",
+        "unknownError": "af6321ca7a8b",
+        "unserializableError": "76e73551597a"
       },
       "locales": {
         "ar": {
-          "file": "4048d285a2c3",
+          "file": "65d97b4947cf",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -167,25 +170,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "لا شيء في الدليل يطابق تلك الكلمة جرّبْ آخر، أَو يَفْتحُ الأقسامَ أعلاه.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "اضغطي سمة على الخريطة وتفاصيلها مفتوحة لك لتقرأيها",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "افتح الدليل",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "ابدأ هنا: ثلاث خطوات",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "ابحثي عن المميزة التي تريدينها على الخريطة مثل الطرد أو الطريق أو النقطة",
@@ -327,11 +315,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "إذا كان هناك شيء ما يبدو خاطئا",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "تقول النواة أنه لم يتم اختيار الخريطة بعد إسأل الشخص الذي بنى تطبيقاً لاختيار الخريطة في مواضع النوافذ",
               "src": "machine",
@@ -377,11 +360,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "من الجيد معرفة",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "لعق نفس المكان مرة أخرى يعيد التفاصيل مباشرة.",
               "src": "machine",
@@ -405,16 +383,16 @@
           }
         },
         "bg": {
-          "file": "51ee2cbf4807",
+          "file": "495e40a49be7",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -492,25 +470,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Нищо в ръководството не съвпада с тази дума. Опитайте друг, или отвори секциите по-горе.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Кликнете върху функция на картата и нейните детайли се отварят за четене.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Отвори гидът.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Започнете от тук: три стъпки",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Намерете функцията, която искате на картата, като колет, път или точка.",
@@ -652,11 +615,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ако нещо не е наред",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "джаджата казва, че не е избрана карта: тя все още не е свързана към карта. Попитайте човека, който е построил приложението, за да изберете картата в настройките на джаджата.",
               "src": "machine",
@@ -702,11 +660,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Добре е да го знам.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Кликването на същото място отново връща данните обратно.",
               "src": "machine",
@@ -730,30 +683,30 @@
           }
         },
         "bs": {
-          "file": "628f54a52058",
+          "file": "b3eb04b54792",
           "counts": {
-            "esri": 9,
+            "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
             "machine": 0,
             "stale": 0,
-            "missing": 62
+            "missing": 67
           },
           "entries": {}
         },
         "ca": {
-          "file": "50d5f8412317",
+          "file": "8bc16bce4a21",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -831,25 +784,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Res en la guia coincideix amb aquesta paraula. Proveu-ne una altra, o obriu les seccions de dalt.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Feu clic sobre el mapa i els seus detalls oberts per llegir.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Obre la guia.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Comença aquí: tres passes",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Trobeu la característica que voleu en el mapa, com ara un paquet, una carretera o un punt.",
@@ -991,11 +929,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Si alguna cosa sembla malament",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "L' estri diu que no hi ha mapa seleccionat: encara no s' ha unit a un mapa. Pregunta a la persona que ha construït l' aplicació per a triar el mapa a l' arranjament de l' estri.",
               "src": "machine",
@@ -1041,11 +974,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Bo saber-ho",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "En clicar el mateix lloc un altre cop els detalls es tornen a fer.",
               "src": "machine",
@@ -1069,16 +997,16 @@
           }
         },
         "cs": {
-          "file": "71a5493dac88",
+          "file": "971afb3e9a1b",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -1156,25 +1084,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nic v průvodci neodpovídá tomu slovu. Zkuste jiný, nebo otevřete sekce výše.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klikněte na funkci na mapě a její podrobnosti otevřít pro vás číst.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Otevři průvodce.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Začněte zde: tři kroky",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Najít funkci, kterou chcete na mapě, jako je balíček, silnice nebo bod.",
@@ -1316,11 +1229,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Pokud něco vypadá špatně",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget říká, že není vybrána žádná mapa: ještě nebyla připojena k mapě. Zeptejte se osoby, která sestrojila aplikaci vybrat mapu v nastavení widget.",
               "src": "machine",
@@ -1366,11 +1274,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobré vědět.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Kliknutí na stejné místo znovu přináší detaily přímo zpět.",
               "src": "machine",
@@ -1394,16 +1297,16 @@
           }
         },
         "da": {
-          "file": "513e6ac1480a",
+          "file": "ff2246a1894c",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -1481,25 +1384,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Intet i guiden matcher det ord. Prøv en anden, eller åbn afsnittene ovenfor.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klik på en funktion på kortet og dens detaljer åbne for dig at læse.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Åbn guiden.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Start her: tre trin",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Find den funktion, du ønsker på kortet, såsom en pakke, en vej eller et punkt.",
@@ -1641,11 +1529,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Hvis noget ser forkert ud",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Kontrollen siger, at der ikke er valgt noget kort: det er endnu ikke blevet føjet til et kort. Spørg den person, der byggede appen til at vælge kortet i widget indstillinger.",
               "src": "machine",
@@ -1691,11 +1574,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Godt at vide",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Ved at klikke det samme sted igen bringer detaljerne lige tilbage.",
               "src": "machine",
@@ -1719,16 +1597,16 @@
           }
         },
         "de": {
-          "file": "67da791c5850",
+          "file": "f309b919af85",
           "counts": {
-            "esri": 9,
+            "esri": 13,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 58,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -1781,6 +1659,11 @@
               "src": "machine",
               "h": "de7560c21d11"
             },
+            "defaultTitle": {
+              "t": "Merkmal",
+              "src": "machine",
+              "h": "ad565d9d01d0"
+            },
             "popupModeHint": {
               "t": "Klicken Sie auf die Karte. Native Map Popup Ergebnisse erscheinen zuerst und konfigurierte REST Endpunkt Ergebnisse erscheinen zuletzt.",
               "src": "machine",
@@ -1806,25 +1689,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nichts im Guide passt zu diesem Wort. Versuchen Sie es mit einem anderen oder öffnen Sie die obigen Abschnitte.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klicken Sie auf eine Funktion auf der Karte und ihre Details sind für Sie zum Lesen geöffnet.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Öffne den Guide.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Beginnen Sie hier: drei Schritte",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Finden Sie die gewünschte Funktion auf der Karte, z. B. ein Paket, eine Straße oder einen Punkt.",
@@ -1966,11 +1834,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Wenn etwas falsch aussieht",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Das Widget sagt, dass keine Karte ausgewählt ist: Es wurde noch nicht mit einer Karte verbunden. Bitten Sie die Person, die die App erstellt hat, die Karte in den Widget-Einstellungen auszuwählen.",
               "src": "machine",
@@ -2016,11 +1879,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Gut zu wissen",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klicken Sie wieder auf die gleiche Stelle bringt die Details direkt zurück.",
               "src": "machine",
@@ -2044,16 +1902,16 @@
           }
         },
         "el": {
-          "file": "1a38e0bae038",
+          "file": "12b8bc463a9d",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -2131,25 +1989,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Τίποτα στον οδηγό δεν ταιριάζει με αυτή τη λέξη. Δοκιμάστε ένα άλλο, ή ανοίξτε τα τμήματα παραπάνω.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Κάντε κλικ σε ένα χαρακτηριστικό στο χάρτη και τα στοιχεία του ανοιχτά για να το διαβάσετε.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Άνοιξε τον οδηγό.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Εκκίνηση εδώ: τρία βήματα",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Βρείτε το χαρακτηριστικό που θέλετε στο χάρτη, όπως ένα δέμα, ένα δρόμο ή ένα σημείο.",
@@ -2291,11 +2134,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Αν κάτι φαίνεται λάθος",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Το γραφικό συστατικό λέει ότι δεν έχει επιλεγεί χάρτης: δεν έχει συνδεθεί ακόμα σε χάρτη. Ρωτήστε το άτομο που κατασκεύασε την εφαρμογή για να επιλέξετε το χάρτη στις ρυθμίσεις widget.",
               "src": "machine",
@@ -2341,11 +2179,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Χαίρομαι που το μαθαίνω.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Κάνοντας κλικ στο ίδιο μέρος ξανά φέρνει τις λεπτομέρειες κατευθείαν πίσω.",
               "src": "machine",
@@ -2369,16 +2202,16 @@
           }
         },
         "es": {
-          "file": "7771575efc27",
+          "file": "289ac1d2ab23",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -2456,25 +2289,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nada en la guía coincide con esa palabra. Pruebe otro, o abra las secciones anteriores.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Haga clic en una característica en el mapa y sus detalles abiertos para que usted lea.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Abre el guía.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Empieza aquí: tres pasos",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Encuentra la característica que quieres en el mapa, como un paquete, una carretera o un punto.",
@@ -2616,11 +2434,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Si algo se ve mal",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "El widget dice que no hay mapa seleccionado: aún no se ha unido a un mapa. Pregúntele a la persona que construyó la aplicación para elegir el mapa en la configuración del widget.",
               "src": "machine",
@@ -2666,11 +2479,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Es bueno saberlo.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Hacer clic en el mismo lugar de nuevo trae los detalles directamente hacia atrás.",
               "src": "machine",
@@ -2694,16 +2502,16 @@
           }
         },
         "et": {
-          "file": "68f8fa84424d",
+          "file": "cbc9d215c716",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -2781,25 +2589,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Mitte miski juhendis ei klapi selle sõnaga. Proovige teist või avage ülaltoodud lõigud.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klõpsake kaardil olevat funktsiooni ja selle üksikasju, mis on teile lugemiseks avatud.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Tee teejuht lahti.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Alusta siit: kolm sammu",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Leidke kaardilt soovitud funktsioon, näiteks pakk, tee või punkt.",
@@ -2941,11 +2734,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Kui midagi on valesti",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Vidin ütleb, et kaarti pole valitud: seda pole veel kaardiga ühendatud. Paluge rakenduse ehitajal valida vidina seadetes kaart.",
               "src": "machine",
@@ -2991,11 +2779,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Hea teada",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klõps samale kohale toob üksikasjad tagasi.",
               "src": "machine",
@@ -3019,16 +2802,16 @@
           }
         },
         "fi": {
-          "file": "b37c886da74d",
+          "file": "85ef33a65d3e",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -3106,25 +2889,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Mikään oppaassa ei vastaa tuota sanaa. Kokeile toista, tai avaa kohdat yllä.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Napsauta kartan ominaisuutta ja sen yksityiskohtia voit lukea.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Avaa opas.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Aloita tästä: kolme vaihetta",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Etsi haluamasi ominaisuus kartalta, kuten paketti, tie tai piste.",
@@ -3266,11 +3034,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Jos jokin näyttää väärältä.",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget sanoo, ettei karttaa ole valittu: sitä ei ole vielä liitetty karttaan. Pyydä sovelluksen rakentajaa valitsemaan kartta widget-asetuksissa.",
               "src": "machine",
@@ -3316,11 +3079,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Hyvä tietää",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klikkaaminen saman paikan uudelleen tuo yksityiskohdat suoraan takaisin.",
               "src": "machine",
@@ -3344,16 +3102,16 @@
           }
         },
         "fr": {
-          "file": "db40078dcc0e",
+          "file": "e0ede058ca51",
           "counts": {
-            "esri": 9,
+            "esri": 13,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 58,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -3406,6 +3164,11 @@
               "src": "machine",
               "h": "de7560c21d11"
             },
+            "exprDefaultLabel": {
+              "t": "Expression",
+              "src": "machine",
+              "h": "97b695b9b9cf"
+            },
             "popupModeHint": {
               "t": "Cliquez sur la carte. Les résultats contextuels de la carte native apparaissent en premier, et les résultats finals de REST configurés apparaissent en dernier.",
               "src": "machine",
@@ -3431,25 +3194,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Rien dans le guide ne correspond à ce mot. Essayez un autre, ou ouvrez les sections ci-dessus.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Cliquez sur une fonctionnalité sur la carte et ses détails ouverts pour que vous puissiez la lire.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Ouvrez le guide.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Commencez ici: trois étapes",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Trouvez la fonction que vous voulez sur la carte, comme un colis, une route ou un point.",
@@ -3591,11 +3339,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Si quelque chose ne va pas",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Le widget dit qu'aucune carte n'est sélectionnée : il n'a pas encore été joint à une carte. Demandez à la personne qui a construit l'application de choisir la carte dans les paramètres du widget.",
               "src": "machine",
@@ -3641,11 +3384,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Bon à savoir",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Le fait de cliquer sur le même endroit ramène les détails directement en arrière.",
               "src": "machine",
@@ -3669,16 +3407,16 @@
           }
         },
         "he": {
-          "file": "b4c54cfe0318",
+          "file": "5ffee483ec14",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -3756,25 +3494,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "שום דבר במדריך לא מתאים למילה הזאת. נסה עוד, או לפתוח את החלקים לעיל.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "לחץ על תכונה על המפה ופרטיה פתוח לך לקרוא.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "פתח את המדריך",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "התחל כאן: שלושה צעדים",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "מצא את התכונה שאתה רוצה במפה, כגון חבילה, דרך או נקודה.",
@@ -3916,11 +3639,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "אם משהו נראה לא בסדר",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "הווידג'ט אומר שאף מפה לא נבחרה: היא עדיין לא הצטרפה למפה. שאל את האדם שבנו את האפליקציה כדי לבחור את המפה בהגדרות הווידג'ט.",
               "src": "machine",
@@ -3966,11 +3684,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "טוב לדעת",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "לחיצה על אותו מקום שוב מחזירה את הפרטים.",
               "src": "machine",
@@ -3994,30 +3707,30 @@
           }
         },
         "hr": {
-          "file": "628f54a52058",
+          "file": "b3eb04b54792",
           "counts": {
-            "esri": 9,
+            "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
             "machine": 0,
             "stale": 0,
-            "missing": 62
+            "missing": 67
           },
           "entries": {}
         },
         "hu": {
-          "file": "1f2210ff1884",
+          "file": "9bc7a89aa26a",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -4095,25 +3808,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "A kalauzban semmi sem egyezik ezzel a szóval. Próbálja meg egy másik, vagy nyissa ki a fenti szakaszok.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Kattintson egy funkció a térképen, és a részletek nyitva áll, hogy olvassa el.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Nyisd ki az útmutatót.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Kezdjük itt: három lépés",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Keresse meg a kívánt funkciót a térképen, például egy csomagot, egy utat vagy egy pontot.",
@@ -4255,11 +3953,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ha valami nem stimmel",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "A widget azt mondja, hogy nincs kijelölve térkép: még nem csatlakozott a térképhez. Kérje meg az alkalmazót, hogy válassza ki a térképet a widget beállításokban.",
               "src": "machine",
@@ -4305,11 +3998,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Jó tudni.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Ugyanarra a helyre kattintva a részletek egyenesen visszavezetnek.",
               "src": "machine",
@@ -4333,16 +4021,16 @@
           }
         },
         "id": {
-          "file": "d6b46f8b7ad2",
+          "file": "b29c73b1402c",
           "counts": {
-            "esri": 8,
-            "esri-check": 1,
+            "esri": 14,
+            "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -4420,25 +4108,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Tidak ada dalam panduan cocok kata itu. Coba yang lain, atau buka bagian di atas.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klik fitur pada peta dan rinciannya terbuka bagi Anda untuk membaca.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Buka panduannya.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Mulai dari sini: tiga langkah",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Cari fitur yang Anda inginkan pada peta, seperti bingkisan, jalan atau titik.",
@@ -4580,11 +4253,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Jika ada sesuatu yang salah",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget mengatakan tidak ada peta yang dipilih: peta belum bergabung dengan peta. Tanyakan pada orang yang membuat aplikasi untuk memilih peta pada pengaturan widget.",
               "src": "machine",
@@ -4630,11 +4298,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Baik untuk mengetahui",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Mengklik tempat yang sama lagi membawa rincian langsung kembali.",
               "src": "machine",
@@ -4658,16 +4321,16 @@
           }
         },
         "it": {
-          "file": "004b32338f84",
+          "file": "453c09a353fe",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -4745,25 +4408,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Niente nella guida corrisponde a quella parola. Prova un altro, o apri le sezioni sopra.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Fare clic su una funzione sulla mappa e i suoi dettagli aperti per leggere.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Apri la guida.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Inizia qui: tre passi",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Trovare la funzione che si desidera sulla mappa, come un pacco, una strada o un punto.",
@@ -4905,11 +4553,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Se qualcosa sembra sbagliato",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Il widget dice che nessuna mappa è selezionata: non è ancora stata inserita in una mappa. Chiedi alla persona che ha costruito l'app di scegliere la mappa nelle impostazioni del widget.",
               "src": "machine",
@@ -4955,11 +4598,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Buono a sapersi",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Fare clic sullo stesso posto riporta nuovamente i dettagli.",
               "src": "machine",
@@ -4983,16 +4621,16 @@
           }
         },
         "ja": {
-          "file": "978ad09cb90c",
+          "file": "4722809d492e",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -5070,25 +4708,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "ガイドがその単語と一致するわけではありません。 別のセクションを試し、または上記のセクションを開きます。",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "地図上の機能をクリックすると、その詳細が表示されます。",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "ガイドを開きます。",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "ここから: 3 つのステップ",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "パーセル、道路、ポイントなどのマップ上で必要な機能を見つけます。",
@@ -5230,11 +4853,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "何かが間違っている",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "ウィジェットはマップが選択されていないと言います。まだマップに参加していません。 ウィジェットの設定で地図を拾うためにアプリをビルドした人が尋ねます。",
               "src": "machine",
@@ -5280,11 +4898,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "よく知る",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "同じ場所をクリックすると、詳細をまっすぐに戻すことができます。",
               "src": "machine",
@@ -5308,16 +4921,16 @@
           }
         },
         "ko": {
-          "file": "567904ff8889",
+          "file": "e2b8dcc95bdd",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -5395,25 +5008,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "가이드의 아무것도 그 단어 일치. 다른 시도, 또는 위의 섹션을 엽니 다.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "지도에 대한 기능을 클릭하고 세부 정보를 읽을 수 있습니다.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "자주 묻는 질문",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "여기에 시작: 세 단계",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "소포, 도로 또는 지점과 같은지도에서 원하는 기능을 찾습니다.",
@@ -5555,11 +5153,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "뭔가 잘못되었는지",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "위젯은지도가 선택되지 않습니다 :지도에 아직 가입되지 않았습니다. 앱을 구축 한 사람이 위젯 설정에서지도를 선택하도록 요청하십시오.",
               "src": "machine",
@@ -5605,11 +5198,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "잘 알고",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "같은 장소를 다시 클릭하여 세부 정보를 곧 다시 가져옵니다.",
               "src": "machine",
@@ -5633,16 +5221,16 @@
           }
         },
         "lt": {
-          "file": "904cbd6c9870",
+          "file": "f0da3e7205e9",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -5720,25 +5308,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Vadove nėra nieko, kas atitiktų šį žodį. Pabandykite kitą, arba atidaryti skyrių aukščiau.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Paspauskite ant žemėlapio funkciją ir jos detales atvira jums skaityti.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Atidaryk gidą.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Pradėti čia: trys žingsniai",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Rasti funkciją norite žemėlapyje, pavyzdžiui, siuntinys, kelias ar taškas.",
@@ -5880,11 +5453,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Jei kas nors atrodo blogai",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Valdiklis sako, kad žemėlapis nėra pasirinktas: jis dar nebuvo prijungtas prie žemėlapio. Paprašykite asmens, kuris sukūrė programą pasirinkti žemėlapį valdikliui nustatymus.",
               "src": "machine",
@@ -5930,11 +5498,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Gera žinoti",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Paspaudus tą pačią vietą vėl atneša detales tiesiai atgal.",
               "src": "machine",
@@ -5958,16 +5521,16 @@
           }
         },
         "lv": {
-          "file": "eeab1a3594e5",
+          "file": "f1307d7d2d44",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -6045,25 +5608,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nekas ceļvedī neatbilst šim vārdam. Mēģiniet citu, vai atvērt sadaļas iepriekš.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Noklikšķiniet uz funkciju kartē un tās detaļas atvērts, lai jūs varētu lasīt.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Atveriet ceļvedi.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Sākt šeit: trīs soļi",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Atrast funkciju vēlaties kartē, piemēram, paku, ceļu vai punktu.",
@@ -6205,11 +5753,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ja kaut kas izskatās nepareizi",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Logdaļa saka, ka nav izvēlēta karte: tā vēl nav pievienota kartei. Palūdziet personai, kas izveidoja lietotni, izvēlēties karti logdaļu uzstādījumos.",
               "src": "machine",
@@ -6255,11 +5798,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Labi zināt",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Noklikšķinot uz tās pašas vietas, informācija atkal atgriežas.",
               "src": "machine",
@@ -6283,16 +5821,16 @@
           }
         },
         "no": {
-          "file": "b00a4c57b270",
+          "file": "e8b24bec0f8c",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -6370,25 +5908,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ingenting i guiden stemmer med det ordet. Prøv en annen, eller åpne seksjonene ovenfor.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klikk på en funksjon på kartet og dens detaljer åpne for deg å lese.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Åpne guiden.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Start her: 3 trinn",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Finn funksjonen du vil ha på kartet, for eksempel en pakke, en vei eller et punkt.",
@@ -6530,11 +6053,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Hvis noe ser galt ut",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widgeten sier ingen kart er valgt: den har ikke blitt koblet til et kart ennå. Spør personen som bygget appen for å velge kartet i widgetinnstillingene.",
               "src": "machine",
@@ -6580,11 +6098,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Godt å vite",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Hvis du klikker samme sted igjen, gir du detaljene rett tilbake.",
               "src": "machine",
@@ -6608,16 +6121,16 @@
           }
         },
         "nl": {
-          "file": "578a9688fa61",
+          "file": "9045e14a58cd",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -6695,25 +6208,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Niets in de gids komt overeen met dat woord. Probeer een andere, of open de bovenstaande secties.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klik op een functie op de kaart en de details openen voor u om te lezen.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Open de gids.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Begin hier: drie stappen",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Vind de functie die u wilt op de kaart, zoals een pakket, een weg of een punt.",
@@ -6855,11 +6353,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Als er iets mis lijkt.",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Het widget zegt dat er geen kaart is geselecteerd: het is nog niet verbonden met een kaart. Vraag de persoon die de app heeft gebouwd om de kaart in de widget-instellingen te kiezen.",
               "src": "machine",
@@ -6905,11 +6398,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Goed om te weten",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Door weer op dezelfde plaats te klikken komen de details terug.",
               "src": "machine",
@@ -6933,16 +6421,16 @@
           }
         },
         "pl": {
-          "file": "866337c91d59",
+          "file": "2c0bea33a829",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -7020,25 +6508,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nic w przewodniku nie pasuje do tego słowa. Spróbuj innego, albo otwórz powyższe sekcje.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Kliknij funkcję na mapie i jej szczegóły otwarte, aby przeczytać.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Otwórz przewodnik.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Zacznij tutaj: trzy kroki",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Znajdź funkcję chcesz na mapie, takich jak paczka, droga lub punkt.",
@@ -7180,11 +6653,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Jeśli coś wygląda źle",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget mówi, że nie wybrano mapy: nie została ona jeszcze połączona z mapą. Poproś osobę, która zbudowała aplikację, aby wybrała mapę w ustawieniach widgetu.",
               "src": "machine",
@@ -7230,11 +6698,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobrze wiedzieć.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Kliknięcie w to samo miejsce ponownie przywraca szczegóły.",
               "src": "machine",
@@ -7258,16 +6721,16 @@
           }
         },
         "pt-br": {
-          "file": "b7e379752877",
+          "file": "0253eb080a3b",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -7345,25 +6808,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nada no guia combina com essa palavra. Tente outro, ou abra as seções acima.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Clique em um recurso no mapa e seus detalhes abertos para você ler.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Abra o guia.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Comece aqui: três passos",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Encontre o recurso que você quer no mapa, como um pacote, uma estrada ou um ponto.",
@@ -7505,11 +6953,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Se algo parecer errado",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "O widget diz que nenhum mapa está selecionado: ainda não foi unido a um mapa. Pergunte à pessoa que construiu o aplicativo para escolher o mapa nas configurações do widget.",
               "src": "machine",
@@ -7555,11 +6998,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Bom saber.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Clicar no mesmo lugar de novo traz os detalhes de volta.",
               "src": "machine",
@@ -7583,16 +7021,16 @@
           }
         },
         "pt-pt": {
-          "file": "d8598055a20a",
+          "file": "c5b0d32f7b10",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -7670,25 +7108,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nada no guia corresponde a essa palavra. Tente outro, ou abra as seções acima.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Clique em um recurso no mapa e seus detalhes abertos para você ler.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Abra o guia.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Comece aqui: três passos",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Encontre o recurso que deseja no mapa, como um pacote, uma estrada ou um ponto.",
@@ -7830,11 +7253,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Se algo parecer errado",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "O widget diz que nenhum mapa está selecionado: ele ainda não foi unido a um mapa. Pergunte à pessoa que construiu o aplicativo para escolher o mapa nas configurações do widget.",
               "src": "machine",
@@ -7880,11 +7298,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "É bom saber.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Clicar no mesmo lugar novamente traz os detalhes de volta.",
               "src": "machine",
@@ -7908,16 +7321,16 @@
           }
         },
         "ro": {
-          "file": "02df23973f5d",
+          "file": "408bdcfbc977",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -7995,25 +7408,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nimic din ghid nu se potriveşte cu acest cuvânt. Încearcă altul, sau deschide secţiunile de mai sus.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Faceţi clic pe o caracteristică de pe hartă şi detaliile sale deschise pentru a citi.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Deschide ghidul.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Începe aici: trei pași",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Găsiți caracteristica pe care doriți pe hartă, cum ar fi un pachet, un drum sau un punct.",
@@ -8155,11 +7553,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Dacă ceva nu arată bine",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget-ul spune că nu este selectată nicio hartă: nu a fost încă conectată la o hartă. Întreabă persoana care a construit aplicația pentru a alege harta în setările widget.",
               "src": "machine",
@@ -8205,11 +7598,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "E bine de ştiut.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Faceți clic din nou același loc aduce detaliile înapoi.",
               "src": "machine",
@@ -8233,16 +7621,16 @@
           }
         },
         "ru": {
-          "file": "3872c3093379",
+          "file": "b74da994a575",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -8320,25 +7708,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ничто в руководстве не соответствует этому слову. Попробуйте другой или откройте разделы выше.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Нажмите на функцию на карте, и ее детали откроются для чтения.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Откройте проводник.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Начните здесь: три шага",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Найдите нужную вам функцию на карте, такую как посылка, дорога или точка.",
@@ -8480,11 +7853,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Если что-то выглядит неправильно",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Виджет говорит, что карта не выбрана: она еще не присоединена к карте. Попросите человека, который создал приложение, выбрать карту в настройках виджета.",
               "src": "machine",
@@ -8530,11 +7898,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Хорошо знать",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Нажатие на одно и то же место снова возвращает детали.",
               "src": "machine",
@@ -8558,16 +7921,16 @@
           }
         },
         "sk": {
-          "file": "750cb1bd0bfc",
+          "file": "3592fb3f5056",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -8645,25 +8008,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nič v sprievodcovi nezodpovedá tomu slovu. Skúste iné, alebo otvoriť časti vyššie.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Kliknite na funkciu na mape a jej detaily sú pre vás otvorené na čítanie.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Otvorte sprievodcu.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Začnite tu: tri kroky",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Nájdite funkciu, ktorú chcete na mape, ako je balík, cesta alebo bod.",
@@ -8805,11 +8153,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ak niečo vyzerá zle",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget hovorí, že žiadna mapa nie je vybraná: ešte nebola pripojená k mape. Opýtajte sa osoby, ktorá postavila aplikáciu vybrať mapu v nastaveniach widgetu.",
               "src": "machine",
@@ -8855,11 +8198,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobré vedieť",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Kliknutím na rovnaké miesto opäť prinesie detaily priamo späť.",
               "src": "machine",
@@ -8883,16 +8221,16 @@
           }
         },
         "sl": {
-          "file": "ac59d2d07d0f",
+          "file": "6f5b72be382b",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -8970,25 +8308,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Nič v vodiču se ne ujema s to besedo. Poskusite drugo ali pa odprite zgornje oddelke.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Kliknite funkcijo na zemljevidu in njene podrobnosti so na voljo za branje.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Odpri vodič.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Začnite tukaj: trije koraki",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Na zemljevidu poiščite funkcijo, kot so paket, cesta ali točka.",
@@ -9130,11 +8453,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Če je kaj narobe.",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Gradnik pravi, da zemljevid ni izbran: še ni bil priključen na zemljevid. Vprašajte osebo, ki je izdelala aplikacijo, da izbere zemljevid v nastavitvah widget.",
               "src": "machine",
@@ -9180,11 +8498,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobro je vedeti.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klik na isto mesto ponovno prinese podrobnosti naravnost nazaj.",
               "src": "machine",
@@ -9208,30 +8521,30 @@
           }
         },
         "sr": {
-          "file": "78d0a23306da",
+          "file": "b4d480ff2ad2",
           "counts": {
-            "esri": 9,
+            "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
             "machine": 0,
             "stale": 0,
-            "missing": 62
+            "missing": 67
           },
           "entries": {}
         },
         "sv": {
-          "file": "fbe9d7b2d8b1",
+          "file": "3b48c85d956b",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -9309,25 +8622,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ingenting i guiden matchar det ordet. Prova en annan, eller öppna avsnitten ovan.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Klicka på en funktion på kartan och dess detaljer öppna för dig att läsa.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Öppna guiden.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Börja här: tre steg",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Hitta den funktion du vill ha på kartan, till exempel ett paket, en väg eller en punkt.",
@@ -9469,11 +8767,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Om något ser fel",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widgeten säger att ingen karta väljs: den har inte gått med på en karta ännu. Fråga personen som byggde appen för att välja kartan i widgetinställningarna.",
               "src": "machine",
@@ -9519,11 +8812,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Bra att veta",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klicka på samma plats igen ger detaljerna rakt tillbaka.",
               "src": "machine",
@@ -9547,16 +8835,16 @@
           }
         },
         "th": {
-          "file": "fc451104d43e",
+          "file": "6408ab9a5077",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -9634,25 +8922,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "ไม่มีอะไรในคู่มือที่ตรงกับคํานั้น ลอง เปิด อีก ส่วน หนึ่ง ข้าง บน.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "คลิกคุณสมบัติบนแผนที่ และรายละเอียดของแผนที่ เปิดให้คุณอ่านได้",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "เปิดคู่มือ",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "เริ่มที่นี่: สามขั้นตอน",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "หา จุด เด่น ที่ คุณ ต้องการ ใน แผนที่ เช่น พัสดุ, ถนน หรือ จุด.",
@@ -9794,11 +9067,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "ถ้ามีอะไรผิดปกติ",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "วิดเจ็ตบอกว่ายังไม่มีการเลือกแผนที่: มันยังไม่ได้เชื่อมโยงกับแผนที่ ถามคนที่สร้างโปรแกรมเพื่อเลือกแผนที่ในการตั้งค่าวิดเจ็ต",
               "src": "machine",
@@ -9844,11 +9112,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "ดีที่ได้รู้",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "การคลิกตําแหน่งเดิมอีกครั้ง นํารายละเอียดกลับมา",
               "src": "machine",
@@ -9872,16 +9135,16 @@
           }
         },
         "tr": {
-          "file": "27d85a473c48",
+          "file": "d735a17e088d",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -9959,25 +9222,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Rehberde hiçbir şey bu kelimeyi maçları. Başka bir deneyin veya yukarıdaki bölümleri açın.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Haritada bir özellik tıklayın ve okuduğunuz için açık ayrıntıları.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Rehberi açın.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Buraya başlayın: Üç adım",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Haritada istediğiniz özelliği bulun, bir parcel, bir yol veya bir nokta gibi.",
@@ -10119,11 +9367,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Bir şey yanlış görünüyorsa",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Widget haritanın seçilmediğini söylüyor: henüz bir haritaya katılmadı. Uygulamayı widget ayarlarında seçmek için inşa eden kişiye sorun.",
               "src": "machine",
@@ -10169,11 +9412,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "İyi bilmek",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Tekrar aynı yere tıklayın ayrıntıları düz geri getiriyor.",
               "src": "machine",
@@ -10197,16 +9435,16 @@
           }
         },
         "zh-cn": {
-          "file": "163e2ce01a54",
+          "file": "5847578ad319",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -10284,25 +9522,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "指南中没有任何内容与这个词相符。 尝试另一个,或者打开上面的部分。",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "单击地图上的特性及其细节打开供您阅读。",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "开导.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "从这里开始: 三步",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "在地图上查找您想要的特性, 如包裹、 道路或点 。",
@@ -10444,11 +9667,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "如果有什么不对劲",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "部件表示没有选择地图: 它尚未加入到地图中 。 要求创建应用程序的人在部件设置中选择地图 。",
               "src": "machine",
@@ -10494,11 +9712,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "很高兴知道",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "再次点击同一地点,可以直接返回细节。",
               "src": "machine",
@@ -10522,16 +9735,16 @@
           }
         },
         "uk": {
-          "file": "a5443b88e831",
+          "file": "77b9a984b0cc",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -10609,25 +9822,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ніщо в інструкції відповідає словом. Спробуйте ще одну або відкрийте розділи вище.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Клацніть функцію на карті та її реквізити, відкриті для вас, щоб прочитати.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Відкрийте посібник.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Почати тут: три кроки",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Знайти функцію, яку ви хочете на карті, такі як посилка, дорога або точка.",
@@ -10769,11 +9967,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Якщо щось виглядає неправильно",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Віджет каже, що немає карти вибрано: він ще не приєднався до карти. Запитайте людину, яка побудувала додаток для вибору карти в налаштуваннях віджету.",
               "src": "machine",
@@ -10819,11 +10012,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Добре знати",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Натискання того ж місця знову приносить деталі прямо назад.",
               "src": "machine",
@@ -10847,16 +10035,16 @@
           }
         },
         "vi": {
-          "file": "dbd9b190f4a5",
+          "file": "61cd8e2c428e",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -10934,25 +10122,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Không có gì phù hợp với từ đó. Thử cái khác, hoặc mở phần trên.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "Hãy nhắp vào một tính năng trên bản đồ và các chi tiết của nó để bạn đọc.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Mở sách hướng dẫn ra.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "Bắt đầu ở đây: ba bước",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Hãy tìm mục trên bản đồ, chẳng hạn như một bưu kiện, một con đường hoặc một điểm.",
@@ -11094,11 +10267,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Nếu có gì không ổn",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Thiết bị điều khiển nói không chọn bản đồ: nó chưa được gắn vào bản đồ. Hãy hỏi người tạo ứng dụng để chọn bản đồ trong thiết lập ô điều khiển.",
               "src": "machine",
@@ -11144,11 +10312,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Rất vui được biết",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Ấn vào cùng một nơi một lần nữa mang lại các chi tiết thẳng trở lại.",
               "src": "machine",
@@ -11172,16 +10335,16 @@
           }
         },
         "zh-hk": {
-          "file": "1f3d6d11e66d",
+          "file": "44a47c87e4b7",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -11259,25 +10422,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "向导裡沒有什麼能符合這個詞的 再試一次,或者打開上面的區域",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "點擊地圖上的特性及其詳情, 供您讀取 。",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "打開向导",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "從這裡開始: 三步",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "在地圖上尋找您想要的功能, 例如包裹、 路徑或點 。",
@@ -11419,11 +10567,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "如果有什麼不對勁",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "元件說沒有選擇地圖: 它尚未加入地圖 。 請建立應用程式的人在元件設定中選擇地圖 。",
               "src": "machine",
@@ -11468,11 +10611,6 @@
               "t": "還卡著? 聯繫GIS分部 提到地物辨識元件和這個應用程式",
               "src": "machine",
               "h": "db0e13ca36d6"
-            },
-            "helpTipsTitle": {
-              "t": "很高興知道",
-              "src": "machine",
-              "h": "79fc372dc790"
             },
             "helpTips1": {
               "t": "點擊同一個地方,",
@@ -11497,16 +10635,16 @@
           }
         },
         "zh-tw": {
-          "file": "1f3d6d11e66d",
+          "file": "44a47c87e4b7",
           "counts": {
-            "esri": 9,
+            "esri": 14,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 62,
+            "machine": 57,
             "stale": 0,
-            "missing": 0
+            "missing": 3
           },
           "entries": {
             "_widgetLabel": {
@@ -11584,25 +10722,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "向导裡沒有什麼能符合這個詞的 再試一次,或者打開上面的區域",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
             "firstRunBody": {
               "t": "點擊地圖上的特性及其詳情, 供您讀取 。",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "打開向导",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "helpStartTitle": {
-              "t": "從這裡開始: 三步",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "在地圖上尋找您想要的功能, 例如包裹、 路徑或點 。",
@@ -11744,11 +10867,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "如果有什麼不對勁",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "元件說沒有選擇地圖: 它尚未加入地圖 。 請建立應用程式的人在元件設定中選擇地圖 。",
               "src": "machine",
@@ -11793,11 +10911,6 @@
               "t": "還卡著? 聯繫GIS分部 提到地物辨識元件和這個應用程式",
               "src": "machine",
               "h": "db0e13ca36d6"
-            },
-            "helpTipsTitle": {
-              "t": "很高興知道",
-              "src": "machine",
-              "h": "79fc372dc790"
             },
             "helpTips1": {
               "t": "點擊同一個地方,",
@@ -11938,12 +11051,12 @@
         "ar": {
           "file": "71b4a4962951",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -12392,28 +11505,18 @@
               "t": "الجولة (بالدولار) فدان، 2) +\"أكسيد\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "دليل المساعدة",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "اظهر زر التساؤل الذي يفتح المرشد",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "bg": {
           "file": "3a5f49b76252",
           "counts": {
-            "esri": 12,
+            "esri": 14,
             "esri-check": 3,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -12862,16 +11965,6 @@
               "t": "Закръглено! Акра, 2) + \"акра\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Показване на ръководство за помощ",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Показване на бутона въпрос-марка, която отваря джаджа помощ ръководство",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
@@ -12892,12 +11985,12 @@
         "ca": {
           "file": "5f9c259fc32c",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -13346,28 +12439,18 @@
               "t": "Arrodoniment($. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Mostra la guia d' ajuda",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Mostra el botó Pregunta- marca que obre la guia d' ajuda de l' estri",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "cs": {
           "file": "c54c2b724dad",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -13816,28 +12899,18 @@
               "t": "Kulaté ($feature. Acres, 2) + \"akry\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Zobrazit nápovědu",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Zobrazit tlačítko question- mark, které otevře nápovědu widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "da": {
           "file": "5ce727c0ef06",
           "counts": {
-            "esri": 15,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 90,
             "stale": 0,
             "missing": 0
           },
@@ -14147,6 +13220,11 @@
               "src": "machine",
               "h": "07c9c3a5e0d9"
             },
+            "format_link": {
+              "t": "Link",
+              "src": "machine",
+              "h": "d0517071aa37"
+            },
             "arcadeSection": {
               "t": "Arcade udtryk",
               "src": "machine",
@@ -14286,16 +13364,6 @@
               "t": "Rund ($feature. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Vis hjælpeguide",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Vis spørgsmåls- markerings- knappen der åbner kontrolhjælpevejledningen",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
@@ -14617,6 +13685,11 @@
               "src": "machine",
               "h": "07c9c3a5e0d9"
             },
+            "format_link": {
+              "t": "Link",
+              "src": "machine",
+              "h": "d0517071aa37"
+            },
             "arcadeSection": {
               "t": "Arcade-Ausdrücke",
               "src": "machine",
@@ -14761,23 +13834,18 @@
               "t": "Show Help Guide",
               "src": "machine",
               "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Zeigen Sie die Fragezeichentaste an, die das Widget-Hilfehandbuch öffnet",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "el": {
           "file": "56a8d6d55637",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -15226,28 +14294,18 @@
               "t": "Γύρος($feature. Ακμές, 2) + \" στρέμματα\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Εμφάνιση οδηγού βοήθειας",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Εμφάνιση του κουμπιού ερωτηματολογίου που ανοίγει τον οδηγό βοήθειας widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "es": {
           "file": "e475b90f449a",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -15696,16 +14754,6 @@
               "t": "Round($feature. Acres, 2) + \" acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Mostrar guía de ayuda",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Mostrar el botón de la marca de preguntas que abre el widget guía de ayuda",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
@@ -16012,6 +15060,11 @@
               "src": "machine",
               "h": "377b3751e8b1"
             },
+            "format_number": {
+              "t": "Number",
+              "src": "machine",
+              "h": "b7baa1d40c4e"
+            },
             "format_integer": {
               "t": "täisarvu",
               "src": "machine",
@@ -16026,6 +15079,11 @@
               "t": "Kuupäev ja kellaaeg",
               "src": "machine",
               "h": "07c9c3a5e0d9"
+            },
+            "format_link": {
+              "t": "Link",
+              "src": "machine",
+              "h": "d0517071aa37"
             },
             "arcadeSection": {
               "t": "Arkaadiavaldised",
@@ -16166,28 +15224,18 @@
               "t": "Round( $feature). Acres, 2) + \"aakrid\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Abijuhendi näitamine",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Küsimusemärgi nupu näitamine, mis avab vidina abi juhendi",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "fi": {
           "file": "559071056b2d",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -16636,28 +15684,18 @@
               "t": "Pyöreä ominaisuus. Acres, 2) + \" eekkeriä\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Näytä ohje",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Näytä kysymys-merkki-painike, joka avaa widget ohjeen",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "fr": {
           "file": "530dd1455144",
           "counts": {
-            "esri": 12,
+            "esri": 11,
             "esri-check": 3,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 92,
             "stale": 0,
             "missing": 0
           },
@@ -16962,6 +16000,11 @@
               "src": "machine",
               "h": "ad2d37e108db"
             },
+            "format_date": {
+              "t": "Date",
+              "src": "machine",
+              "h": "eb9a4bc1c0c1"
+            },
             "format_datetime": {
               "t": "Date et heure",
               "src": "machine",
@@ -17047,6 +16090,11 @@
               "src": "machine",
               "h": "71990a2874b0"
             },
+            "configSection": {
+              "t": "Configuration",
+              "src": "machine",
+              "h": "754164850f38"
+            },
             "exportConfig": {
               "t": "Configuration d'exportation (XML)",
               "src": "machine",
@@ -17077,6 +16125,11 @@
               "src": "machine",
               "h": "29e49e191d6e"
             },
+            "messagesSection": {
+              "t": "Messages",
+              "src": "machine",
+              "h": "f1702b468627"
+            },
             "noResultMessage": {
               "t": "Aucun message de résultat",
               "src": "machine",
@@ -17106,28 +16159,18 @@
               "t": "Ronde($caractère. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Afficher le guide d'aide",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Afficher le bouton question-marque qui ouvre le guide d'aide du widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "he": {
           "file": "3c408c19f61a",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -17576,16 +16619,6 @@
               "t": "עגול ($feature). עכו, 2) + \"מדנמים\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "מדריך עזרה",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "הצג את לחצן סימן שאלה פותח את מדריך העזרה widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
@@ -17606,12 +16639,12 @@
         "hu": {
           "file": "3a9cfba9ae61",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -18060,28 +17093,18 @@
               "t": "Kerek ($funkció. Acres, 2) + \"aces\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Segítőútmutató megjelenítése",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Megjeleníti a kérdőjel gombot, amely megnyitja a widget súgó útmutatót",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "id": {
           "file": "d5e4ca621a72",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -18530,28 +17553,18 @@
               "t": "Bulat (fitur $. Acres, 2) + \"acre\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Tampilkan panduan bantuan",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Tampilkan tombol tanya-tandai yang membuka panduan bantuan widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "it": {
           "file": "eb480ff05300",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -19000,28 +18013,18 @@
               "t": "Rotondo($feature. Acri, 2) + \"acri\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Mostra la guida",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Mostra il pulsante di punto interrogativo che apre la guida di aiuto widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "ja": {
           "file": "f6210b249c22",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -19470,28 +18473,18 @@
               "t": "ラウンド($feature) エーカー、2) + \"エーカー\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "ヘルプガイドを表示",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "ウィジェットヘルプガイドを開く質問のボタンを表示する",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "ko": {
           "file": "71d080c5179a",
           "counts": {
-            "esri": 14,
-            "esri-check": 1,
+            "esri": 17,
+            "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -19940,28 +18933,18 @@
               "t": "라운드($feature) Acres, 2) + \"에이커\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "공지사항",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "위젯 도움말 가이드를 열 수있는 질문 표시 버튼",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "lt": {
           "file": "61a52e3d0e86",
           "counts": {
-            "esri": 13,
+            "esri": 15,
             "esri-check": 2,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -20410,28 +19393,18 @@
               "t": "Apskritimas ($funkcija. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Rodyti pagalbos vadovą",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Rodyti klausimų žymėjimo mygtuką, kuris atveria valdikliui skirtą pagalbos vadovą",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "lv": {
           "file": "e2eac501818f",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -20880,28 +19853,18 @@
               "t": "Raund( $ Feature. Akras, 2) + \" akras\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Rādīt palīdzības ceļvedi",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Rādīt jautājumu zīmes pogu, kas atver logdaļu palīdzības rokasgrāmatu",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "no": {
           "file": "c2e711e382d4",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -21350,28 +20313,18 @@
               "t": "Rund($feature. Acres, 2) + \" mål\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Vis hjelpguide",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Vis spørsmålsmerkeknappen som åpner widget-hjelpeguiden",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "nl": {
-          "file": "61a06fbaa5a6",
+          "file": "1bb786346573",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -21820,28 +20773,18 @@
               "t": "Rond. Acres, 2) + \" acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Hulplijn tonen",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "De knop met het vraagteken tonen die de hulplijn widget opent",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "pl": {
-          "file": "ab51cb542232",
+          "file": "94e05ce621b4",
           "counts": {
-            "esri": 15,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 90,
             "stale": 0,
             "missing": 0
           },
@@ -22151,6 +21094,11 @@
               "src": "machine",
               "h": "07c9c3a5e0d9"
             },
+            "format_link": {
+              "t": "Związek",
+              "src": "machine",
+              "h": "d0517071aa37"
+            },
             "arcadeSection": {
               "t": "Wyrażenia arkadowe",
               "src": "machine",
@@ -22290,28 +21238,18 @@
               "t": "Runda (funkcja $. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Pokaż przewodnik pomocy",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Pokaż przycisk question- mark, który otwiera przewodnik pomocy widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "pt-br": {
-          "file": "375e421295ec",
+          "file": "282d5acbcb59",
           "counts": {
-            "esri": 13,
-            "esri-check": 2,
+            "esri": 16,
+            "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -22760,28 +21698,18 @@
               "t": "Arredondado. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Mostre guia de ajuda.",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Mostre o botão de ponto de interrogação que abre o guia de ajuda do widget.",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "pt-pt": {
           "file": "84ef564121d9",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -23230,28 +22158,18 @@
               "t": "Redonda($feature. Acres, 2) + \" hectares\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Mostrar guia de ajuda",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Mostrar o botão de marca de perguntas que abre o guia de ajuda do elemento",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "ro": {
           "file": "c08646d93d7d",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -23700,28 +22618,18 @@
               "t": "Rotund (featură$. Acres, 2) + \" acri\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Arată ghidul de ajutor",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Arată butonul semn de întrebare care deschide ghidul de ajutor widget",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "ru": {
           "file": "f4f6746cee4d",
           "counts": {
-            "esri": 12,
+            "esri": 14,
             "esri-check": 3,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -24170,28 +23078,18 @@
               "t": "Круглый ($feature). Акры, 2) + \"акры\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Показать справочник",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Покажите кнопку вопрос-марка, которая открывает руководство по помощи виджета",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "sk": {
           "file": "bc51277ee66a",
           "counts": {
-            "esri": 14,
-            "esri-check": 1,
+            "esri": 17,
+            "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -24640,28 +23538,18 @@
               "t": "Round ($feature. Akry, 2) + \" akry\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Zobraziť návod na pomoc",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Zobraziť tlačidlo otázniku, ktoré otvorí sprievodcu pomocníkom",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "sl": {
           "file": "8a1d4f1898f9",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -25110,42 +23998,32 @@
               "t": "Round($obraz. Acres, 2) + \"akrov\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Prikaži vodnik za pomoč",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Prikaži gumb z vprašanji, ki odpre widget pomoč vodnik",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "sr": {
           "file": "72a3532cad0f",
           "counts": {
-            "esri": 14,
+            "esri": 13,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
             "machine": 0,
             "stale": 0,
-            "missing": 91
+            "missing": 92
           },
           "entries": {}
         },
         "sv": {
           "file": "ef4cb1d7e1ba",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -25594,28 +24472,18 @@
               "t": "Runda ($feature. Acres, 2) + \"acres\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Visa hjälp guide",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Visa frågemärke knappen som öppnar widget hjälp guide",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "th": {
           "file": "d4c3fc72ddfb",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -26064,21 +24932,11 @@
               "t": "Round($fency). Acres, 2) + \"เอเคอร์\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "แสดงคําแนะนํา",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "แสดงปุ่ม เครื่องหมายคําถามที่เปิดวิดเจ็ตคําแนะนํา",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "tr": {
-          "file": "0b66953860e8",
+          "file": "1d9d1e332f45",
           "counts": {
             "esri": 14,
             "esri-check": 1,
@@ -26395,6 +25253,11 @@
               "src": "machine",
               "h": "07c9c3a5e0d9"
             },
+            "format_link": {
+              "t": "Link Link Link Link",
+              "src": "machine",
+              "h": "d0517071aa37"
+            },
             "arcadeSection": {
               "t": "Arcade ifadeleri",
               "src": "machine",
@@ -26539,23 +25402,18 @@
               "t": "Show help guide",
               "src": "machine",
               "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "widget'ı açan soru işaret düğmesine göster",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "zh-cn": {
           "file": "d2515249c6e3",
           "counts": {
-            "esri": 15,
+            "esri": 17,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -27004,28 +25862,18 @@
               "t": "圆(元). 亩, 2 + \"亩\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "显示帮助指南",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "显示打开部件帮助指南的问题标记按钮",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "uk": {
           "file": "e4b0362c6281",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -27474,28 +26322,18 @@
               "t": "Круглий($feature. Acres, 2) + \"акрів\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Показати посібник",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Показати натис-mark, який відкриває посібник з підтримки віджету",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "vi": {
           "file": "49c1ec7fb7b1",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -27944,28 +26782,18 @@
               "t": "Vòng quanh. Acres, 2) + \"a\"",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Hiện hướng dẫn trợ giúp",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Hiển thị nút đánh dấu câu hỏi để mở hướng dẫn trợ giúp ô điều khiển",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "zh-hk": {
           "file": "5a583e759d3c",
           "counts": {
-            "esri": 13,
+            "esri": 15,
             "esri-check": 2,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -28414,28 +27242,18 @@
               "t": "圓( $feature ). 亩,2)+\"亩\".",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "顯示說明指南",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "顯示開啟元件說明指導的問題標鍵",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
         "zh-tw": {
           "file": "5a583e759d3c",
           "counts": {
-            "esri": 13,
+            "esri": 15,
             "esri-check": 2,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -28884,16 +27702,6 @@
               "t": "圓( $feature ). 亩,2)+\"亩\".",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "顯示說明指南",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "顯示開啟元件說明指導的問題標鍵",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         }

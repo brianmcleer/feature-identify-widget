@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Procure no guia (clique em \"click\" ou \"popup\")",
         helpNoMatches: "Nada no guia combina com essa palavra. Tente outro, ou abra as seções acima.",
         helpAnd: "e",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nova aqui?",
         firstRunBody: "Clique em um recurso no mapa e seus detalhes abertos para você ler.",
         firstRunHelpLink: "Abra o guia.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Dispensar",
         helpStartTitle: "Comece aqui: três passos",
         helpStart1: "Encontre o recurso que você quer no mapa, como um pacote, uma estrada ou um ponto.",
         helpStart2: "Clique uma vez. Dê-lhe um momento enquanto os detalhes são coletados.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Os detalhes mostram no widget em vez de sobre o mapa: a janela do mapa não poderia abrir neste dispositivo. Isso acontece em alguns telefones e o primeiro resultado é mostrado no widget.",
         helpTroubleDiagnostic: "Uma caixa preta de texto pequeno fica no fundo da tela: a visão diagnóstica está ligada. Peça à pessoa que construiu o aplicativo para desligá-lo nas configurações do widget.",
         helpTroubleContact: "Ainda preso? Contate a Divisão GIS e mencione o widget de identificação de recursos e este aplicativo.",
-        helpTipsTitle: "Bom saber.",
+        helpTipsTitle: "Bom saber",
         helpTips1: "Clicar no mesmo lugar de novo traz os detalhes de volta.",
         helpTips2: "Aproxime-se antes de clicar onde as características se sentam juntas. Você tem uma lista mais curta e clara.",
         helpTips3: "Nada que você clicar aqui muda os dados. Você só está lendo.",
-        featureIdentifyDebugNewestFirst: "Característica Identifique depuração"
+        featureIdentifyDebugNewestFirst: "Característica Identifique depuração",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

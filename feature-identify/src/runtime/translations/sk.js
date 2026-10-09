@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Hľadať sprievodcu (skúste \"click\" alebo \"popup\")",
         helpNoMatches: "Nič v sprievodcovi nezodpovedá tomu slovu. Skúste iné, alebo otvoriť časti vyššie.",
         helpAnd: "a",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Tu nový?",
         firstRunBody: "Kliknite na funkciu na mape a jej detaily sú pre vás otvorené na čítanie.",
         firstRunHelpLink: "Otvorte sprievodcu.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Odchod",
         helpStartTitle: "Začnite tu: tri kroky",
         helpStart1: "Nájdite funkciu, ktorú chcete na mape, ako je balík, cesta alebo bod.",
         helpStart2: "Klikni na to raz. Dajte tomu chvíľu, kým sú detaily zhromaždené.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Kliknutím na rovnaké miesto opäť prinesie detaily priamo späť.",
         helpTips2: "Zoom pred kliknutím, kde funkcie sedia blízko seba. Dostanete kratší, jasnejší zoznam.",
         helpTips3: "Nič, čo kliknete, nezmení dáta. Len to čítaš.",
-        featureIdentifyDebugNewestFirst: "Funkcia Identifikovať debug (najnovší prvý)"
+        featureIdentifyDebugNewestFirst: "Funkcia Identifikovať debug (najnovší prvý)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Rehberi arayın (basın” veya \"popup\")",
         helpNoMatches: "Rehberde hiçbir şey bu kelimeyi maçları. Başka bir deneyin veya yukarıdaki bölümleri açın.",
         helpAnd: "ve",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Yeni burada?",
         firstRunBody: "Haritada bir özellik tıklayın ve okuduğunuz için açık ayrıntıları.",
         firstRunHelpLink: "Rehberi açın.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Başarısızlık",
         helpStartTitle: "Buraya başlayın: Üç adım",
         helpStart1: "Haritada istediğiniz özelliği bulun, bir parcel, bir yol veya bir nokta gibi.",
         helpStart2: "Bir kez tıklayın. Ayrıntılar toplandığında bir an verin.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Tekrar aynı yere tıklayın ayrıntıları düz geri getiriyor.",
         helpTips2: "Daha önce, özelliklerin birlikte yakın olduğu yere tıklayın. Daha kısa, daha net bir liste alırsınız.",
         helpTips3: "Buraya tıkladığınız hiçbir şey verileri değiştirir. Sadece okuyorsunuz.",
-        featureIdentifyDebugNewestFirst: "Özel Açıklama debug (newest first)"
+        featureIdentifyDebugNewestFirst: "Özel Açıklama debug (newest first)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

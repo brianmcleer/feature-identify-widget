@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Recherche dans le guide (essayer \"clic\" ou \"popup\")",
         helpNoMatches: "Rien dans le guide ne correspond à ce mot. Essayez un autre, ou ouvrez les sections ci-dessus.",
         helpAnd: "et",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nouveau ici ?",
         firstRunBody: "Cliquez sur une fonctionnalité sur la carte et ses détails ouverts pour que vous puissiez la lire.",
         firstRunHelpLink: "Ouvrez le guide.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Rejet",
         helpStartTitle: "Commencez ici: trois étapes",
         helpStart1: "Trouvez la fonction que vous voulez sur la carte, comme un colis, une route ou un point.",
         helpStart2: "Cliquez une fois. Donnez-lui un moment pendant que les détails sont recueillis.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Le fait de cliquer sur le même endroit ramène les détails directement en arrière.",
         helpTips2: "Zoomez avant de cliquer sur l'endroit où les fonctionnalités se trouvent. Vous obtenez une liste plus courte et plus claire.",
         helpTips3: "Rien de ce que vous cliquez ici ne change les données. Vous le lisez seulement.",
-        featureIdentifyDebugNewestFirst: "Fonction Identifier le débogage (le plus récent en premier)"
+        featureIdentifyDebugNewestFirst: "Fonction Identifier le débogage (le plus récent en premier)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

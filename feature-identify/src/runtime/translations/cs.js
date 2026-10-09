@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Hledat průvodce (zkuste \"klepněte\" nebo \"popup\")",
         helpNoMatches: "Nic v průvodci neodpovídá tomu slovu. Zkuste jiný, nebo otevřete sekce výše.",
         helpAnd: "A",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nový tady?",
         firstRunBody: "Klikněte na funkci na mapě a její podrobnosti otevřít pro vás číst.",
         firstRunHelpLink: "Otevři průvodce.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Rozpustit",
         helpStartTitle: "Začněte zde: tři kroky",
         helpStart1: "Najít funkci, kterou chcete na mapě, jako je balíček, silnice nebo bod.",
         helpStart2: "Klikni na to jednou. Dejte tomu chvilku, než se shromáždí detaily.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Detaily ukazují v widgetu místo po mapě: okno mapy se na tomto zařízení nemohlo otevřít. To se děje na některých telefonech a první výsledek je uveden v widget místo.",
         helpTroubleDiagnostic: "V dolní části obrazovky sedí černá krabička s malým textem: diagnostický pohled je zapnutý. Zeptejte se osoby, která sestavila aplikaci, aby ji vypnula v nastavení widget.",
         helpTroubleContact: "Pořád se zasekl? Kontaktujte oddělení GIS a zmiňte widget Identifikace funkce a tuto aplikaci.",
-        helpTipsTitle: "Dobré vědět.",
+        helpTipsTitle: "Dobré vědět",
         helpTips1: "Kliknutí na stejné místo znovu přináší detaily přímo zpět.",
         helpTips2: "Přiblížit před klepnutím, kde funkce sedí blízko sebe. Dostaneš kratší, jasnější seznam.",
         helpTips3: "Nic, co zde kliknete, nezmění data. Jen to čteš.",
-        featureIdentifyDebugNewestFirst: "Funkce Identifikovat ladění (nejnovější první)"
+        featureIdentifyDebugNewestFirst: "Funkce Identifikovat ladění (nejnovější první)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

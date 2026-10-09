@@ -24,12 +24,12 @@ System.register([], function (e) {
         helpTitle: "說明",
         helpIntro: "地圖上的特徵認證告訴你你點擊的什麼",
         helpSearchPlaceholder: "搜尋導覽( 試著「 點擊 」 或「 彈出 」 )",
-        helpNoMatches: "向导裡沒有什麼能符合這個詞的 再試一次,或者打開上面的區域",
+        helpNoMatches: "向导裡沒有什麼能符合這個詞的 再試一次,或者打開上面的區域.",
         helpAnd: "和",
-        firstRunTitle: "New here?",
+        firstRunTitle: "新來的?",
         firstRunBody: "點擊地圖上的特性及其詳情, 供您讀取 。",
-        firstRunHelpLink: "打開向导",
-        firstRunDismiss: "Dismiss",
+        firstRunHelpLink: "打開向导.",
+        firstRunDismiss: "解散",
         helpStartTitle: "從這裡開始: 三步",
         helpStart1: "在地圖上尋找您想要的功能, 例如包裹、 路徑或點 。",
         helpStart2: "點擊一次 稍候,",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "點擊同一個地方,",
         helpTips2: "放大后再點擊特性的位置 。 你得到一個更短,更清晰的清單。",
         helpTips3: "您點擊這裡的數據不會改變 。 你只看它。",
-        featureIdentifyDebugNewestFirst: "特性辨識除錯( 最新第一 )"
+        featureIdentifyDebugNewestFirst: "特性辨識除錯( 最新第一 )",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

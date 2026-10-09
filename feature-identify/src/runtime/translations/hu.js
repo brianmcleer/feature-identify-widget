@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Keresés az útmutató (próbálja \"kattintson\" vagy \"popup\")",
         helpNoMatches: "A kalauzban semmi sem egyezik ezzel a szóval. Próbálja meg egy másik, vagy nyissa ki a fenti szakaszok.",
         helpAnd: "és",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Új itt?",
         firstRunBody: "Kattintson egy funkció a térképen, és a részletek nyitva áll, hogy olvassa el.",
         firstRunHelpLink: "Nyisd ki az útmutatót.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Elutasítás",
         helpStartTitle: "Kezdjük itt: három lépés",
         helpStart1: "Keresse meg a kívánt funkciót a térképen, például egy csomagot, egy utat vagy egy pontot.",
         helpStart2: "Csak egyszer. Adj neki egy percet, amíg a részleteket összegyűjtik.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "A részletek azt mutatják a widget helyett a térkép: a térkép ablak nem tudta megnyitni ezt az eszközt. Ez történik néhány telefonon, és az első eredmény látható a widget helyett.",
         helpTroubleDiagnostic: "Egy fekete doboz kis szöveg ül a képernyő alján: a diagnosztikai nézet van. Kérje meg az alkalmazót, hogy a widget beállításokban kapcsolja ki.",
         helpTroubleContact: "Még mindig? Lépjen kapcsolatba a FIS Division, és említse meg a Feature identificate widget és ezt az alkalmazást.",
-        helpTipsTitle: "Jó tudni.",
+        helpTipsTitle: "Jó tudni",
         helpTips1: "Ugyanarra a helyre kattintva a részletek egyenesen visszavezetnek.",
         helpTips2: "Közelíts rá, mielőtt rákattintasz arra, ahol a funkciók közel ülnek egymáshoz. Kapsz egy rövidebb, tisztább listát.",
         helpTips3: "Semmi, amire rákattint, nem változtatja meg az adatokat. Csak olvasod.",
-        featureIdentifyDebugNewestFirst: "Jellemzők Azonosító (legújabb)"
+        featureIdentifyDebugNewestFirst: "Jellemzők Azonosító (legújabb)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

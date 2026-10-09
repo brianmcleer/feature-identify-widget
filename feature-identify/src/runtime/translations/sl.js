@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Iskanje vodnika (poskusite \"klik\" ali \"popup\")",
         helpNoMatches: "Nič v vodiču se ne ujema s to besedo. Poskusite drugo ali pa odprite zgornje oddelke.",
         helpAnd: "in",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nova tukaj?",
         firstRunBody: "Kliknite funkcijo na zemljevidu in njene podrobnosti so na voljo za branje.",
         firstRunHelpLink: "Odpri vodič.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Prosto",
         helpStartTitle: "Začnite tukaj: trije koraki",
         helpStart1: "Na zemljevidu poiščite funkcijo, kot so paket, cesta ali točka.",
         helpStart2: "Klikni enkrat. Dajte mu trenutek, da se zberejo podrobnosti.",
@@ -59,7 +59,7 @@ System.register([], function (e) {
         helpSelectionHighlight: "Funkcija, ki jo berete, je opisana na zemljevidu, tako da lahko vidite, katera je.",
         helpSelectionOther: "Drugi deli aplikacije, kot je miza, lahko sledijo in kažejo enak zapis.",
         helpSelectionNoMove: "Zemljevid se ne premika ali spreminja lestvice sam od sebe. Ko želite, da gre zemljevid tja, uporabite dejanje povečave.",
-        helpTroubleTitle: "Če je kaj narobe.",
+        helpTroubleTitle: "Če je kaj narobe",
         helpTroubleNoMap: "Gradnik pravi, da zemljevid ni izbran: še ni bil priključen na zemljevid. Vprašajte osebo, ki je izdelala aplikacijo, da izbere zemljevid v nastavitvah widget.",
         helpTroubleNothing: "Nič se ne zgodi, ko kliknete zemljevid: gradnik je zaprt ali ni bil postavljen na to velikost zaslona. Odpri funkcijo Identificiraj iz aplikacije in nato še enkrat klikni na zemljevid.",
         helpTroubleMissed: "Nič se ne najde tam, kjer veš, da je funkcija: klik pristal tik ob robu. Povečaj in klikni še enkrat, bližje sredini bonusne igre.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Podrobnosti prikazujejo v gradniku namesto preko zemljevida: okno zemljevida se na tej napravi ni moglo odpreti. To se zgodi na nekaterih telefonih in prvi rezultat je prikazan v widget namesto.",
         helpTroubleDiagnostic: "Na dnu zaslona sedi črna škatla z majhnim besedilom: diagnostični pogled je vključen. Vprašajte osebo, ki je izdelala aplikacijo, da jo izklopi v nastavitvah widget.",
         helpTroubleContact: "Še vedno obtičal? Kontaktirajte oddelek GIS in omenite gradnik Lastnosti Identificiraj in to aplikacijo.",
-        helpTipsTitle: "Dobro je vedeti.",
+        helpTipsTitle: "Dobro je vedeti",
         helpTips1: "Klik na isto mesto ponovno prinese podrobnosti naravnost nazaj.",
         helpTips2: "Povečajte, preden kliknete, kjer so funkcije tesno skupaj. Dobiš krajši in jasnejši seznam.",
         helpTips3: "Nič ne spremeni podatkov. Samo bereš jo.",
-        featureIdentifyDebugNewestFirst: "Funkcija Identificiraj razhroščevanje (najprej novo)"
+        featureIdentifyDebugNewestFirst: "Funkcija Identificiraj razhroščevanje (najprej novo)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

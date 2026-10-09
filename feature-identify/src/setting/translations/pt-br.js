@@ -107,8 +107,8 @@ System.register([], function (e) {
         parcelFeatureParcelNum: "\"Parcel\" + $feature. PARCEL NUM",
         roundFeatureAcres2Acres: "Arredondado. Acres, 2) + \"acres\"",
         help: "Ajuda",
-        showHelpGuide: "Mostre guia de ajuda.",
-        showTheQuestionMarkButtonThat: "Mostre o botão de ponto de interrogação que abre o guia de ajuda do widget."
+        showHelpGuide: "Mostre guia de ajuda",
+        showTheQuestionMarkButtonThat: "Mostre o botão de ponto de interrogação que abre o guia de ajuda do widget"
       })
     }
   }

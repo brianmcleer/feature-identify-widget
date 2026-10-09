@@ -73,7 +73,7 @@ System.register([], function (e) {
         format_percent: "Yüzde",
         format_date: "Tarih",
         format_datetime: "Tarih ve Zaman",
-        format_link: "Link",
+        format_link: "Link Link Link Link",
         arcadeSection: "Arcade ifadeleri",
         arcadeHint: "Ölçekli sıra ifadesi için bir etiket kullanın. Arcade tam bir Popup Element sözlük döndürürken etiket boş bırakın, örneğin { tipi: 'text', text: content> Full popup ifadeleri otomatik olarak üretilen özellikler sıralarını değiştirir.",
         exprLabelPlaceholder: "Row etiketi veya tam popup içeriği için boş",
@@ -108,7 +108,7 @@ System.register([], function (e) {
         roundFeatureAcres2Acres: "Round($feature. Acres, 2) + \" dönüm\"",
         help: "Yardım",
         showHelpGuide: "Show help guide",
-        showTheQuestionMarkButtonThat: "widget'ı açan soru işaret düğmesine göster"
+        showTheQuestionMarkButtonThat: "Widget'ı açan soru işaret düğmesine göster"
       })
     }
   }

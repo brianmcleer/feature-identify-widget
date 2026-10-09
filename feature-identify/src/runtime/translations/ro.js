@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Caută ghidul (incercati \"click\" sau \"popup\")",
         helpNoMatches: "Nimic din ghid nu se potriveşte cu acest cuvânt. Încearcă altul, sau deschide secţiunile de mai sus.",
         helpAnd: "și",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nou aici?",
         firstRunBody: "Faceţi clic pe o caracteristică de pe hartă şi detaliile sale deschise pentru a citi.",
         firstRunHelpLink: "Deschide ghidul.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Liber",
         helpStartTitle: "Începe aici: trei pași",
         helpStart1: "Găsiți caracteristica pe care doriți pe hartă, cum ar fi un pachet, un drum sau un punct.",
         helpStart2: "Apasă o dată. Dă-i un moment în timp ce detaliile sunt colectate.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Detaliile arată în widget în loc de peste hartă: fereastra hartă nu a putut deschide pe acest dispozitiv. Acest lucru se întâmplă pe unele telefoane și primul rezultat este afișat în widget în schimb.",
         helpTroubleDiagnostic: "O cutie neagră cu text mic se află în partea de jos a ecranului: vizualizarea diagnostică este pornită. Întreabă persoana care a construit aplicația să-l oprească în setările widget.",
         helpTroubleContact: "Încă blocat? Contactați divizia GIS și menționați widget-ul de identificare a caracteristicilor și această aplicație.",
-        helpTipsTitle: "E bine de ştiut.",
+        helpTipsTitle: "E bine de ştiut",
         helpTips1: "Faceți clic din nou același loc aduce detaliile înapoi.",
         helpTips2: "Zoom înainte de a face clic pe unde caracteristicile stau aproape împreună. Ai o listă mai scurtă, mai clară.",
         helpTips3: "Nimic din ce faceți clic aici schimbă datele. O citeşti doar.",
-        featureIdentifyDebugNewestFirst: "Caracteristici Identificați depanarea (cea mai nouă primă)"
+        featureIdentifyDebugNewestFirst: "Caracteristici Identificați depanarea (cea mai nouă primă)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

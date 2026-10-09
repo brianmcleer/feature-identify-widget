@@ -14,6 +14,7 @@ import FirstRunHint from './components/FirstRunHint'
 import { buildHelpSections, type HelpFeatures } from './helpSections'
 import { beacon } from '../shared/beacon'
 import type { BeaconHandle } from '../shared/beacon'
+import { __setIntl, __t } from './i18n-t'
 
 type WidgetProps = AllWidgetProps<IMConfig> & { id: string, useMapWidgetIds: string[] }
 
@@ -81,6 +82,7 @@ type SettledResult<T> =
   | { status: 'rejected', reason: any }
 
 const Widget = (props: WidgetProps): React.ReactElement => {
+  __setIntl((props as any).intl)
   const { config, useMapWidgetIds, intl, state, id: widgetId } = props
 
   const [loading, setLoading] = React.useState(false)
@@ -337,7 +339,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     return String(layer.label || '').trim() ||
       getConstantArcadeString(layer.titleExpression) ||
       String(layer.titleField || '').trim() ||
-      'Configured identify layer'
+      __t("configuredIdentifyLayer")
   }
 
   const getRuntimeDataSourceId = (url: string): string => {

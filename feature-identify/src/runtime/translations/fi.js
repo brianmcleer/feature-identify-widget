@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Etsi opas (yritä \"klikkaa\" tai \"popup\")",
         helpNoMatches: "Mikään oppaassa ei vastaa tuota sanaa. Kokeile toista, tai avaa kohdat yllä.",
         helpAnd: "ja",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Uusi täällä?",
         firstRunBody: "Napsauta kartan ominaisuutta ja sen yksityiskohtia voit lukea.",
         firstRunHelpLink: "Avaa opas.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Poistu",
         helpStartTitle: "Aloita tästä: kolme vaihetta",
         helpStart1: "Etsi haluamasi ominaisuus kartalta, kuten paketti, tie tai piste.",
         helpStart2: "Klikkaa sitä kerran. Odota hetki, kun tiedot kerätään.",
@@ -59,7 +59,7 @@ System.register([], function (e) {
         helpSelectionHighlight: "Luemasi ominaisuus on esitetty kartalla, joten voit nähdä mikä se on.",
         helpSelectionOther: "Muut sovelluksen osat, kuten taulukko, voivat seurata ja näyttää saman tietueen.",
         helpSelectionNoMove: "Kartta ei liiku eikä muuta mittakaavaa itsestään. Käytä zoomaustoimintoa yksityiskohdissa, kun haluat kartan menevän sinne.",
-        helpTroubleTitle: "Jos jokin näyttää väärältä.",
+        helpTroubleTitle: "Jos jokin näyttää väärältä",
         helpTroubleNoMap: "Widget sanoo, ettei karttaa ole valittu: sitä ei ole vielä liitetty karttaan. Pyydä sovelluksen rakentajaa valitsemaan kartta widget-asetuksissa.",
         helpTroubleNothing: "Mitään ei tapahdu, kun napsautat karttaa: widget on suljettu tai ei asetettu tämän näytön kokoa. Avaa ominaisuudet Tunnista sovelluksesta ja klikkaa karttaa uudelleen.",
         helpTroubleMissed: "Mitään ei löydy, jos tiedät ominaisuus on: napsahdus laskeutui juuri reunalta. Lähennä ja klikkaa uudelleen, lähempänä keskellä ominaisuus.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Klikkaaminen saman paikan uudelleen tuo yksityiskohdat suoraan takaisin.",
         helpTips2: "Lähennä ennen kuin klikkaat missä ominaisuudet istuvat lähellä toisiaan. Saat lyhyemmän ja selkeämmän listan.",
         helpTips3: "Mikään ei muuta tietoja. Luet vain sitä.",
-        featureIdentifyDebugNewestFirst: "Ominaisuus Tunnista vianetsintä (uusin ensin)"
+        featureIdentifyDebugNewestFirst: "Ominaisuus Tunnista vianetsintä (uusin ensin)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

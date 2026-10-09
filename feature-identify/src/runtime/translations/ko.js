@@ -25,11 +25,11 @@ System.register([], function (e) {
         helpIntro: "Feature Identify는 지도를 클릭한 모든 것에 대해 알려줍니다.",
         helpSearchPlaceholder: "가이드 검색 (try \"click\" 또는 \"popup\")",
         helpNoMatches: "가이드의 아무것도 그 단어 일치. 다른 시도, 또는 위의 섹션을 엽니 다.",
-        helpAnd: "and",
-        firstRunTitle: "New here?",
+        helpAnd: "및",
+        firstRunTitle: "여기에 새로운?",
         firstRunBody: "지도에 대한 기능을 클릭하고 세부 정보를 읽을 수 있습니다.",
-        firstRunHelpLink: "자주 묻는 질문",
-        firstRunDismiss: "Dismiss",
+        firstRunHelpLink: "자주 묻는 질문.",
+        firstRunDismiss: "뚱 베어",
         helpStartTitle: "여기에 시작: 세 단계",
         helpStart1: "소포, 도로 또는 지점과 같은지도에서 원하는 기능을 찾습니다.",
         helpStart2: "한 번 클릭. 세부사항이 수집된 동안 그것을 순간을 주십시오.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "같은 장소를 다시 클릭하여 세부 정보를 곧 다시 가져옵니다.",
         helpTips2: "줌을 클릭하기 전에 기능을 함께 앉아. 더 짧고, 더 명확한 목록.",
         helpTips3: "이 페이지는 자동으로 번역되었습니다. 당신은 단지 그것을 읽습니다.",
-        featureIdentifyDebugNewestFirst: "debug를 식별하는 기능 (최신 첫 번째)"
+        featureIdentifyDebugNewestFirst: "debug를 식별하는 기능 (최신 첫 번째)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

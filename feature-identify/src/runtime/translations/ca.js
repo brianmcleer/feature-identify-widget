@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Cerca la guia (canvia \"clic \" o \" popup\")",
         helpNoMatches: "Res en la guia coincideix amb aquesta paraula. Proveu-ne una altra, o obriu les seccions de dalt.",
         helpAnd: "i",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nova aquí?",
         firstRunBody: "Feu clic sobre el mapa i els seus detalls oberts per llegir.",
         firstRunHelpLink: "Obre la guia.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Descarta",
         helpStartTitle: "Comença aquí: tres passes",
         helpStart1: "Trobeu la característica que voleu en el mapa, com ara un paquet, una carretera o un punt.",
         helpStart2: "Una vegada. Dóna-li un moment mentre els detalls es recullen.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "En clicar el mateix lloc un altre cop els detalls es tornen a fer.",
         helpTips2: "Apropa abans de clicar on s' asseuen les característiques. Tens una llista més curta, més clara.",
         helpTips3: "No hi ha res que cliqueu aquí canvia les dades. Només l'estàs llegint.",
-        featureIdentifyDebugNewestFirst: "Identificació de depuració (més primera)"
+        featureIdentifyDebugNewestFirst: "Identificació de depuració (més primera)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

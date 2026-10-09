@@ -106,7 +106,7 @@ System.register([], function (e) {
         debugOverlayHint: "Toont een live event log onderaan het scherm op elk apparaat, met een kopieerknop. Alleen inschakelen tijdens het oplossen van problemen, dan weer uit. De overlay kan ook per sessie worden ingeschakeld door fi debug=1 toe te voegen aan de app-URL.",
         parcelFeatureParcelNum: "\"Parcel\" + $ feature. PARCEL NUM",
         roundFeatureAcres2Acres: "Rond. Acres, 2) + \" acres\"",
-        help: "Help",
+        help: "Hulp",
         showHelpGuide: "Hulplijn tonen",
         showTheQuestionMarkButtonThat: "De knop met het vraagteken tonen die de hulplijn widget opent"
       })

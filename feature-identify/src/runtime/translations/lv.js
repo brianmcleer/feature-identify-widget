@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Meklēt ceļvedī (mēģiniet \"klikšķināt\" vai \"pacelt\")",
         helpNoMatches: "Nekas ceļvedī neatbilst šim vārdam. Mēģiniet citu, vai atvērt sadaļas iepriekš.",
         helpAnd: "un",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Jauna šeit?",
         firstRunBody: "Noklikšķiniet uz funkciju kartē un tās detaļas atvērts, lai jūs varētu lasīt.",
         firstRunHelpLink: "Atveriet ceļvedi.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Noņemt",
         helpStartTitle: "Sākt šeit: trīs soļi",
         helpStart1: "Atrast funkciju vēlaties kartē, piemēram, paku, ceļu vai punktu.",
         helpStart2: "Uzklikšķini vienreiz. Dodiet tam brīdi, kamēr detaļas tiek savāktas.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Noklikšķinot uz tās pašas vietas, informācija atkal atgriežas.",
         helpTips2: "Pietuvināt pirms jūs noklikšķiniet uz, kur funkcijas sēdēt cieši kopā. Jūs saņemsiet īsāku, skaidrāku sarakstu.",
         helpTips3: "Šeit nekas nemaina datus. Tu tikai to lasi.",
-        featureIdentifyDebugNewestFirst: "Funkcija Identificēt atkļūdošanu (newest first)"
+        featureIdentifyDebugNewestFirst: "Funkcija Identificēt atkļūdošanu (newest first)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

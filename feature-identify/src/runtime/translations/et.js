@@ -25,11 +25,11 @@ System.register([], function (e) {
         helpIntro: "Funktsioon Identifitseeri ütleb teile, mida iganes klõpsate kaardil.",
         helpSearchPlaceholder: "Otsige juhendit (proovige \"klõpsake\" või \"popup\")",
         helpNoMatches: "Mitte miski juhendis ei klapi selle sõnaga. Proovige teist või avage ülaltoodud lõigud.",
-        helpAnd: "and",
-        firstRunTitle: "New here?",
+        helpAnd: "ja",
+        firstRunTitle: "Uus siin?",
         firstRunBody: "Klõpsake kaardil olevat funktsiooni ja selle üksikasju, mis on teile lugemiseks avatud.",
         firstRunHelpLink: "Tee teejuht lahti.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Tühistage",
         helpStartTitle: "Alusta siit: kolm sammu",
         helpStart1: "Leidke kaardilt soovitud funktsioon, näiteks pakk, tee või punkt.",
         helpStart2: "Klõpsa korra. Võtke aega, kuni detailid on kogutud.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Klõps samale kohale toob üksikasjad tagasi.",
         helpTips2: "Suurendage, enne kui klõpsate, kus funktsioonid asuvad lähedal. Sa saad lühema ja selgema nimekirja.",
         helpTips3: "Miski, millele klõpsad, ei muuda andmeid. Sa ainult loed seda.",
-        featureIdentifyDebugNewestFirst: "Funktsioon Identifitseeri silumine (uusim esimene)"
+        featureIdentifyDebugNewestFirst: "Funktsioon Identifitseeri silumine (uusim esimene)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

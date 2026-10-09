@@ -25,11 +25,11 @@ System.register([], function (e) {
         helpIntro: "Caratteristica Identify ti racconta tutto quello che fai clic sulla mappa.",
         helpSearchPlaceholder: "Cerca la guida (prova \"click\" o \"popup\")",
         helpNoMatches: "Niente nella guida corrisponde a quella parola. Prova un altro, o apri le sezioni sopra.",
-        helpAnd: "and",
-        firstRunTitle: "New here?",
+        helpAnd: "And",
+        firstRunTitle: "Nuovo qui?",
         firstRunBody: "Fare clic su una funzione sulla mappa e i suoi dettagli aperti per leggere.",
         firstRunHelpLink: "Apri la guida.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Oggetto",
         helpStartTitle: "Inizia qui: tre passi",
         helpStart1: "Trovare la funzione che si desidera sulla mappa, come un pacco, una strada o un punto.",
         helpStart2: "Fare clic su una volta. Dagli un momento in cui i dettagli vengono raccolti.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Fare clic sullo stesso posto riporta nuovamente i dettagli.",
         helpTips2: "Zoom in prima di fare clic su dove le caratteristiche siedono vicino insieme. Hai una lista piu' breve e piu' chiara.",
         helpTips3: "Nulla di ciò che si fa clic qui cambia i dati. Lo stai solo leggendo.",
-        featureIdentifyDebugNewestFirst: "Caratteristica Identificare il debug (newest first)"
+        featureIdentifyDebugNewestFirst: "Caratteristica Identificare il debug (newest first)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

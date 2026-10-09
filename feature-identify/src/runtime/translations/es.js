@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Buscar en la guía (intentar \"click\" o \"popup\")",
         helpNoMatches: "Nada en la guía coincide con esa palabra. Pruebe otro, o abra las secciones anteriores.",
         helpAnd: "y",
-        firstRunTitle: "New here?",
+        firstRunTitle: "¿Eres nuevo aquí?",
         firstRunBody: "Haga clic en una característica en el mapa y sus detalles abiertos para que usted lea.",
         firstRunHelpLink: "Abre el guía.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Desestimación",
         helpStartTitle: "Empieza aquí: tres pasos",
         helpStart1: "Encuentra la característica que quieres en el mapa, como un paquete, una carretera o un punto.",
         helpStart2: "Hazlo una vez. Dale un momento mientras se recogen los detalles.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Los detalles aparecen en el widget en vez de en el mapa: la ventana del mapa no pudo abrirse en este dispositivo. Esto sucede en algunos teléfonos y el primer resultado se muestra en el widget en lugar.",
         helpTroubleDiagnostic: "Una caja negra de texto pequeño se sienta en la parte inferior de la pantalla: la vista de diagnóstico está en. Pregúntele a la persona que construyó la aplicación para apagarla en la configuración del widget.",
         helpTroubleContact: "¿Sigues atrapado? Contacte con la División GIS y mencione el widget Feature Identificar y esta aplicación.",
-        helpTipsTitle: "Es bueno saberlo.",
+        helpTipsTitle: "Es bueno saberlo",
         helpTips1: "Hacer clic en el mismo lugar de nuevo trae los detalles directamente hacia atrás.",
         helpTips2: "Acérquese antes de hacer clic en donde las funciones se sientan juntas. Tienes una lista más corta y más clara.",
         helpTips3: "Nada que haga clic aquí cambia los datos. Sólo lo estás leyendo.",
-        featureIdentifyDebugNewestFirst: "Característica Identifique depuración (no menor primero)"
+        featureIdentifyDebugNewestFirst: "Característica Identifique depuración (no menor primero)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

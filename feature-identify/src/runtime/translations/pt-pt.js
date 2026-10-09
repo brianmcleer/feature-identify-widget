@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Pesquisar no guia (tentar \"clique\" ou \"popup\")",
         helpNoMatches: "Nada no guia corresponde a essa palavra. Tente outro, ou abra as seções acima.",
         helpAnd: "E",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Nova aqui?",
         firstRunBody: "Clique em um recurso no mapa e seus detalhes abertos para você ler.",
         firstRunHelpLink: "Abra o guia.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Demitir",
         helpStartTitle: "Comece aqui: três passos",
         helpStart1: "Encontre o recurso que deseja no mapa, como um pacote, uma estrada ou um ponto.",
         helpStart2: "Clique uma vez. Dê-lhe um momento enquanto os detalhes são coletados.",
@@ -69,11 +69,14 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Os detalhes mostram no widget em vez de sobre o mapa: a janela do mapa não pôde abrir neste dispositivo. Isso acontece em alguns telefones e o primeiro resultado é mostrado no widget.",
         helpTroubleDiagnostic: "Uma caixa preta de texto pequeno fica na parte inferior da tela: a visão diagnóstica está ligada. Pergunte à pessoa que construiu o aplicativo para desligá-lo nas configurações do widget.",
         helpTroubleContact: "Ainda preso? Entre em contato com a Divisão GIS e mencione o widget Característica Identificar e este aplicativo.",
-        helpTipsTitle: "É bom saber.",
+        helpTipsTitle: "É bom saber",
         helpTips1: "Clicar no mesmo lugar novamente traz os detalhes de volta.",
         helpTips2: "Ampliar antes de clicar onde as funcionalidades se sentam juntas. Tens uma lista mais curta e clara.",
         helpTips3: "Nada do que você clicar aqui altera os dados. Só estás a ler.",
-        featureIdentifyDebugNewestFirst: "Característica Identificar a depuração (primeiro mais recente)"
+        featureIdentifyDebugNewestFirst: "Característica Identificar a depuração (primeiro mais recente)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

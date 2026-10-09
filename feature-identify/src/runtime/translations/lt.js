@@ -26,10 +26,10 @@ System.register([], function (e) {
         helpSearchPlaceholder: "Ieškoti vadovo (pabandykite \"spustelėkite\" arba \"iššokti\")",
         helpNoMatches: "Vadove nėra nieko, kas atitiktų šį žodį. Pabandykite kitą, arba atidaryti skyrių aukščiau.",
         helpAnd: "ir",
-        firstRunTitle: "New here?",
+        firstRunTitle: "Čia nauja?",
         firstRunBody: "Paspauskite ant žemėlapio funkciją ir jos detales atvira jums skaityti.",
         firstRunHelpLink: "Atidaryk gidą.",
-        firstRunDismiss: "Dismiss",
+        firstRunDismiss: "Nutraukti",
         helpStartTitle: "Pradėti čia: trys žingsniai",
         helpStart1: "Rasti funkciją norite žemėlapyje, pavyzdžiui, siuntinys, kelias ar taškas.",
         helpStart2: "Paspausk vieną kartą. Duokit jam minutėlę, kol bus surinkta informacija.",
@@ -73,7 +73,10 @@ System.register([], function (e) {
         helpTips1: "Paspaudus tą pačią vietą vėl atneša detales tiesiai atgal.",
         helpTips2: "Priartinti prieš paspausite, kur funkcijos sėdėti arti. Gavai trumpesnį, aiškesnį sąrašą.",
         helpTips3: "Nieko, ką paspausite čia, nekeičia duomenų. Tu tik skaitai.",
-        featureIdentifyDebugNewestFirst: "Atvaizdas Nustatyti derinimo (naujausias pirmas)"
+        featureIdentifyDebugNewestFirst: "Atvaizdas Nustatyti derinimo (naujausias pirmas)",
+        configuredIdentifyLayer: "Configured identify layer",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }
