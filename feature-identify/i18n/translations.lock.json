@@ -693,18 +693,354 @@
           }
         },
         "bs": {
-          "file": "b3eb04b54792",
+          "file": "becb7716ae03",
           "counts": {
             "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 67,
             "stale": 0,
-            "missing": 67
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "_widgetLabel": {
+              "t": "Identifikacija osobina",
+              "src": "machine",
+              "h": "62edad677097"
+            },
+            "clickHint": {
+              "t": "Kliknite na osobinu na karti da vidite detalje.",
+              "src": "machine",
+              "h": "b07b3297c210"
+            },
+            "noMap": {
+              "t": "Nijedna mapa nije izabrana. Otvori postavke grafičkog elementa i izaberi kartu.",
+              "src": "machine",
+              "h": "bcf916fdf436"
+            },
+            "noUrl": {
+              "t": "Izvor podešenog sloja je omogućen, ali nije podešen REST URL sloja.",
+              "src": "machine",
+              "h": "1564869c3375"
+            },
+            "noResult": {
+              "t": "Nijedna osobina nije pronađena na toj lokaciji.",
+              "src": "machine",
+              "h": "6acef013aaaf"
+            },
+            "queryFailed": {
+              "t": "Konfigurirani sloj nije mogao biti upitan. Provjerite URL sloja i pristup servisu.",
+              "src": "machine",
+              "h": "45af16c4a960"
+            },
+            "queryTimedOut": {
+              "t": "Podešeni sloj nije odgovorio na vrijeme.",
+              "src": "machine",
+              "h": "e9e475a75576"
+            },
+            "mapPopupFailed": {
+              "t": "Skočni slojevi mape nisu mogli biti upitan.",
+              "src": "machine",
+              "h": "1faca69b4c38"
+            },
+            "partialResults": {
+              "t": "Neki skočni izvori nisu mogli biti upitan. Uspješni rezultati su još uvijek prikazani.",
+              "src": "machine",
+              "h": "cd8274015922"
+            },
+            "exprError": {
+              "t": "(Izraz greška)",
+              "src": "machine",
+              "h": "de7560c21d11"
+            },
+            "popupModeHint": {
+              "t": "Kliknite na mapu. Native map popup rezultati se pojavljuju prvi, a konfigurirani REST ishodi se pojavljuju posljednji.",
+              "src": "machine",
+              "h": "b202605ac6b0"
+            },
+            "popupUnavailable": {
+              "t": "Skočni prikaz mape nije mogao biti otvoren na ovom uređaju, pa je prvi rezultat prikazan ovdje.",
+              "src": "machine",
+              "h": "eba96e048748"
+            },
+            "copyLog": {
+              "t": "Kopiraj dnevnik",
+              "src": "machine",
+              "h": "bd8e29659e0b"
+            },
+            "helpIntro": {
+              "t": "Značajka Identificirajte vam govori o svemu što kliknete na karti.",
+              "src": "machine",
+              "h": "133abd9c7714"
+            },
+            "helpSearchPlaceholder": {
+              "t": "Traži vodič (pokušajklik ilipopup",
+              "src": "machine",
+              "h": "0ed4c3530d87"
+            },
+            "helpNoMatches": {
+              "t": "Ništa u vodiču ne odgovara toj riječi.",
+              "src": "machine",
+              "h": "3fe179f75330"
+            },
+            "firstRunTitle": {
+              "t": "Novi ovdje?",
+              "src": "machine",
+              "h": "b81f2e17e001"
+            },
+            "firstRunBody": {
+              "t": "Kliknite na osobinu na karti i otvorite detalje koje možete čitati.",
+              "src": "machine",
+              "h": "34bca9efdf48"
+            },
+            "firstRunHelpLink": {
+              "t": "Otvori vodič.",
+              "src": "machine",
+              "h": "2447dd6134ea"
+            },
+            "firstRunDismiss": {
+              "t": "Otpust",
+              "src": "machine",
+              "h": "70afe9eff3f2"
+            },
+            "helpStartTitle": {
+              "t": "Počnite ovdje: tri koraka",
+              "src": "machine",
+              "h": "789320b4831d"
+            },
+            "helpStart1": {
+              "t": "Pronađite značajku koju želite na karti, kao što su parcela, put ili tačka.",
+              "src": "machine",
+              "h": "e96ce1c83cee"
+            },
+            "helpStart2": {
+              "t": "Kliknite jednom. Dajte mu trenutak dok se detalji ne sakupe.",
+              "src": "machine",
+              "h": "9fde55ab1bac"
+            },
+            "helpStart3Popup": {
+              "t": "Pročitajte detalje u prozoru koji se otvara preko mape.",
+              "src": "machine",
+              "h": "1034b05cf37c"
+            },
+            "helpStart3Panel": {
+              "t": "Pročitajte detalje ovdje u grafičkom elementu.",
+              "src": "machine",
+              "h": "7ceff6a06ce5"
+            },
+            "helpResultsTitle": {
+              "t": "Čitam detalje.",
+              "src": "machine",
+              "h": "39b5eae1a65a"
+            },
+            "helpResultsIntroPopup": {
+              "t": "Detalji se otvaraju u malom prozoru iznad mape.",
+              "src": "machine",
+              "h": "2f140aaa51ef"
+            },
+            "helpResultsIntroPanel": {
+              "t": "Detalji su navedeni u grafičkom elementu, pod naslovom.",
+              "src": "machine",
+              "h": "323c679d2381"
+            },
+            "helpResultsTitleLinePopup": {
+              "t": "Linija na vrhu prozora označava osobinu na koju ste kliknuli.",
+              "src": "machine",
+              "h": "51b787738038"
+            },
+            "helpResultsTitleLinePanel": {
+              "t": "Linija na vrhu grafičkog elementa naziva osobinu koju ste kliknuli.",
+              "src": "machine",
+              "h": "94fcf29f086a"
+            },
+            "helpResultsRows": {
+              "t": "Pod naslovom je lista. Svaka linija ima oznaku na lijevoj strani i vrijednost za tu osobinu na desnoj strani.",
+              "src": "machine",
+              "h": "a92bbc7c625c"
+            },
+            "helpResultsLinks": {
+              "t": "Vrijednost koja je web adresa prikazuje kao link. Kliknite na nju i stranica se otvara u novoj karti, tako da karta ostaje na način na koji ste je ostavili.",
+              "src": "machine",
+              "h": "28cfb11e96df"
+            },
+            "helpResultsMany": {
+              "t": "Ako vaš klik pronađe više od jedne osobine, male strelice na vrhu prozora vas kroz njih, jednu po jednu.",
+              "src": "machine",
+              "h": "1f42fdcd6239"
+            },
+            "helpResultsList": {
+              "t": "Također možete otvoriti listu na vrhu prozora i izabrati osobinu koju želite po imenu.",
+              "src": "machine",
+              "h": "eeda8b1e507f"
+            },
+            "helpResultsEmptyPopup": {
+              "t": "Ako se ništa ne nađe tamo gdje ste kliknuli, kratki prozor tako kaže.",
+              "src": "machine",
+              "h": "126e84c3272c"
+            },
+            "helpResultsEmptyPanel": {
+              "t": "Ako se ništa ne nađe na mjestu gdje ste kliknuli, u grafičkom elementu se pojavljuje kratka bilješka.",
+              "src": "machine",
+              "h": "d83761bee3b3"
+            },
+            "helpResultsClose": {
+              "t": "Zatvori prozor sa malim x na vrhu kada završite.",
+              "src": "machine",
+              "h": "503b09352f6c"
+            },
+            "helpSourcesTitle": {
+              "t": "Odakle dolaze detalji?",
+              "src": "machine",
+              "h": "fbd963b6e378"
+            },
+            "helpSourcesIntro": {
+              "t": "Jedan klik traži {sources}.",
+              "src": "machine",
+              "h": "01cd125065a8"
+            },
+            "helpSourceMapName": {
+              "t": "slojevi iscrtani na karti",
+              "src": "machine",
+              "h": "eeb0b01f897e"
+            },
+            "helpSourceExtraName": {
+              "t": "dodatni slojevi postavljeni za ovu aplikaciju",
+              "src": "machine",
+              "h": "bec39d0018eb"
+            },
+            "helpSourcesMap": {
+              "t": "Slojevi mape: bilo koji sloj koji je uključen i nacrtan na mapi može odgovoriti, koristeći tekst postavljen u samoj mapi.",
+              "src": "machine",
+              "h": "ba30e16a27f6"
+            },
+            "helpSourcesExtra": {
+              "t": "Dodatni slojevi: osoba koja je napravila aplikaciju može dodati slojeve koji nisu iscrtani na mapi. Njihovi detalji su napisani za ovu aplikaciju, tako da naljepnice mogu drugačije čitati.",
+              "src": "machine",
+              "h": "96a3d6641b15"
+            },
+            "helpSourcesOrder": {
+              "t": "Rezultati sa mape dolaze prvi. Rezultati iz dodatnih slojeva dolaze nakon njih.",
+              "src": "machine",
+              "h": "50edba828ebf"
+            },
+            "helpSourcesDuplicates": {
+              "t": "Kada se ista ploča vrati sa oba, vidiš je jednom, ne dvaput.",
+              "src": "machine",
+              "h": "fd88d1090f47"
+            },
+            "helpSelectionTitle": {
+              "t": "Osobina u koju gledate",
+              "src": "machine",
+              "h": "2910a297dd61"
+            },
+            "helpSelectionHighlight": {
+              "t": "Osobina koju čitate je nacrtana na mapi, tako da možete vidjeti koja je.",
+              "src": "machine",
+              "h": "e5dabc2bc84b"
+            },
+            "helpSelectionOther": {
+              "t": "Ostali dijelovi aplikacije, kao što je tabela, mogu pratiti i prikazati isti zapis.",
+              "src": "machine",
+              "h": "cf769c4986d5"
+            },
+            "helpSelectionNoMove": {
+              "t": "Karta se ne pomjera ili mijenja skalu sama od sebe. Koristi radnju uvećanja u detaljima kada želiš da mapa ode tamo.",
+              "src": "machine",
+              "h": "97b6677c9e1c"
+            },
+            "helpTroubleTitle": {
+              "t": "Ako nešto nije u redu",
+              "src": "machine",
+              "h": "6f7fec3ff1e0"
+            },
+            "helpTroubleNoMap": {
+              "t": "Grafički element kaže da mapa nije izabrana: još nije spojena na mapu. Pitajte osobu koja je napravila aplikaciju da izabere mapu u postavkama grafičkog elementa.",
+              "src": "machine",
+              "h": "4834d2960867"
+            },
+            "helpTroubleNothing": {
+              "t": "Ništa se ne događa kada kliknete na mapu: grafički element je zatvoren ili nije postavljen na ovu veličinu ekrana. Otvori značajku Identificiraj iz aplikacije, a zatim ponovo kliknite na mapu.",
+              "src": "machine",
+              "h": "b5f12b27fca0"
+            },
+            "helpTroubleMissed": {
+              "t": "Ništa se ne može naći tamo gdje znate da je značajka: klik je sletio malo izvan ruba. Zumiraj i klikni ponovo, bliže sredini osobine.",
+              "src": "machine",
+              "h": "5744aea950c3"
+            },
+            "helpTroubleLayerOff": {
+              "t": "Iz rezultata nedostaje sloj koji ste očekivali: taj sloj je isključen u mapi. Uključite ga ponovo u listi slojeva i kliknite ponovo.",
+              "src": "machine",
+              "h": "c8b3b097f3f1"
+            },
+            "helpTroubleSlow": {
+              "t": "Detalji traju dugo: servis je zauzet odgovaranjem. Pričekajte nekoliko sekundi, a zatim kliknite ponovo na isto mjesto.",
+              "src": "machine",
+              "h": "b27fcf9b5a3f"
+            },
+            "helpTroublePartial": {
+              "t": "U bilješci piše da se neki izvori nisu mogli pročitati: jedan servis nije odgovorio na vrijeme. Ono što je stiglo još uvijek je prikazano. Pokušajte isti klik ponovo u trenutku.",
+              "src": "machine",
+              "h": "7db5a1b97c00"
+            },
+            "helpTroubleNoPopup": {
+              "t": "Detalji pokazuju u grafičkom elementu umjesto preko mape: prozor mape se ne može otvoriti na ovom uređaju. Ovo se događa na nekim telefonima i prvi rezultat je prikazan u grafičkom elementu umjesto toga.",
+              "src": "machine",
+              "h": "1f53c82df86e"
+            },
+            "helpTroubleDiagnostic": {
+              "t": "Crna kutija malog teksta sjedi na dnu ekrana: uključen je dijagnostički pogled. Pitajte osobu koja je napravila aplikaciju da je isključi u postavkama grafičkog elementa.",
+              "src": "machine",
+              "h": "58cb21ff17df"
+            },
+            "helpTroubleContact": {
+              "t": "Još uvijek zapeo? Kontaktirajte GIS diviziju i pomenite element Identifikacije osobina i ovu aplikaciju.",
+              "src": "machine",
+              "h": "db0e13ca36d6"
+            },
+            "helpTipsTitle": {
+              "t": "Dobro je znati.",
+              "src": "machine",
+              "h": "79fc372dc790"
+            },
+            "helpTips1": {
+              "t": "Klikom na isto mjesto, detalji se vraćaju.",
+              "src": "machine",
+              "h": "e445abe53312"
+            },
+            "helpTips2": {
+              "t": "Zumiraj prije nego klikneš gdje osobine sjede zajedno. Dobiješ kraću, jasniju listu.",
+              "src": "machine",
+              "h": "f2c4f173acbd"
+            },
+            "helpTips3": {
+              "t": "Ništa što kliknete ovdje ne mijenja podatke.",
+              "src": "machine",
+              "h": "d0dc939214e6"
+            },
+            "featureIdentifyDebugNewestFirst": {
+              "t": "Značajka Identificiraj ispravljanje grešaka (najnovije prvo)",
+              "src": "machine",
+              "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Podešeni identifikacijski sloj",
+              "src": "machine",
+              "h": "01ed1cf4d370"
+            },
+            "unknownError": {
+              "t": "nepoznata greška",
+              "src": "machine",
+              "h": "af6321ca7a8b"
+            },
+            "unserializableError": {
+              "t": "Neserijalizacijska greška",
+              "src": "machine",
+              "h": "76e73551597a"
+            }
+          }
         },
         "ca": {
           "file": "81775e46f46d",
@@ -3767,18 +4103,354 @@
           }
         },
         "hr": {
-          "file": "b3eb04b54792",
+          "file": "04584883063e",
           "counts": {
             "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 67,
             "stale": 0,
-            "missing": 67
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "_widgetLabel": {
+              "t": "Identificiraj značajke",
+              "src": "machine",
+              "h": "62edad677097"
+            },
+            "clickHint": {
+              "t": "Kliknite značajku na karti da biste vidjeli njene detalje.",
+              "src": "machine",
+              "h": "b07b3297c210"
+            },
+            "noMap": {
+              "t": "Nije odabrana mapa. Otvori postavke widgeta i odaberi kartu.",
+              "src": "machine",
+              "h": "bcf916fdf436"
+            },
+            "noUrl": {
+              "t": "Konfigurirani izvor sloja je omogućen, ali nije podešen niti jedan URL za REST.",
+              "src": "machine",
+              "h": "1564869c3375"
+            },
+            "noResult": {
+              "t": "Nema značajke pronađene na toj lokaciji.",
+              "src": "machine",
+              "h": "6acef013aaaf"
+            },
+            "queryFailed": {
+              "t": "Konfigurirani sloj se ne može ispitati. Provjerite URL sloja i pristup uslugama.",
+              "src": "machine",
+              "h": "45af16c4a960"
+            },
+            "queryTimedOut": {
+              "t": "Konfigurirani sloj nije odgovorio na vrijeme.",
+              "src": "machine",
+              "h": "e9e475a75576"
+            },
+            "mapPopupFailed": {
+              "t": "Mapa popup slojevi nisu mogli biti upitan.",
+              "src": "machine",
+              "h": "1faca69b4c38"
+            },
+            "partialResults": {
+              "t": "Neki skočni izvori nisu mogli biti upitan. Uspješni rezultati su još uvijek prikazani.",
+              "src": "machine",
+              "h": "cd8274015922"
+            },
+            "exprError": {
+              "t": "(Izraz pogreška)",
+              "src": "machine",
+              "h": "de7560c21d11"
+            },
+            "popupModeHint": {
+              "t": "Kliknite na kartu. Domorodačka karta skočni rezultati pojavljuju se prvi, i konfigurirani REST ishod rezultati pojavljuju posljednji.",
+              "src": "machine",
+              "h": "b202605ac6b0"
+            },
+            "popupUnavailable": {
+              "t": "Mapa popup nije mogla biti otvorena na ovom uređaju, tako da je prvi rezultat prikazan ovdje umjesto.",
+              "src": "machine",
+              "h": "eba96e048748"
+            },
+            "copyLog": {
+              "t": "Kopiraj dnevnik",
+              "src": "machine",
+              "h": "bd8e29659e0b"
+            },
+            "helpIntro": {
+              "t": "Značajka Identificirajte vam govori o svemu što kliknete na karti.",
+              "src": "machine",
+              "h": "133abd9c7714"
+            },
+            "helpSearchPlaceholder": {
+              "t": "Pretraži vodič (pokušajteklik ilipopup",
+              "src": "machine",
+              "h": "0ed4c3530d87"
+            },
+            "helpNoMatches": {
+              "t": "Ništa u vodiču ne odgovara toj riječi. Pokušajte drugi, ili otvorite dijelove iznad.",
+              "src": "machine",
+              "h": "3fe179f75330"
+            },
+            "firstRunTitle": {
+              "t": "Novi ovdje?",
+              "src": "machine",
+              "h": "b81f2e17e001"
+            },
+            "firstRunBody": {
+              "t": "Kliknite na značajku na karti i njezini detalji otvoreni za čitanje.",
+              "src": "machine",
+              "h": "34bca9efdf48"
+            },
+            "firstRunHelpLink": {
+              "t": "Otvori vodič.",
+              "src": "machine",
+              "h": "2447dd6134ea"
+            },
+            "firstRunDismiss": {
+              "t": "Otpust",
+              "src": "machine",
+              "h": "70afe9eff3f2"
+            },
+            "helpStartTitle": {
+              "t": "Počnite ovdje: tri koraka",
+              "src": "machine",
+              "h": "789320b4831d"
+            },
+            "helpStart1": {
+              "t": "Pronađite značajku koju želite na karti, kao što su parcela, cesta ili točka.",
+              "src": "machine",
+              "h": "e96ce1c83cee"
+            },
+            "helpStart2": {
+              "t": "Kliknite jednom. Dajte mu trenutak dok se detalji prikupljaju.",
+              "src": "machine",
+              "h": "9fde55ab1bac"
+            },
+            "helpStart3Popup": {
+              "t": "Pročitajte detalje u prozoru koji se otvara preko karte.",
+              "src": "machine",
+              "h": "1034b05cf37c"
+            },
+            "helpStart3Panel": {
+              "t": "Pročitajte detalje ovdje u widget.",
+              "src": "machine",
+              "h": "7ceff6a06ce5"
+            },
+            "helpResultsTitle": {
+              "t": "Čitanje detalja",
+              "src": "machine",
+              "h": "39b5eae1a65a"
+            },
+            "helpResultsIntroPopup": {
+              "t": "Detalji se otvaraju u malom prozoru iznad karte.",
+              "src": "machine",
+              "h": "2f140aaa51ef"
+            },
+            "helpResultsIntroPanel": {
+              "t": "Detalji su navedeni u widget, pod naslovom.",
+              "src": "machine",
+              "h": "323c679d2381"
+            },
+            "helpResultsTitleLinePopup": {
+              "t": "Linija na vrhu prozora naziva značajku koju ste kliknuli.",
+              "src": "machine",
+              "h": "51b787738038"
+            },
+            "helpResultsTitleLinePanel": {
+              "t": "Linija na vrhu widgeta naziva značajku koju ste kliknuli.",
+              "src": "machine",
+              "h": "94fcf29f086a"
+            },
+            "helpResultsRows": {
+              "t": "Pod naslovom je popis. Svaka linija ima oznaku na lijevoj strani i vrijednost za tu osobinu na desnoj strani.",
+              "src": "machine",
+              "h": "a92bbc7c625c"
+            },
+            "helpResultsLinks": {
+              "t": "Vrijednost koja je web adresa pokazuje kao link. Kliknite na nju i stranica se otvara u novoj karti, tako da karta ostaje kako ste je ostavili.",
+              "src": "machine",
+              "h": "28cfb11e96df"
+            },
+            "helpResultsMany": {
+              "t": "Ako vaš klik pronađe više od jedne značajke, male strijele na vrhu prozora prolaze kroz njih, jednu po jednu.",
+              "src": "machine",
+              "h": "1f42fdcd6239"
+            },
+            "helpResultsList": {
+              "t": "Također možete otvoriti popis na vrhu prozora i odabrati značajku koju želite po imenu.",
+              "src": "machine",
+              "h": "eeda8b1e507f"
+            },
+            "helpResultsEmptyPopup": {
+              "t": "Ako se ništa ne nađe tamo gdje ste kliknuli, kratki prozor tako kaže.",
+              "src": "machine",
+              "h": "126e84c3272c"
+            },
+            "helpResultsEmptyPanel": {
+              "t": "Ako se ništa ne nađe tamo gdje ste kliknuli, u widgetu se pojavljuje kratka nota.",
+              "src": "machine",
+              "h": "d83761bee3b3"
+            },
+            "helpResultsClose": {
+              "t": "Zatvorite prozor s malim x na vrhu desno kada ste gotovi.",
+              "src": "machine",
+              "h": "503b09352f6c"
+            },
+            "helpSourcesTitle": {
+              "t": "Odakle dolaze detalji?",
+              "src": "machine",
+              "h": "fbd963b6e378"
+            },
+            "helpSourcesIntro": {
+              "t": "Jedan klik pita {sources}.",
+              "src": "machine",
+              "h": "01cd125065a8"
+            },
+            "helpSourceMapName": {
+              "t": "slojevi nacrtani na karti",
+              "src": "machine",
+              "h": "eeb0b01f897e"
+            },
+            "helpSourceExtraName": {
+              "t": "dodatni slojevi postavljeni za ovu aplikaciju",
+              "src": "machine",
+              "h": "bec39d0018eb"
+            },
+            "helpSourcesMap": {
+              "t": "Mapa slojeva: bilo koji sloj koji je uključen i nacrtan na karti može odgovoriti, koristeći tekst postavljen u samoj karti.",
+              "src": "machine",
+              "h": "ba30e16a27f6"
+            },
+            "helpSourcesExtra": {
+              "t": "Dodatni slojevi: osoba koja je izradila aplikaciju može dodati slojeve koji nisu nacrtani na karti. Njihovi detalji su napisani za ovu aplikaciju, tako da naljepnice mogu čitati drugačije.",
+              "src": "machine",
+              "h": "96a3d6641b15"
+            },
+            "helpSourcesOrder": {
+              "t": "Rezultati s karte dolaze prvi. Rezultati iz dodatnih slojeva dolaze nakon njih.",
+              "src": "machine",
+              "h": "50edba828ebf"
+            },
+            "helpSourcesDuplicates": {
+              "t": "Kada se ista ploča vrati sa oba, vidiš je jednom, ne dvaput.",
+              "src": "machine",
+              "h": "fd88d1090f47"
+            },
+            "helpSelectionTitle": {
+              "t": "Osobina koju gledate",
+              "src": "machine",
+              "h": "2910a297dd61"
+            },
+            "helpSelectionHighlight": {
+              "t": "Značajka koju čitate prikazana je na karti, tako da možete vidjeti koja je.",
+              "src": "machine",
+              "h": "e5dabc2bc84b"
+            },
+            "helpSelectionOther": {
+              "t": "Ostali dijelovi aplikacije, kao što je stol, mogu pratiti i prikazati isti zapis.",
+              "src": "machine",
+              "h": "cf769c4986d5"
+            },
+            "helpSelectionNoMove": {
+              "t": "Karta se ne pomiče ili sama mijenja skalu. Koristite akciju uvećanja u detaljima kada želite da mapa ode tamo.",
+              "src": "machine",
+              "h": "97b6677c9e1c"
+            },
+            "helpTroubleTitle": {
+              "t": "Ako nešto izgleda loše",
+              "src": "machine",
+              "h": "6f7fec3ff1e0"
+            },
+            "helpTroubleNoMap": {
+              "t": "Grafički element kaže da karta nije odabrana: još nije spojena na kartu. Pitajte osobu koja je izradila aplikaciju da izabere kartu u postavkama widgeta.",
+              "src": "machine",
+              "h": "4834d2960867"
+            },
+            "helpTroubleNothing": {
+              "t": "Ništa se ne događa kada kliknete na kartu: widget je zatvoren ili nije postavljen na ovaj zaslon veličine. Otvori značajke Identificirati iz aplikacije, a zatim kliknite na kartu opet.",
+              "src": "machine",
+              "h": "b5f12b27fca0"
+            },
+            "helpTroubleMissed": {
+              "t": "Ništa nije pronađeno gdje znate značajku je: klik sletio samo s ruba. Zumiraj i kliknite opet, bliže sredini značajke.",
+              "src": "machine",
+              "h": "5744aea950c3"
+            },
+            "helpTroubleLayerOff": {
+              "t": "Sloj koji ste očekivali nedostaje iz rezultata: taj sloj je isključen u mapi. Uključite ga ponovno u popisu slojeva i kliknite ponovno.",
+              "src": "machine",
+              "h": "c8b3b097f3f1"
+            },
+            "helpTroubleSlow": {
+              "t": "Detalji traju dugo vremena: usluga je zauzet odgovaranjem. Pričekajte nekoliko sekundi, a zatim kliknite opet na istom mjestu.",
+              "src": "machine",
+              "h": "b27fcf9b5a3f"
+            },
+            "helpTroublePartial": {
+              "t": "Poruka kaže da neki izvori nisu mogli biti pročitani: jedna usluga nije odgovorila na vrijeme. Ono što je stiglo još uvijek je prikazano. Pokušajte isti klik ponovno u trenutku.",
+              "src": "machine",
+              "h": "7db5a1b97c00"
+            },
+            "helpTroubleNoPopup": {
+              "t": "Detalji pokazuju u widget umjesto preko karte: prozor mape nije mogao otvoriti na ovom uređaju. To se događa na nekim telefonima i prvi rezultat je prikazan u widget umjesto.",
+              "src": "machine",
+              "h": "1f53c82df86e"
+            },
+            "helpTroubleDiagnostic": {
+              "t": "Crna kutija malog teksta sjedi na dnu zaslona: dijagnostički pogled je uključen. Pitajte osobu koja je izradila aplikaciju da je isključi u postavkama widgeta.",
+              "src": "machine",
+              "h": "58cb21ff17df"
+            },
+            "helpTroubleContact": {
+              "t": "Još uvijek zaglavi? Kontaktirajte GIS Division i spomenuti značaj Identificirati widget i ovu aplikaciju.",
+              "src": "machine",
+              "h": "db0e13ca36d6"
+            },
+            "helpTipsTitle": {
+              "t": "Dobro je znati.",
+              "src": "machine",
+              "h": "79fc372dc790"
+            },
+            "helpTips1": {
+              "t": "Klikom na isto mjesto, detalji se vraćaju ravno natrag.",
+              "src": "machine",
+              "h": "e445abe53312"
+            },
+            "helpTips2": {
+              "t": "Zumiraj prije nego klikneš gdje značajke sjede zajedno. Dobiješ kraći, jasniji popis.",
+              "src": "machine",
+              "h": "f2c4f173acbd"
+            },
+            "helpTips3": {
+              "t": "Ništa što kliknete ovdje ne mijenja podatke. Samo ih čitate.",
+              "src": "machine",
+              "h": "d0dc939214e6"
+            },
+            "featureIdentifyDebugNewestFirst": {
+              "t": "Značajka Identificirati debug (najnoviji prvi)",
+              "src": "machine",
+              "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurirani identifikacijski sloj",
+              "src": "machine",
+              "h": "01ed1cf4d370"
+            },
+            "unknownError": {
+              "t": "nepoznata greška",
+              "src": "machine",
+              "h": "af6321ca7a8b"
+            },
+            "unserializableError": {
+              "t": "Neserijalizacijska greška",
+              "src": "machine",
+              "h": "76e73551597a"
+            }
+          }
         },
         "hu": {
           "file": "dbafdf77a56e",
@@ -8661,18 +9333,354 @@
           }
         },
         "sr": {
-          "file": "b4d480ff2ad2",
+          "file": "dbd0f1de4d57",
           "counts": {
             "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 67,
             "stale": 0,
-            "missing": 67
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "_widgetLabel": {
+              "t": "Identifikacija osobina",
+              "src": "machine",
+              "h": "62edad677097"
+            },
+            "clickHint": {
+              "t": "Kliknite na osobinu na mapi da vidite njene detalje.",
+              "src": "machine",
+              "h": "b07b3297c210"
+            },
+            "noMap": {
+              "t": "Nije odabrana mapa. Otvorite postavke grafičkog elementa i izaberite mapu.",
+              "src": "machine",
+              "h": "bcf916fdf436"
+            },
+            "noUrl": {
+              "t": "Konfigurisani izvor sloja je omogućen, ali nije konfigurisan nijedan REST URL sloja.",
+              "src": "machine",
+              "h": "1564869c3375"
+            },
+            "noResult": {
+              "t": "Nije pronaðen na toj lokaciji.",
+              "src": "machine",
+              "h": "6acef013aaaf"
+            },
+            "queryFailed": {
+              "t": "Konfigurisani sloj ne može biti ispitan. Provjerite URL sloja i pristup uslugama.",
+              "src": "machine",
+              "h": "45af16c4a960"
+            },
+            "queryTimedOut": {
+              "t": "Konfigurisani sloj nije odgovorio na vreme.",
+              "src": "machine",
+              "h": "e9e475a75576"
+            },
+            "mapPopupFailed": {
+              "t": "Mapa se ne može ispitati.",
+              "src": "machine",
+              "h": "1faca69b4c38"
+            },
+            "partialResults": {
+              "t": "Neki skočni izvori nisu mogli biti upitan. Uspešni rezultati su još uvek prikazani.",
+              "src": "machine",
+              "h": "cd8274015922"
+            },
+            "exprError": {
+              "t": "(Izražavanje greška)",
+              "src": "machine",
+              "h": "de7560c21d11"
+            },
+            "popupModeHint": {
+              "t": "Kliknite na mapu. Native map popup rezultati pojavljuju prvi, i konfigurisani REST ishod rezultati se pojavljuju poslednji.",
+              "src": "machine",
+              "h": "b202605ac6b0"
+            },
+            "popupUnavailable": {
+              "t": "Mapa popup nije mogla biti otvorena na ovom uređaju, tako da je prvi rezultat prikazan ovde umesto toga.",
+              "src": "machine",
+              "h": "eba96e048748"
+            },
+            "copyLog": {
+              "t": "Kopiraj dnevnik",
+              "src": "machine",
+              "h": "bd8e29659e0b"
+            },
+            "helpIntro": {
+              "t": "Identifikacija osobina vam govori o svemu što kliknete na mapi.",
+              "src": "machine",
+              "h": "133abd9c7714"
+            },
+            "helpSearchPlaceholder": {
+              "t": "Тражи водич (pokušajte click ili popup",
+              "src": "machine",
+              "h": "0ed4c3530d87"
+            },
+            "helpNoMatches": {
+              "t": "Ništa u vodièu ne odgovara toj reèi.",
+              "src": "machine",
+              "h": "3fe179f75330"
+            },
+            "firstRunTitle": {
+              "t": "Novi ovde?",
+              "src": "machine",
+              "h": "b81f2e17e001"
+            },
+            "firstRunBody": {
+              "t": "Kliknite na osobinu na mapi i njene detalje otvorite za čitanje.",
+              "src": "machine",
+              "h": "34bca9efdf48"
+            },
+            "firstRunHelpLink": {
+              "t": "Otvori vodiè.",
+              "src": "machine",
+              "h": "2447dd6134ea"
+            },
+            "firstRunDismiss": {
+              "t": "Otpust.",
+              "src": "machine",
+              "h": "70afe9eff3f2"
+            },
+            "helpStartTitle": {
+              "t": "Poènite ovde: tri koraka.",
+              "src": "machine",
+              "h": "789320b4831d"
+            },
+            "helpStart1": {
+              "t": "Pronađite značajku koju želite na mapi, kao što su parcela, put ili tačka.",
+              "src": "machine",
+              "h": "e96ce1c83cee"
+            },
+            "helpStart2": {
+              "t": "Kliknite jednom. Dajte mu trenutak dok se detalji ne sakupe.",
+              "src": "machine",
+              "h": "9fde55ab1bac"
+            },
+            "helpStart3Popup": {
+              "t": "Proèitaj detalje u prozoru koji se otvara preko mape.",
+              "src": "machine",
+              "h": "1034b05cf37c"
+            },
+            "helpStart3Panel": {
+              "t": "Proèitajte detalje u vidžetu.",
+              "src": "machine",
+              "h": "7ceff6a06ce5"
+            },
+            "helpResultsTitle": {
+              "t": "Èitam detalje.",
+              "src": "machine",
+              "h": "39b5eae1a65a"
+            },
+            "helpResultsIntroPopup": {
+              "t": "Detalji se otvaraju u malom prozoru iznad mape.",
+              "src": "machine",
+              "h": "2f140aaa51ef"
+            },
+            "helpResultsIntroPanel": {
+              "t": "Detalji su navedeni u vidžetu, pod naslovom.",
+              "src": "machine",
+              "h": "323c679d2381"
+            },
+            "helpResultsTitleLinePopup": {
+              "t": "Linija na vrhu prozora imenuje osobinu na koju ste kliknuli.",
+              "src": "machine",
+              "h": "51b787738038"
+            },
+            "helpResultsTitleLinePanel": {
+              "t": "Linija na vrhu grafičkog elementa imenuje osobinu na koju ste kliknuli.",
+              "src": "machine",
+              "h": "94fcf29f086a"
+            },
+            "helpResultsRows": {
+              "t": "Pod naslovom je lista. Svaka linija ima oznaku na levoj strani i vrednost za tu osobinu na desnoj strani.",
+              "src": "machine",
+              "h": "a92bbc7c625c"
+            },
+            "helpResultsLinks": {
+              "t": "Vrednost koja je veb adresa pokazuje kao link. Kliknite na nju i stranica se otvara u novom tabu, tako da mapa ostaje kako ste je ostavili.",
+              "src": "machine",
+              "h": "28cfb11e96df"
+            },
+            "helpResultsMany": {
+              "t": "Ako vaš klik pronađe više od jedne osobine, male strele na vrhu prozora vas provlače kroz njih, jednu po jednu.",
+              "src": "machine",
+              "h": "1f42fdcd6239"
+            },
+            "helpResultsList": {
+              "t": "Takođe možete da otvorite listu na vrhu prozora i izaberete značajku koju želite po imenu.",
+              "src": "machine",
+              "h": "eeda8b1e507f"
+            },
+            "helpResultsEmptyPopup": {
+              "t": "Ako se ništa ne naðe tamo gde ste kliknuli, kratki prozor tako kaže.",
+              "src": "machine",
+              "h": "126e84c3272c"
+            },
+            "helpResultsEmptyPanel": {
+              "t": "Ako se ništa ne naðe tamo gde ste kliknuli, u vidžetu se pojavljuje kratka poruka.",
+              "src": "machine",
+              "h": "d83761bee3b3"
+            },
+            "helpResultsClose": {
+              "t": "Zatvorite prozor sa malim x na njegovom vrhu kada završite.",
+              "src": "machine",
+              "h": "503b09352f6c"
+            },
+            "helpSourcesTitle": {
+              "t": "Odakle dolaze detalji?",
+              "src": "machine",
+              "h": "fbd963b6e378"
+            },
+            "helpSourcesIntro": {
+              "t": "Jedan klik pita {sources}.",
+              "src": "machine",
+              "h": "01cd125065a8"
+            },
+            "helpSourceMapName": {
+              "t": "slojevi nacrtani na mapi",
+              "src": "machine",
+              "h": "eeb0b01f897e"
+            },
+            "helpSourceExtraName": {
+              "t": "Dodatni slojevi postavljeni za ovu aplikaciju",
+              "src": "machine",
+              "h": "bec39d0018eb"
+            },
+            "helpSourcesMap": {
+              "t": "Slojevi mapa: bilo koji sloj koji je uključen i nacrtan na mapi može odgovoriti, koristeći tekst postavljen u samoj mapi.",
+              "src": "machine",
+              "h": "ba30e16a27f6"
+            },
+            "helpSourcesExtra": {
+              "t": "Dodatni slojevi: osoba koja je napravila aplikaciju može dodati slojeve koji nisu nacrtani na mapi. Njihovi detalji su napisani za ovu aplikaciju, tako da etikete mogu drugačije da čitaju.",
+              "src": "machine",
+              "h": "96a3d6641b15"
+            },
+            "helpSourcesOrder": {
+              "t": "Rezultati sa mape su na prvom mestu.",
+              "src": "machine",
+              "h": "50edba828ebf"
+            },
+            "helpSourcesDuplicates": {
+              "t": "Kada se ista ploèa vrati sa oba, vidiš je jednom, ne dvaput.",
+              "src": "machine",
+              "h": "fd88d1090f47"
+            },
+            "helpSelectionTitle": {
+              "t": "Osobina u koju gledate",
+              "src": "machine",
+              "h": "2910a297dd61"
+            },
+            "helpSelectionHighlight": {
+              "t": "Osobina koju čitate je nacrtana na mapi, tako da možete videti koja je.",
+              "src": "machine",
+              "h": "e5dabc2bc84b"
+            },
+            "helpSelectionOther": {
+              "t": "Ostali delovi aplikacije, kao što je sto, mogu da prate i prikažu isti zapis.",
+              "src": "machine",
+              "h": "cf769c4986d5"
+            },
+            "helpSelectionNoMove": {
+              "t": "Mapa se ne pomera ili sama menja skalu. Koristite akciju zumiranja u detaljima kada želite da mapa ode tamo.",
+              "src": "machine",
+              "h": "97b6677c9e1c"
+            },
+            "helpTroubleTitle": {
+              "t": "Ako nešto nije u redu",
+              "src": "machine",
+              "h": "6f7fec3ff1e0"
+            },
+            "helpTroubleNoMap": {
+              "t": "Grafički element kaže da mapa nije odabrana: još nije spojena na mapu. Pitajte osobu koja je napravila aplikaciju da izabere mapu u postavkama grafičkog elementa.",
+              "src": "machine",
+              "h": "4834d2960867"
+            },
+            "helpTroubleNothing": {
+              "t": "Ništa se ne dešava kada kliknete na mapu: grafički element je zatvoren ili nije postavljen na ovu veličinu ekrana. Otvorite Feature Identificirajte sa aplikacije, a zatim ponovo kliknite na mapu.",
+              "src": "machine",
+              "h": "b5f12b27fca0"
+            },
+            "helpTroubleMissed": {
+              "t": "Ništa se ne nalazi tamo gde znate da je značajka: klik je sleteo sa ivice. Zumiraj i klikni ponovo, bliže sredini osobine.",
+              "src": "machine",
+              "h": "5744aea950c3"
+            },
+            "helpTroubleLayerOff": {
+              "t": "Sloj koji ste očekivali nedostaje iz rezultata: taj sloj je isključen u mapi. Uključite ga ponovo u listi slojeva i kliknite ponovo.",
+              "src": "machine",
+              "h": "c8b3b097f3f1"
+            },
+            "helpTroubleSlow": {
+              "t": "Detalji dugo traju: servis je zauzet odgovaranjem. Sačekajte nekoliko sekundi, a zatim kliknite ponovo na isto mesto.",
+              "src": "machine",
+              "h": "b27fcf9b5a3f"
+            },
+            "helpTroublePartial": {
+              "t": "U poruci piše da neki izvori nisu mogli da se pročitaju: jedan servis nije odgovorio na vreme. Ono što je stiglo još uvek je prikazano. Probajte isti klik ponovo u trenutku.",
+              "src": "machine",
+              "h": "7db5a1b97c00"
+            },
+            "helpTroubleNoPopup": {
+              "t": "Detalji pokazuju u grafičkom elementu umesto preko mape: prozor mape nije mogao da se otvori na ovom uređaju. Ovo se dešava na nekim telefonima i prvi rezultat je prikazan u grafičkom elementu umesto toga.",
+              "src": "machine",
+              "h": "1f53c82df86e"
+            },
+            "helpTroubleDiagnostic": {
+              "t": "Crna kutija malog teksta sedi na dnu ekrana: uključen je dijagnostički pogled. Pitajte osobu koja je napravila aplikaciju da je isključi u postavkama vidžeta.",
+              "src": "machine",
+              "h": "58cb21ff17df"
+            },
+            "helpTroubleContact": {
+              "t": "Još uvek zaglavljen? Kontaktirajte GIS diviziju i pomenite Vidžet prepoznavanja osobina i ovu aplikaciju.",
+              "src": "machine",
+              "h": "db0e13ca36d6"
+            },
+            "helpTipsTitle": {
+              "t": "Dobro je znati.",
+              "src": "machine",
+              "h": "79fc372dc790"
+            },
+            "helpTips1": {
+              "t": "Klikom na isto mesto, detalji se vraæaju.",
+              "src": "machine",
+              "h": "e445abe53312"
+            },
+            "helpTips2": {
+              "t": "Zumiraj pre nego što klikneš gde osobine sede zajedno, dobiæeš kraæu, jasniju listu.",
+              "src": "machine",
+              "h": "f2c4f173acbd"
+            },
+            "helpTips3": {
+              "t": "Ništa što klikneš ovde ne menja podatke.",
+              "src": "machine",
+              "h": "d0dc939214e6"
+            },
+            "featureIdentifyDebugNewestFirst": {
+              "t": "Značajka Identificiraj debug (najnovije prvo)",
+              "src": "machine",
+              "h": "8b8f06b8dd39"
+            },
+            "configuredIdentifyLayer": {
+              "t": "Konfigurisani identifikovani sloj",
+              "src": "machine",
+              "h": "01ed1cf4d370"
+            },
+            "unknownError": {
+              "t": "nepoznata greška",
+              "src": "machine",
+              "h": "af6321ca7a8b"
+            },
+            "unserializableError": {
+              "t": "Neserijalizacijska greška",
+              "src": "machine",
+              "h": "76e73551597a"
+            }
+          }
         },
         "sv": {
           "file": "45143fb9ca7e",
@@ -12149,18 +13157,474 @@
           }
         },
         "bs": {
-          "file": "374c967bd6ec",
+          "file": "195de8d1ac9d",
           "counts": {
             "esri": 14,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 91,
             "stale": 0,
-            "missing": 91
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "displaySection": {
+              "t": "Radni tok popup-a",
+              "src": "machine",
+              "h": "c37a8513a8c7"
+            },
+            "displayMode": {
+              "t": "Prikaži rezultate",
+              "src": "machine",
+              "h": "71c5c8dd150d"
+            },
+            "displayModePanel": {
+              "t": "U ovom panelu grafičkog elementa",
+              "src": "machine",
+              "h": "890aa703f531"
+            },
+            "displayModePopup": {
+              "t": "Iskakanje na mapi",
+              "src": "machine",
+              "h": "9ff708a2253b"
+            },
+            "displayModeHint": {
+              "t": "Popup mod preuzima vlasništvo nad klikom karte, okuplja svaki omogućeni izvor, i otvara jedan koordinirani native popup.",
+              "src": "machine",
+              "h": "078d64af898d"
+            },
+            "panelModeNotice": {
+              "t": "Način rada ploče je zadržan za naslijeđenu upotrebu. Upita samo konfigurirane REST slojeve i ostavlja uobičajeno iskakanje karte nepromijenjeno.",
+              "src": "machine",
+              "h": "ef336e997ef2"
+            },
+            "sourceMode": {
+              "t": "Popup izvori",
+              "src": "machine",
+              "h": "2e4c25929481"
+            },
+            "sourceModeMap": {
+              "t": "Samo skočni slojevi",
+              "src": "machine",
+              "h": "7db862b94c61"
+            },
+            "sourceModeConfigured": {
+              "t": "Samo konfigurirani REST slojevi",
+              "src": "machine",
+              "h": "2000ea37f33a"
+            },
+            "sourceModeCombined": {
+              "t": "Mapiraj slojeve i konfigurisane REST slojeve",
+              "src": "machine",
+              "h": "ecfc2d4ef0f8"
+            },
+            "sourceModeHint": {
+              "t": "Kombinirani mod ispituje oba izvora na istom kliku, uklanja duplikate i otvara rezultate zajedno.",
+              "src": "machine",
+              "h": "99623b000f50"
+            },
+            "resultOrderFixed": {
+              "t": "Rezultati iskakanja mape su uvijek navedeni prvi. Konfigurirani rezultati ishoda REST ishoda su zadnji pridodani.",
+              "src": "machine",
+              "h": "7af6aa2c58e7"
+            },
+            "openFeatureMenu": {
+              "t": "Otvori listu rezultata kada je višestruko",
+              "src": "machine",
+              "h": "23af82ec0c13"
+            },
+            "deduplicateResults": {
+              "t": "Ukloni dvostruke zapise",
+              "src": "machine",
+              "h": "349cd02c155c"
+            },
+            "maxTotalResults": {
+              "t": "Maksimalni iskačući rezultati",
+              "src": "machine",
+              "h": "d992ee303cc6"
+            },
+            "maxTotalResultsHint": {
+              "t": "Konačna granica nakon karte i konfigurisani rezultati se spajaju i uklanjaju duplikati.",
+              "src": "machine",
+              "h": "fc8a8882e13d"
+            },
+            "showNoResultPopup": {
+              "t": "Prikaži popup bez rezultovanja",
+              "src": "machine",
+              "h": "4d78fc77640a"
+            },
+            "mapPopupSection": {
+              "t": "Mapa iskačućih slojeva",
+              "src": "machine",
+              "h": "f55b6ee3c283"
+            },
+            "useDefaultPopupTemplates": {
+              "t": "Uključi slojeve bez podešenih popup-ova",
+              "src": "machine",
+              "h": "5bf2b2e9d1a9"
+            },
+            "useDefaultPopupTemplatesHint": {
+              "t": "Kada je uključeno, vidljivi skočni slojevi mape mogu koristiti automatski generirani uobičajeni skočni prozor. Ostavite onemogućeni da odaju počast tačnoj konfiguraciji skočne karte.",
+              "src": "machine",
+              "h": "3b3fec17b555"
+            },
+            "layerSection": {
+              "t": "Podešeni REST slojevi",
+              "src": "machine",
+              "h": "aa5f8e8277a0"
+            },
+            "layersIntro": {
+              "t": "Svaki sloj ima svoj naslov, skrivena polja, pravila formata i Arcade izraze. Slojevi su upitni u redoslijedu koji je naveden i nisu iscrtani na karti.",
+              "src": "machine",
+              "h": "223c26e827f6"
+            },
+            "layerLabelPlaceholder": {
+              "t": "Ime sloja (koristi se kao oznaka izvora podataka)",
+              "src": "machine",
+              "h": "a7ce0f403f02"
+            },
+            "layerEnabled": {
+              "t": "Uključeno",
+              "src": "machine",
+              "h": "df174a3f2faa"
+            },
+            "layerUrl": {
+              "t": "REST URL sloja",
+              "src": "machine",
+              "h": "3ffe0194140b"
+            },
+            "layerUrlHint": {
+              "t": "Puni URL do upitnog ishoda sloja koji završava u broju slojeva. Koristite javnu adresu koja prolazi kroz vaš Web Adaptor, a ne direktni ArcGIS Server port.",
+              "src": "machine",
+              "h": "3c65d8f22403"
+            },
+            "testConnection": {
+              "t": "Test",
+              "src": "machine",
+              "h": "640ab2bae07b"
+            },
+            "testRunning": {
+              "t": "Testiranje iz ovog preglednika...",
+              "src": "machine",
+              "h": "8050cb6486f3"
+            },
+            "testNoUrl": {
+              "t": "Unesi prvo URL sloja.",
+              "src": "machine",
+              "h": "b82f8e5467dc"
+            },
+            "testUnnamed": {
+              "t": "Nepoznati sloj",
+              "src": "machine",
+              "h": "3fcaa619c7a7"
+            },
+            "testRecords": {
+              "t": "{count} zapisa",
+              "src": "machine",
+              "h": "add0cff8e70b"
+            },
+            "testElapsed": {
+              "t": "{ms} ms",
+              "src": "machine",
+              "h": "c965f5d6d35d"
+            },
+            "testNoQuery": {
+              "t": "Upozorenje: sloj ne navodi sposobnost ispitivanja.",
+              "src": "machine",
+              "h": "c9e33908b043"
+            },
+            "testFailed": {
+              "t": "Test nije uspio:",
+              "src": "machine",
+              "h": "5db322b03f8f"
+            },
+            "testTimeout": {
+              "t": "Služba nije odgovorila na vrijeme.",
+              "src": "machine",
+              "h": "9bd1558ce66a"
+            },
+            "lintPort": {
+              "t": "Port {port} je direktni port ArcGIS servera. Obično se ne može doći do njega sa telefona ili izvan vaše mreže. Koristite web Adaptor URL na standardnom portu.",
+              "src": "machine",
+              "h": "3bbc837d1fac"
+            },
+            "lintHttp": {
+              "t": "URL koristi http. Aplikacije servirane preko https ne mogu ga učitati.",
+              "src": "machine",
+              "h": "26d2dbfb4cf9"
+            },
+            "lintInvalid": {
+              "t": "Ovo nije važeći URL.",
+              "src": "machine",
+              "h": "addd1f79d3fb"
+            },
+            "lintLayerId": {
+              "t": "URL će se završiti brojem sloja, kao što je /MapServer/0.",
+              "src": "machine",
+              "h": "fadde3c1b759"
+            },
+            "lintRest": {
+              "t": "URL ne izgleda kao ArcGIS REST ishod (/rest/services/ nedostaje).",
+              "src": "machine",
+              "h": "e763b3bdb3d0"
+            },
+            "clickTolerance": {
+              "t": "Tolerancija klika (piksli)",
+              "src": "machine",
+              "h": "6773527b70ad"
+            },
+            "clickToleranceHint": {
+              "t": "Proširuje mapu klikom na malu upitnu površinu veličine ekrana tako da su tačka i osobine linije lakše identificirati.",
+              "src": "machine",
+              "h": "1f3427c62692"
+            },
+            "maxConfiguredResults": {
+              "t": "Rezultati po podešenom sloju",
+              "src": "machine",
+              "h": "176f8c1d5ee7"
+            },
+            "maxConfiguredResultsHint": {
+              "t": "Omogućava preklapanju konfigurisanihslojnih osobina da učestvuju u skočnom rezultatu biciklizma.",
+              "src": "machine",
+              "h": "d57bf76116e0"
+            },
+            "titleField": {
+              "t": "Polje za naslov",
+              "src": "machine",
+              "h": "1c7a30795afd"
+            },
+            "titleFieldHint": {
+              "t": "Polje je prikazano kao naslov popup-a. Ostavite prazno za korištenje polja za prikaz usluga.",
+              "src": "machine",
+              "h": "3451a0a00bd2"
+            },
+            "titleExpression": {
+              "t": "Izraz naslova",
+              "src": "machine",
+              "h": "6e0e15b0536f"
+            },
+            "titleExpressionHint": {
+              "t": "Opcionalno. Premosti naslovno polje. Identifikovana osobina je dostupna kao $feature.",
+              "src": "machine",
+              "h": "8317336f3958"
+            },
+            "excludedFields": {
+              "t": "Skrivena polja",
+              "src": "machine",
+              "h": "5b3268c27e7d"
+            },
+            "excludedFieldsHint": {
+              "t": "Imena koja su odvojena od polja da bi se izostavila iz iskačućeg sadržaja.",
+              "src": "machine",
+              "h": "a7c4a54630da"
+            },
+            "useAliases": {
+              "t": "Koristi aliase polja",
+              "src": "machine",
+              "h": "c4c7c9095840"
+            },
+            "formatsSection": {
+              "t": "Format polja",
+              "src": "machine",
+              "h": "7fd634ad876e"
+            },
+            "formatsHint": {
+              "t": "Formatiraj polje kao broj, valutu, postotak ili datum ili ga pretvori u link izgrađen iz URL šablona sa {FIELD_NAME} tokenima.",
+              "src": "machine",
+              "h": "bbb475400c9b"
+            },
+            "addFormat": {
+              "t": "Dodaj pravilo formata",
+              "src": "machine",
+              "h": "4badc5e1cefd"
+            },
+            "formatDecimals": {
+              "t": "Decimale",
+              "src": "machine",
+              "h": "2a4e3cb3c61a"
+            },
+            "formatPrefix": {
+              "t": "Prefiks",
+              "src": "machine",
+              "h": "90eceb016c51"
+            },
+            "formatSuffix": {
+              "t": "Sufiks",
+              "src": "machine",
+              "h": "885db975a310"
+            },
+            "formatLinkTextPlaceholder": {
+              "t": "_Opcija:",
+              "src": "machine",
+              "h": "377b3751e8b1"
+            },
+            "format_integer": {
+              "t": "Cijeli broj",
+              "src": "machine",
+              "h": "9edcffff4461"
+            },
+            "format_currency": {
+              "t": "Valuta (USD)",
+              "src": "machine",
+              "h": "ad2d37e108db"
+            },
+            "format_datetime": {
+              "t": "Datum i vrijeme",
+              "src": "machine",
+              "h": "07c9c3a5e0d9"
+            },
+            "arcadeSection": {
+              "t": "Arkadni izrazi",
+              "src": "machine",
+              "h": "0b2e9373d7a4"
+            },
+            "arcadeHint": {
+              "t": "Koristi oznaku za skalarni izraz reda. Ostavite prazninu kada Arcade vrati puni Popup Element rječnik, kao npr. {tip: 'tekst', tekst: sadržaj }. Puni popup izrazi zamjenjuju automatski generirane redove atributa.",
+              "src": "machine",
+              "h": "e5d240fea25e"
+            },
+            "exprLabelPlaceholder": {
+              "t": "Oznaka reda ili prazna za puni popup sadržaj",
+              "src": "machine",
+              "h": "0d899a7daed0"
+            },
+            "addExpression": {
+              "t": "Dodaj izraz",
+              "src": "machine",
+              "h": "7e7a3efa819d"
+            },
+            "highlightSelectedFeature": {
+              "t": "Istakni izabranu ikonu kao izabranu zaglavlje",
+              "src": "machine",
+              "h": "33932f47e87d"
+            },
+            "outlineColor": {
+              "t": "Istakni boju kao _crtano",
+              "src": "machine",
+              "h": "4e526e81bbea"
+            },
+            "outlineColorHint": {
+              "t": "Boja izabrane osobine. Popuna poligona ostaje prozirna.",
+              "src": "machine",
+              "h": "bba3b3483fb4"
+            },
+            "outlineWidth": {
+              "t": "Širina linije (px)",
+              "src": "machine",
+              "h": "686ed3f33abc"
+            },
+            "publishSelection": {
+              "t": "Obavijesti druge grafičke elemente izabranog rezultata",
+              "src": "machine",
+              "h": "ae4dcf772abf"
+            },
+            "publishSelectionHint": {
+              "t": "Objavljuje evidencije-izbor-promijenjenu poruku kada je rezultat izabran, tako da grafički elementi kao što su Tabela ili izvještaj o svojini mogu odgovoriti na identifikacijski klik.",
+              "src": "machine",
+              "h": "f0becfb3b9d6"
+            },
+            "navigationNotice": {
+              "t": "Biciklizam kroz skočne rezultate ne mijenja opseg mape ili skalu. Karta se pomjera samo kada korisnik izabere skočno uvećanje Za radnju.",
+              "src": "machine",
+              "h": "20af0e7aa5bd"
+            },
+            "linkText": {
+              "t": "Link tekst prikaza",
+              "src": "machine",
+              "h": "046966568a9e"
+            },
+            "linkTextHint": {
+              "t": "Vrijednosti koje počinju sa http ili https iscrtavaju kao hipervezu koristeći ovaj tekst osim ako pravilo formata ne kaže drugačije.",
+              "src": "machine",
+              "h": "fef864a9d9a3"
+            },
+            "performanceSection": {
+              "t": "Performanse",
+              "src": "machine",
+              "h": "63c904559993"
+            },
+            "resultCacheSeconds": {
+              "t": "Rezultati ponovne upotrebe za ponovljene klikove (sekunde)",
+              "src": "machine",
+              "h": "e98be242f885"
+            },
+            "resultCacheSecondsHint": {
+              "t": "Ponavljanje klika na istom mjestu na istoj skali odgovara se iz memorije za ovoliko sekundi umjesto ponovnog osvajanja servisa. 0 onemogućuje.",
+              "src": "machine",
+              "h": "71990a2874b0"
+            },
+            "exportConfig": {
+              "t": "Konfiguracija izvoza (XML)",
+              "src": "machine",
+              "h": "8d3c78011fdd"
+            },
+            "importConfig": {
+              "t": "Uvezi podešavanja",
+              "src": "machine",
+              "h": "f3e2672a40c5"
+            },
+            "importOk": {
+              "t": "Konfiguracija uvezena.",
+              "src": "machine",
+              "h": "108c3494c280"
+            },
+            "importFailed": {
+              "t": "Uvoz nije uspio. Provjerite da li je datoteka XML za podešavanja osobina.",
+              "src": "machine",
+              "h": "aa4931147e00"
+            },
+            "configHint": {
+              "t": "Verzija 1, 2, i 3 XML datoteke su uvezene. Starije datoteke se pretvaraju u postavke po sloju pri uvozu.",
+              "src": "machine",
+              "h": "da07ddf15196"
+            },
+            "versionLabel": {
+              "t": "Osobine Identificirajte verziju {version}",
+              "src": "machine",
+              "h": "29e49e191d6e"
+            },
+            "noResultMessage": {
+              "t": "Šifrujem poruku",
+              "src": "machine",
+              "h": "60d747201cee"
+            },
+            "debugSection": {
+              "t": "Rješavanje problema",
+              "src": "machine",
+              "h": "285ec850c11d"
+            },
+            "debugOverlay": {
+              "t": "Pokaži dijagnostičko preklapanje",
+              "src": "machine",
+              "h": "f3f7b952cbe4"
+            },
+            "debugOverlayHint": {
+              "t": "Prikazuje dnevnik živih događaja na dnu ekrana na svakom uređaju, sa dugmetom Kopiraj. Uključite samo dok snimate probleme, zatim isključite. Preklapanje može biti omogućeno i per-session dodavanjem fi_debug=1 na URL aplikacije.",
+              "src": "machine",
+              "h": "799969743381"
+            },
+            "parcelFeatureParcelNum": {
+              "t": "Parcel + $feature.PARCEL_NUM",
+              "src": "machine",
+              "h": "862ebe30b81c"
+            },
+            "roundFeatureAcres2Acres": {
+              "t": "Okrugli($feature.Acres, 2) + jutar",
+              "src": "machine",
+              "h": "654483b25c9b"
+            },
+            "showHelpGuide": {
+              "t": "Pokaži vodič za pomoć",
+              "src": "machine",
+              "h": "03e9f0b81336"
+            },
+            "showTheQuestionMarkButtonThat": {
+              "t": "Pokaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkog elementa",
+              "src": "machine",
+              "h": "62c4e81a84ca"
+            }
+          }
         },
         "ca": {
           "file": "5f9c259fc32c",
@@ -16803,18 +18267,474 @@
           }
         },
         "hr": {
-          "file": "24d845d41126",
+          "file": "0ae97774f869",
           "counts": {
             "esri": 14,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 91,
             "stale": 0,
-            "missing": 91
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "displaySection": {
+              "t": "Iskakajući radni tok",
+              "src": "machine",
+              "h": "c37a8513a8c7"
+            },
+            "displayMode": {
+              "t": "Prikaži rezultate",
+              "src": "machine",
+              "h": "71c5c8dd150d"
+            },
+            "displayModePanel": {
+              "t": "U ovom panelu widget- a",
+              "src": "machine",
+              "h": "890aa703f531"
+            },
+            "displayModePopup": {
+              "t": "U iskačućoj mapi",
+              "src": "machine",
+              "h": "9ff708a2253b"
+            },
+            "displayModeHint": {
+              "t": "Popup mod preuzima vlasništvo nad klikom na kartu, okuplja sve omogućene izvore, te otvara jedan koordinirani native popup.",
+              "src": "machine",
+              "h": "078d64af898d"
+            },
+            "panelModeNotice": {
+              "t": "Način rada ploče je zadržan za nasljeđe korištenja. Upita samo konfigurirane REST slojeve i ostavlja uobičajeno skočno ponašanje mape nepromijenjenim.",
+              "src": "machine",
+              "h": "ef336e997ef2"
+            },
+            "sourceMode": {
+              "t": "Izvori",
+              "src": "machine",
+              "h": "2e4c25929481"
+            },
+            "sourceModeMap": {
+              "t": "Samo skočni slojevi",
+              "src": "machine",
+              "h": "7db862b94c61"
+            },
+            "sourceModeConfigured": {
+              "t": "Samo konfigurirani REST slojevi",
+              "src": "machine",
+              "h": "2000ea37f33a"
+            },
+            "sourceModeCombined": {
+              "t": "Mapa slojeva i konfigurirani REST slojevi",
+              "src": "machine",
+              "h": "ecfc2d4ef0f8"
+            },
+            "sourceModeHint": {
+              "t": "Kombinirani način upita oba izvora na isti klik, uklanja duplikate i zajedno otvara rezultate.",
+              "src": "machine",
+              "h": "99623b000f50"
+            },
+            "resultOrderFixed": {
+              "t": "Mapa skočni rezultati su uvijek nabrojani prvi. Konfigurirani rezultati ishoda REST ishoda su zadnji pridodani.",
+              "src": "machine",
+              "h": "7af6aa2c58e7"
+            },
+            "openFeatureMenu": {
+              "t": "Otvori popis rezultata kada je više",
+              "src": "machine",
+              "h": "23af82ec0c13"
+            },
+            "deduplicateResults": {
+              "t": "Ukloni dvostruke zapise",
+              "src": "machine",
+              "h": "349cd02c155c"
+            },
+            "maxTotalResults": {
+              "t": "Maksimalni iskačući rezultati",
+              "src": "machine",
+              "h": "d992ee303cc6"
+            },
+            "maxTotalResultsHint": {
+              "t": "Konačna granica nakon karte i konfigurirani rezultati se spajaju i uklanjaju duplikati.",
+              "src": "machine",
+              "h": "fc8a8882e13d"
+            },
+            "showNoResultPopup": {
+              "t": "Prikaži skočni prikaz bez rezultacije",
+              "src": "machine",
+              "h": "4d78fc77640a"
+            },
+            "mapPopupSection": {
+              "t": "Mapa iskačućih slojeva",
+              "src": "machine",
+              "h": "f55b6ee3c283"
+            },
+            "useDefaultPopupTemplates": {
+              "t": "Uključi slojeve bez podešenih popup-ova",
+              "src": "machine",
+              "h": "5bf2b2e9d1a9"
+            },
+            "useDefaultPopupTemplatesHint": {
+              "t": "Kada je omogućeno, vidljivi skočni slojevi mape mogu koristiti automatski generirani zadani skočni. Ostavite onemogućene da odaju počast konfiguraciji web karte.",
+              "src": "machine",
+              "h": "3b3fec17b555"
+            },
+            "layerSection": {
+              "t": "Konfigurirani REST slojevi",
+              "src": "machine",
+              "h": "aa5f8e8277a0"
+            },
+            "layersIntro": {
+              "t": "Svaki sloj ima svoj naslov, skrivena polja, pravila formata, i Arcade izraza. Slojevi su upitni u redoslijedu naveden i nisu nacrtani na karti.",
+              "src": "machine",
+              "h": "223c26e827f6"
+            },
+            "layerLabelPlaceholder": {
+              "t": "Naziv sloja (koristi se kao oznaka izvora podataka)",
+              "src": "machine",
+              "h": "a7ce0f403f02"
+            },
+            "layerEnabled": {
+              "t": "Omogućeno",
+              "src": "machine",
+              "h": "df174a3f2faa"
+            },
+            "layerUrl": {
+              "t": "URL RESTORA Sloja",
+              "src": "machine",
+              "h": "3ffe0194140b"
+            },
+            "layerUrlHint": {
+              "t": "Puni URL do upitnog ishoda sloja koji završava u broju sloja. Koristite javnu adresu koja prolazi kroz vaš Web Adaptor, a ne izravni ArcGIS Server port.",
+              "src": "machine",
+              "h": "3c65d8f22403"
+            },
+            "testConnection": {
+              "t": "Test",
+              "src": "machine",
+              "h": "640ab2bae07b"
+            },
+            "testRunning": {
+              "t": "Testiranje iz ovog preglednika...",
+              "src": "machine",
+              "h": "8050cb6486f3"
+            },
+            "testNoUrl": {
+              "t": "Prvo unesite URL sloja.",
+              "src": "machine",
+              "h": "b82f8e5467dc"
+            },
+            "testUnnamed": {
+              "t": "Neimenovani sloj",
+              "src": "machine",
+              "h": "3fcaa619c7a7"
+            },
+            "testRecords": {
+              "t": "{count} zapisi",
+              "src": "machine",
+              "h": "add0cff8e70b"
+            },
+            "testElapsed": {
+              "t": "{ms} ms",
+              "src": "machine",
+              "h": "c965f5d6d35d"
+            },
+            "testNoQuery": {
+              "t": "Upozorenje: sloj ne navodi sposobnost ispitivanja.",
+              "src": "machine",
+              "h": "c9e33908b043"
+            },
+            "testFailed": {
+              "t": "Test nije uspio:",
+              "src": "machine",
+              "h": "5db322b03f8f"
+            },
+            "testTimeout": {
+              "t": "Služba nije reagirala na vrijeme.",
+              "src": "machine",
+              "h": "9bd1558ce66a"
+            },
+            "lintPort": {
+              "t": "Port {port} je izravni ArcGIS poslužiteljski port. Obično se ne može dobiti s telefona ili izvan vaše mreže. Koristite web Adaptor URL na standardnom portu.",
+              "src": "machine",
+              "h": "3bbc837d1fac"
+            },
+            "lintHttp": {
+              "t": "URL koristi http. Aplikacije servirane preko https ne mogu ga učitati.",
+              "src": "machine",
+              "h": "26d2dbfb4cf9"
+            },
+            "lintInvalid": {
+              "t": "Ovo nije ispravan URL.",
+              "src": "machine",
+              "h": "addd1f79d3fb"
+            },
+            "lintLayerId": {
+              "t": "URL bi trebao završiti u broju slojeva, kao što je /MapServer/0.",
+              "src": "machine",
+              "h": "fadde3c1b759"
+            },
+            "lintRest": {
+              "t": "URL ne izgleda kao ArcGIS REST ishod (/odmor/usluge/ nedostaje).",
+              "src": "machine",
+              "h": "e763b3bdb3d0"
+            },
+            "clickTolerance": {
+              "t": "Klikni toleranciju (piksela)",
+              "src": "machine",
+              "h": "6773527b70ad"
+            },
+            "clickToleranceHint": {
+              "t": "Proširuje kartu klikom na malo područje upit veličine zaslona tako da su točke i značajke linija lakše identificirati.",
+              "src": "machine",
+              "h": "1f3427c62692"
+            },
+            "maxConfiguredResults": {
+              "t": "Rezultati po konfiguriranom sloju",
+              "src": "machine",
+              "h": "176f8c1d5ee7"
+            },
+            "maxConfiguredResultsHint": {
+              "t": "Omogućava preklapanju konfigurirani-sloj značajke sudjelovati u skočnom rezultat biciklizam.",
+              "src": "machine",
+              "h": "d57bf76116e0"
+            },
+            "titleField": {
+              "t": "Polje naslova",
+              "src": "machine",
+              "h": "1c7a30795afd"
+            },
+            "titleFieldHint": {
+              "t": "Polje prikazano kao skočni naslov. Ostavite prazno za korištenje polja za prikaz usluga.",
+              "src": "machine",
+              "h": "3451a0a00bd2"
+            },
+            "titleExpression": {
+              "t": "Izraz naslova (Arcade)",
+              "src": "machine",
+              "h": "6e0e15b0536f"
+            },
+            "titleExpressionHint": {
+              "t": "Opcionalno. Premošćuje polje naslova. Identificirana značajka je dostupna kao $feature.",
+              "src": "machine",
+              "h": "8317336f3958"
+            },
+            "excludedFields": {
+              "t": "Skrivena polja",
+              "src": "machine",
+              "h": "5b3268c27e7d"
+            },
+            "excludedFieldsHint": {
+              "t": "Zarezom odvojena imena polja kako bi se izostavilo iz skočnog sadržaja.",
+              "src": "machine",
+              "h": "a7c4a54630da"
+            },
+            "useAliases": {
+              "t": "Koristi aliase polja",
+              "src": "machine",
+              "h": "c4c7c9095840"
+            },
+            "formatsSection": {
+              "t": "Format polja",
+              "src": "machine",
+              "h": "7fd634ad876e"
+            },
+            "formatsHint": {
+              "t": "Formirajte polje kao broj, valuta, postotak, ili datum, ili ga pretvoriti u link izgrađen od URL predložak s {FIELD_NAME} tokeni.",
+              "src": "machine",
+              "h": "bbb475400c9b"
+            },
+            "addFormat": {
+              "t": "Dodaj pravilo formata",
+              "src": "machine",
+              "h": "4badc5e1cefd"
+            },
+            "formatDecimals": {
+              "t": "Decimale",
+              "src": "machine",
+              "h": "2a4e3cb3c61a"
+            },
+            "formatPrefix": {
+              "t": "Prefiks",
+              "src": "machine",
+              "h": "90eceb016c51"
+            },
+            "formatSuffix": {
+              "t": "Sufiks",
+              "src": "machine",
+              "h": "885db975a310"
+            },
+            "formatLinkTextPlaceholder": {
+              "t": "Tekst veze (nije obvezno)",
+              "src": "machine",
+              "h": "377b3751e8b1"
+            },
+            "format_integer": {
+              "t": "Cijeli broj",
+              "src": "machine",
+              "h": "9edcffff4461"
+            },
+            "format_currency": {
+              "t": "Mjenjačnica (USD)",
+              "src": "machine",
+              "h": "ad2d37e108db"
+            },
+            "format_datetime": {
+              "t": "Datum i vrijeme",
+              "src": "machine",
+              "h": "07c9c3a5e0d9"
+            },
+            "arcadeSection": {
+              "t": "Arkadni izrazi",
+              "src": "machine",
+              "h": "0b2e9373d7a4"
+            },
+            "arcadeHint": {
+              "t": "Koristi oznaku za skalarni izraz retka. Ostavi oznaku praznom kada Arcade vrati puni Skočni Element rječnik, kao što je { vrsta: 'tekst', tekst: sadržaj }. Puni skočni izrazi zamjenjuju automatski generirane redove atributa.",
+              "src": "machine",
+              "h": "e5d240fea25e"
+            },
+            "exprLabelPlaceholder": {
+              "t": "Naljepnica retka ili prazna za puni skočni sadržaj",
+              "src": "machine",
+              "h": "0d899a7daed0"
+            },
+            "addExpression": {
+              "t": "Dodaj izraz",
+              "src": "machine",
+              "h": "7e7a3efa819d"
+            },
+            "highlightSelectedFeature": {
+              "t": "Istakni odabranu skočnu mogućnost",
+              "src": "machine",
+              "h": "33932f47e87d"
+            },
+            "outlineColor": {
+              "t": "Istakni boju",
+              "src": "machine",
+              "h": "4e526e81bbea"
+            },
+            "outlineColorHint": {
+              "t": "Boja Heksa za odabrani obris. Popuna poligona ostaje prozirna.",
+              "src": "machine",
+              "h": "bba3b3483fb4"
+            },
+            "outlineWidth": {
+              "t": "Širina linije (px)",
+              "src": "machine",
+              "h": "686ed3f33abc"
+            },
+            "publishSelection": {
+              "t": "Obavijesti druge widgete odabranog rezultata",
+              "src": "machine",
+              "h": "ae4dcf772abf"
+            },
+            "publishSelectionHint": {
+              "t": "Objavljuje evidencije-izbor-promijenjena poruka kada je rezultat izabran, tako da widgets kao što su Tablica ili Izvješće o svojini može odgovoriti na identificirani klik.",
+              "src": "machine",
+              "h": "f0becfb3b9d6"
+            },
+            "navigationNotice": {
+              "t": "Biciklizam kroz skočne rezultate ne mijenja opseg karte ili skalu. Karta se kreće samo kada korisnik odabere skočno zumiranje Za akciju.",
+              "src": "machine",
+              "h": "20af0e7aa5bd"
+            },
+            "linkText": {
+              "t": "Poveži tekst prikaza",
+              "src": "machine",
+              "h": "046966568a9e"
+            },
+            "linkTextHint": {
+              "t": "Vrijednosti koje započinju sa http ili https iscrtavaju kao hipervezu koristeći ovaj tekst osim ako pravilo formata ne kaže drugačije.",
+              "src": "machine",
+              "h": "fef864a9d9a3"
+            },
+            "performanceSection": {
+              "t": "Izvedba",
+              "src": "machine",
+              "h": "63c904559993"
+            },
+            "resultCacheSeconds": {
+              "t": "Rezultati ponovne primjene za ponovljene klikove (sekunde)",
+              "src": "machine",
+              "h": "e98be242f885"
+            },
+            "resultCacheSecondsHint": {
+              "t": "Ponovni klik na istom mjestu na istoj ljestvici odgovara se iz memorije za ove mnoge sekunde umjesto ponovnog osvajanja servisa. 0 onemogućuje.",
+              "src": "machine",
+              "h": "71990a2874b0"
+            },
+            "exportConfig": {
+              "t": "Konfiguracija izvoza (XML)",
+              "src": "machine",
+              "h": "8d3c78011fdd"
+            },
+            "importConfig": {
+              "t": "Konfiguracija uvoza (XML)",
+              "src": "machine",
+              "h": "f3e2672a40c5"
+            },
+            "importOk": {
+              "t": "Konfiguracija uvezena.",
+              "src": "machine",
+              "h": "108c3494c280"
+            },
+            "importFailed": {
+              "t": "Uvoz nije uspio. Provjerite da li je datoteka XML za konfiguraciju osobina.",
+              "src": "machine",
+              "h": "aa4931147e00"
+            },
+            "configHint": {
+              "t": "Verzija 1, 2, i 3 XML datoteke su uvozni. Starije datoteke su pretvoreni u po sloju postavke na uvoz.",
+              "src": "machine",
+              "h": "da07ddf15196"
+            },
+            "versionLabel": {
+              "t": "Značajka Identificirajte inačicu {version}",
+              "src": "machine",
+              "h": "29e49e191d6e"
+            },
+            "noResultMessage": {
+              "t": "Nema rezultatne poruke",
+              "src": "machine",
+              "h": "60d747201cee"
+            },
+            "debugSection": {
+              "t": "Rješavanje problema",
+              "src": "machine",
+              "h": "285ec850c11d"
+            },
+            "debugOverlay": {
+              "t": "Prikaži dijagnostičko preklapanje",
+              "src": "machine",
+              "h": "f3f7b952cbe4"
+            },
+            "debugOverlayHint": {
+              "t": "Prikazuje dnevnik događaja uživo na dnu zaslona na svakom uređaju, s gumbom Kopiranje. Uključite samo dok snimate probleme, a zatim isključite. Preklapanje se također može omogućiti per-session dodavanjem fi_debug=1 na URL aplikacije.",
+              "src": "machine",
+              "h": "799969743381"
+            },
+            "parcelFeatureParcelNum": {
+              "t": "Parcel + $feature.PARCEL_NUM",
+              "src": "machine",
+              "h": "862ebe30b81c"
+            },
+            "roundFeatureAcres2Acres": {
+              "t": "Okrugli ($feature.Acres, 2) + hektara",
+              "src": "machine",
+              "h": "654483b25c9b"
+            },
+            "showHelpGuide": {
+              "t": "Prikaži vodič pomoći",
+              "src": "machine",
+              "h": "03e9f0b81336"
+            },
+            "showTheQuestionMarkButtonThat": {
+              "t": "Prikaži gumb s upitnikom koji otvara vodič za pomoć widgetu",
+              "src": "machine",
+              "h": "62c4e81a84ca"
+            }
+          }
         },
         "hu": {
           "file": "3a9cfba9ae61",
@@ -24182,18 +26102,479 @@
           }
         },
         "sr": {
-          "file": "72a3532cad0f",
+          "file": "3756529c753f",
           "counts": {
             "esri": 13,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 92,
             "stale": 0,
-            "missing": 92
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "displaySection": {
+              "t": "Искачући радни токQShortcut",
+              "src": "machine",
+              "h": "c37a8513a8c7"
+            },
+            "displayMode": {
+              "t": "Prikaži rezultate",
+              "src": "machine",
+              "h": "71c5c8dd150d"
+            },
+            "displayModePanel": {
+              "t": "U ovom panelu grafičkog elementa",
+              "src": "machine",
+              "h": "890aa703f531"
+            },
+            "displayModePopup": {
+              "t": "U mapi iskakanje",
+              "src": "machine",
+              "h": "9ff708a2253b"
+            },
+            "displayModeHint": {
+              "t": "Popup mod preuzima vlasništvo nad klikom mape, okuplja svaki omogućeni izvor, i otvara jedan koordinirani native popup.",
+              "src": "machine",
+              "h": "078d64af898d"
+            },
+            "panelModeNotice": {
+              "t": "Upita samo konfigurisane REST slojeve i ostavlja normalno skočno ponašanje mape nepromenjeno.",
+              "src": "machine",
+              "h": "ef336e997ef2"
+            },
+            "sourceMode": {
+              "t": "Искачући извориQShortcut",
+              "src": "machine",
+              "h": "2e4c25929481"
+            },
+            "sourceModeMap": {
+              "t": "Samo skoèni slojevi mape",
+              "src": "machine",
+              "h": "7db862b94c61"
+            },
+            "sourceModeConfigured": {
+              "t": "Samo konfigurisani REST slojevi",
+              "src": "machine",
+              "h": "2000ea37f33a"
+            },
+            "sourceModeCombined": {
+              "t": "Mapa slojeva i konfigurisani REST slojevi",
+              "src": "machine",
+              "h": "ecfc2d4ef0f8"
+            },
+            "sourceModeHint": {
+              "t": "Kombinovani mod ispituje oba izvora na istom kliku, uklanja duplikate i zajedno otvara rezultate.",
+              "src": "machine",
+              "h": "99623b000f50"
+            },
+            "resultOrderFixed": {
+              "t": "Mapa skočni rezultati su uvek nabrojani prvi. Konfigurisani rezultati REST ishoda su dodani poslednji.",
+              "src": "machine",
+              "h": "7af6aa2c58e7"
+            },
+            "openFeatureMenu": {
+              "t": "Otvori listu rezultata kada je više",
+              "src": "machine",
+              "h": "23af82ec0c13"
+            },
+            "deduplicateResults": {
+              "t": "Ukloni duplikat zapisa",
+              "src": "machine",
+              "h": "349cd02c155c"
+            },
+            "maxTotalResults": {
+              "t": "Maksimalni iskačući rezultati",
+              "src": "machine",
+              "h": "d992ee303cc6"
+            },
+            "maxTotalResultsHint": {
+              "t": "Konačna granica nakon mape i konfigurisani rezultati se spajaju i uklanjaju duplikati.",
+              "src": "machine",
+              "h": "fc8a8882e13d"
+            },
+            "showNoResultPopup": {
+              "t": "Prikaži bez rezultovanja iskakanje",
+              "src": "machine",
+              "h": "4d78fc77640a"
+            },
+            "mapPopupSection": {
+              "t": "Mapa skočnih slojeva",
+              "src": "machine",
+              "h": "f55b6ee3c283"
+            },
+            "useDefaultPopupTemplates": {
+              "t": "Uključi slojeve bez konfigurisanih popup-ova",
+              "src": "machine",
+              "h": "5bf2b2e9d1a9"
+            },
+            "useDefaultPopupTemplatesHint": {
+              "t": "Kada je omogućeno, vidljivi skočni slojevi mape mogu da koriste automatski generisani uobičajeni skočni. Ostavite onemogućeni da ispoštuju konfiguraciju tačno na veb mapi.",
+              "src": "machine",
+              "h": "3b3fec17b555"
+            },
+            "layerSection": {
+              "t": "Podešeni REST slojevi",
+              "src": "machine",
+              "h": "aa5f8e8277a0"
+            },
+            "layersIntro": {
+              "t": "Svaki sloj ima svoj naslov, skrivena polja, pravila formata, i Arcade izraze. Slojevi su upitni u redoslijedu koji je naveden i nisu iscrtani na mapi.",
+              "src": "machine",
+              "h": "223c26e827f6"
+            },
+            "layerLabelPlaceholder": {
+              "t": "Naziv sloja (koristi se kao oznaka izvora podataka)",
+              "src": "machine",
+              "h": "a7ce0f403f02"
+            },
+            "layerEnabled": {
+              "t": "Omogućeno",
+              "src": "machine",
+              "h": "df174a3f2faa"
+            },
+            "layerUrl": {
+              "t": "REST URL слоја",
+              "src": "machine",
+              "h": "3ffe0194140b"
+            },
+            "layerUrlHint": {
+              "t": "Puni URL do upitnog ishoda sloja koji završava u broju slojeva. Koristite javnu adresu koja prolazi kroz vaš Web Adaptor, a ne direktan ArcGIS Server port.",
+              "src": "machine",
+              "h": "3c65d8f22403"
+            },
+            "testConnection": {
+              "t": "Test",
+              "src": "machine",
+              "h": "640ab2bae07b"
+            },
+            "testRunning": {
+              "t": "Test iz ovog pretraživaèa...",
+              "src": "machine",
+              "h": "8050cb6486f3"
+            },
+            "testNoUrl": {
+              "t": "Prvo unesite URL sloja.",
+              "src": "machine",
+              "h": "b82f8e5467dc"
+            },
+            "testUnnamed": {
+              "t": "Neimenovani sloj",
+              "src": "machine",
+              "h": "3fcaa619c7a7"
+            },
+            "testRecords": {
+              "t": "{count} zapisi",
+              "src": "machine",
+              "h": "add0cff8e70b"
+            },
+            "testElapsed": {
+              "t": "{ms} ms",
+              "src": "machine",
+              "h": "c965f5d6d35d"
+            },
+            "testNoQuery": {
+              "t": "Upozorenje: sloj ne navodi sposobnost ispitivanja.",
+              "src": "machine",
+              "h": "c9e33908b043"
+            },
+            "testFailed": {
+              "t": "Test nije uspeo:",
+              "src": "machine",
+              "h": "5db322b03f8f"
+            },
+            "testTimeout": {
+              "t": "Služba nije odgovorila na vreme.",
+              "src": "machine",
+              "h": "9bd1558ce66a"
+            },
+            "lintPort": {
+              "t": "Port {port} je direktan ArcGIS Server port. Obično se ne može dobiti sa telefona ili izvan vaše mreže. Koristite Web Adaptor URL na standardnom portu.",
+              "src": "machine",
+              "h": "3bbc837d1fac"
+            },
+            "lintHttp": {
+              "t": "URL koristi http. Aplikacije servirane preko https ne mogu da ga učitaju.",
+              "src": "machine",
+              "h": "26d2dbfb4cf9"
+            },
+            "lintInvalid": {
+              "t": "Ovo nije valjani URL.",
+              "src": "machine",
+              "h": "addd1f79d3fb"
+            },
+            "lintLayerId": {
+              "t": "URL bi trebalo da se završi u broju slojeva, kao što je /MapServer/0.",
+              "src": "machine",
+              "h": "fadde3c1b759"
+            },
+            "lintRest": {
+              "t": "URL ne izgleda kao ArcGIS REST ishod (/rest/services/ nedostaje).",
+              "src": "machine",
+              "h": "e763b3bdb3d0"
+            },
+            "clickTolerance": {
+              "t": "Klikni na toleranciju (piksela)",
+              "src": "machine",
+              "h": "6773527b70ad"
+            },
+            "clickToleranceHint": {
+              "t": "Proširuje mapu klikom u malu upitnu oblast veličine ekrana tako da su tačke i linijske osobine lakše identifikovane.",
+              "src": "machine",
+              "h": "1f3427c62692"
+            },
+            "maxConfiguredResults": {
+              "t": "Rezultati po konfigurisanom sloju",
+              "src": "machine",
+              "h": "176f8c1d5ee7"
+            },
+            "maxConfiguredResultsHint": {
+              "t": "Omogućava preklapanju konfigurisanih-slojnih osobina da učestvuju u skočnom rezultatu biciklizma.",
+              "src": "machine",
+              "h": "d57bf76116e0"
+            },
+            "titleField": {
+              "t": "Polje naslova",
+              "src": "machine",
+              "h": "1c7a30795afd"
+            },
+            "titleFieldHint": {
+              "t": "Polje je prikazano kao skočni naslov. Ostavite prazno da se koristi polje za prikaz usluga.",
+              "src": "machine",
+              "h": "3451a0a00bd2"
+            },
+            "titleExpression": {
+              "t": "Израз наслова (Arcade)",
+              "src": "machine",
+              "h": "6e0e15b0536f"
+            },
+            "titleExpressionHint": {
+              "t": "Izborno. Premosti naslovno polje. Identifikovana osobina je dostupna kao $feature.",
+              "src": "machine",
+              "h": "8317336f3958"
+            },
+            "excludedFields": {
+              "t": "Skrivena polja",
+              "src": "machine",
+              "h": "5b3268c27e7d"
+            },
+            "excludedFieldsHint": {
+              "t": "Zarezom odvojena imena polja da bi se izostavila iz iskaèuæeg sadržaja.",
+              "src": "machine",
+              "h": "a7c4a54630da"
+            },
+            "useAliases": {
+              "t": "Koristi terenske aliase",
+              "src": "machine",
+              "h": "c4c7c9095840"
+            },
+            "formatsSection": {
+              "t": "Format polja",
+              "src": "machine",
+              "h": "7fd634ad876e"
+            },
+            "formatsHint": {
+              "t": "Formirajte polje kao broj, valutu, procenat, ili datum, ili ga pretvorite u link izgrađen od URL šablona sa {FIELD_NAME} tokenima.",
+              "src": "machine",
+              "h": "bbb475400c9b"
+            },
+            "addFormat": {
+              "t": "Додај правило форматаQShortcut",
+              "src": "machine",
+              "h": "4badc5e1cefd"
+            },
+            "formatDecimals": {
+              "t": "Decimale",
+              "src": "machine",
+              "h": "2a4e3cb3c61a"
+            },
+            "formatPrefix": {
+              "t": "Prefiks",
+              "src": "machine",
+              "h": "90eceb016c51"
+            },
+            "formatSuffix": {
+              "t": "СуфиксQShortcut",
+              "src": "machine",
+              "h": "885db975a310"
+            },
+            "formatLinkTextPlaceholder": {
+              "t": "Текст везе (неопцијално)",
+              "src": "machine",
+              "h": "377b3751e8b1"
+            },
+            "format_integer": {
+              "t": "Cjelobrojni broj",
+              "src": "machine",
+              "h": "9edcffff4461"
+            },
+            "format_currency": {
+              "t": "Valuta (USD)",
+              "src": "machine",
+              "h": "ad2d37e108db"
+            },
+            "format_datetime": {
+              "t": "Datum i vreme",
+              "src": "machine",
+              "h": "07c9c3a5e0d9"
+            },
+            "format_link": {
+              "t": "Link",
+              "src": "machine",
+              "h": "d0517071aa37"
+            },
+            "arcadeSection": {
+              "t": "Arcade izrazi",
+              "src": "machine",
+              "h": "0b2e9373d7a4"
+            },
+            "arcadeHint": {
+              "t": "Koristite oznaku za skalarni izraz reda. Ostavite prazninu kada Arcade vrati puni Popup Element rečnik, kao što je { tip: 'tekst', tekst: sadržaj }. Puni skočni izrazi zamenjuju automatski generisane redove atributa.",
+              "src": "machine",
+              "h": "e5d240fea25e"
+            },
+            "exprLabelPlaceholder": {
+              "t": "Oznaka reda ili prazna za puni iskačući sadržaj",
+              "src": "machine",
+              "h": "0d899a7daed0"
+            },
+            "addExpression": {
+              "t": "Dodaj izraz",
+              "src": "machine",
+              "h": "7e7a3efa819d"
+            },
+            "highlightSelectedFeature": {
+              "t": "Истакни изабрану искачућу могућностQShortcut",
+              "src": "machine",
+              "h": "33932f47e87d"
+            },
+            "outlineColor": {
+              "t": "Истакни боју обриса",
+              "src": "machine",
+              "h": "4e526e81bbea"
+            },
+            "outlineColorHint": {
+              "t": "Boja heksa za odabrani obris. Popuna poligona ostaje prozirna.",
+              "src": "machine",
+              "h": "bba3b3483fb4"
+            },
+            "outlineWidth": {
+              "t": "Оутлајн ширина (px)",
+              "src": "machine",
+              "h": "686ed3f33abc"
+            },
+            "publishSelection": {
+              "t": "Obavijesti druge grafičke elemente odabranog rezultata",
+              "src": "machine",
+              "h": "ae4dcf772abf"
+            },
+            "publishSelectionHint": {
+              "t": "Objavljuje evidentno-izborno-promenjenu poruku kada je odabran rezultat, tako da vidžeti kao što su Tabela ili Izveštaj o svojini mogu da odgovore na identifikovani klik.",
+              "src": "machine",
+              "h": "f0becfb3b9d6"
+            },
+            "navigationNotice": {
+              "t": "Biciklizam kroz skočne rezultate ne menja obim mape ili skalu. Mapa se pomera samo kada korisnik izabere skočnu Zoom To action.",
+              "src": "machine",
+              "h": "20af0e7aa5bd"
+            },
+            "linkText": {
+              "t": "Повези текст приказа",
+              "src": "machine",
+              "h": "046966568a9e"
+            },
+            "linkTextHint": {
+              "t": "Vrednosti koje počinju sa http ili https iscrtavaju kao hipervezu koristeći ovaj tekst ukoliko pravilo formata ne kaže drugačije.",
+              "src": "machine",
+              "h": "fef864a9d9a3"
+            },
+            "performanceSection": {
+              "t": "Performans",
+              "src": "machine",
+              "h": "63c904559993"
+            },
+            "resultCacheSeconds": {
+              "t": "Rezultate ponovne upotrebe za ponovljene klikove (sekunde)",
+              "src": "machine",
+              "h": "e98be242f885"
+            },
+            "resultCacheSecondsHint": {
+              "t": "Ponavljanje klika na istom mestu na istoj skali odgovara se iz memorije za ovoliko sekundi umesto da ponovo osvoji servis. 0 onemogućuje.",
+              "src": "machine",
+              "h": "71990a2874b0"
+            },
+            "exportConfig": {
+              "t": "Конфигурација извоза (XML)",
+              "src": "machine",
+              "h": "8d3c78011fdd"
+            },
+            "importConfig": {
+              "t": "Увези конфигурацију (XML)",
+              "src": "machine",
+              "h": "f3e2672a40c5"
+            },
+            "importOk": {
+              "t": "Konfiguracija uvezena.",
+              "src": "machine",
+              "h": "108c3494c280"
+            },
+            "importFailed": {
+              "t": "Uvoz nije uspio. Provjerite da li je datoteka XML za konfiguraciju osobina.",
+              "src": "machine",
+              "h": "aa4931147e00"
+            },
+            "configHint": {
+              "t": "Verzija 1, 2, i 3 XML fajla su uvezeni. Stariji fajlovi se pretvaraju u po sloju postavke na uvozu.",
+              "src": "machine",
+              "h": "da07ddf15196"
+            },
+            "versionLabel": {
+              "t": "Feature Identificiraj verziju {version}",
+              "src": "machine",
+              "h": "29e49e191d6e"
+            },
+            "noResultMessage": {
+              "t": "Nema rezultatne poruke",
+              "src": "machine",
+              "h": "60d747201cee"
+            },
+            "debugSection": {
+              "t": "Rješavanje problema",
+              "src": "machine",
+              "h": "285ec850c11d"
+            },
+            "debugOverlay": {
+              "t": "Prikaži dijagnostičko preklapanje",
+              "src": "machine",
+              "h": "f3f7b952cbe4"
+            },
+            "debugOverlayHint": {
+              "t": "Prikazuje dnevnik događaja uživo na dnu ekrana na svakom uređaju, sa dugmetom Kopiranje. Uključite samo dok snimate probleme, a zatim isključite. Preklapanje se takođe može omogućiti per-session dodavanjem fi_debug=1 na URL aplikacije.",
+              "src": "machine",
+              "h": "799969743381"
+            },
+            "parcelFeatureParcelNum": {
+              "t": "Parcel + $feature.PARCEL_NUM",
+              "src": "machine",
+              "h": "862ebe30b81c"
+            },
+            "roundFeatureAcres2Acres": {
+              "t": "Okrugli($feature.Acres, 2) + jutar",
+              "src": "machine",
+              "h": "654483b25c9b"
+            },
+            "showHelpGuide": {
+              "t": "Pokaži vodič za pomoć",
+              "src": "machine",
+              "h": "03e9f0b81336"
+            },
+            "showTheQuestionMarkButtonThat": {
+              "t": "Prikaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkom elementu",
+              "src": "machine",
+              "h": "62c4e81a84ca"
+            }
+          }
         },
         "sv": {
           "file": "ef4cb1d7e1ba",
