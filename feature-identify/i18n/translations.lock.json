@@ -693,14 +693,14 @@
           }
         },
         "bs": {
-          "file": "becb7716ae03",
+          "file": "9b28d246c808",
           "counts": {
-            "esri": 7,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 67,
+            "machine": 58,
             "stale": 0,
             "missing": 0
           },
@@ -780,35 +780,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ništa u vodiču ne odgovara toj riječi.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
-            "firstRunTitle": {
-              "t": "Novi ovdje?",
-              "src": "machine",
-              "h": "b81f2e17e001"
-            },
             "firstRunBody": {
               "t": "Kliknite na osobinu na karti i otvorite detalje koje možete čitati.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Otvori vodič.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "firstRunDismiss": {
-              "t": "Otpust",
-              "src": "machine",
-              "h": "70afe9eff3f2"
-            },
-            "helpStartTitle": {
-              "t": "Počnite ovdje: tri koraka",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Pronađite značajku koju želite na karti, kao što su parcela, put ili tačka.",
@@ -950,11 +925,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ako nešto nije u redu",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Grafički element kaže da mapa nije izabrana: još nije spojena na mapu. Pitajte osobu koja je napravila aplikaciju da izabere mapu u postavkama grafičkog elementa.",
               "src": "machine",
@@ -1000,11 +970,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobro je znati.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klikom na isto mjesto, detalji se vraćaju.",
               "src": "machine",
@@ -1029,16 +994,6 @@
               "t": "Podešeni identifikacijski sloj",
               "src": "machine",
               "h": "01ed1cf4d370"
-            },
-            "unknownError": {
-              "t": "nepoznata greška",
-              "src": "machine",
-              "h": "af6321ca7a8b"
-            },
-            "unserializableError": {
-              "t": "Neserijalizacijska greška",
-              "src": "machine",
-              "h": "76e73551597a"
             }
           }
         },
@@ -4103,14 +4058,14 @@
           }
         },
         "hr": {
-          "file": "04584883063e",
+          "file": "132ebe4ec1d4",
           "counts": {
-            "esri": 7,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 67,
+            "machine": 58,
             "stale": 0,
             "missing": 0
           },
@@ -4190,35 +4145,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ništa u vodiču ne odgovara toj riječi. Pokušajte drugi, ili otvorite dijelove iznad.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
-            "firstRunTitle": {
-              "t": "Novi ovdje?",
-              "src": "machine",
-              "h": "b81f2e17e001"
-            },
             "firstRunBody": {
               "t": "Kliknite na značajku na karti i njezini detalji otvoreni za čitanje.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Otvori vodič.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "firstRunDismiss": {
-              "t": "Otpust",
-              "src": "machine",
-              "h": "70afe9eff3f2"
-            },
-            "helpStartTitle": {
-              "t": "Počnite ovdje: tri koraka",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Pronađite značajku koju želite na karti, kao što su parcela, cesta ili točka.",
@@ -4360,11 +4290,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ako nešto izgleda loše",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Grafički element kaže da karta nije odabrana: još nije spojena na kartu. Pitajte osobu koja je izradila aplikaciju da izabere kartu u postavkama widgeta.",
               "src": "machine",
@@ -4410,11 +4335,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobro je znati.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klikom na isto mjesto, detalji se vraćaju ravno natrag.",
               "src": "machine",
@@ -4439,16 +4359,6 @@
               "t": "Konfigurirani identifikacijski sloj",
               "src": "machine",
               "h": "01ed1cf4d370"
-            },
-            "unknownError": {
-              "t": "nepoznata greška",
-              "src": "machine",
-              "h": "af6321ca7a8b"
-            },
-            "unserializableError": {
-              "t": "Neserijalizacijska greška",
-              "src": "machine",
-              "h": "76e73551597a"
             }
           }
         },
@@ -9333,14 +9243,14 @@
           }
         },
         "sr": {
-          "file": "dbd0f1de4d57",
+          "file": "0502041c0eef",
           "counts": {
-            "esri": 7,
+            "esri": 16,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 67,
+            "machine": 58,
             "stale": 0,
             "missing": 0
           },
@@ -9420,35 +9330,10 @@
               "src": "machine",
               "h": "0ed4c3530d87"
             },
-            "helpNoMatches": {
-              "t": "Ništa u vodièu ne odgovara toj reèi.",
-              "src": "machine",
-              "h": "3fe179f75330"
-            },
-            "firstRunTitle": {
-              "t": "Novi ovde?",
-              "src": "machine",
-              "h": "b81f2e17e001"
-            },
             "firstRunBody": {
               "t": "Kliknite na osobinu na mapi i njene detalje otvorite za čitanje.",
               "src": "machine",
               "h": "34bca9efdf48"
-            },
-            "firstRunHelpLink": {
-              "t": "Otvori vodiè.",
-              "src": "machine",
-              "h": "2447dd6134ea"
-            },
-            "firstRunDismiss": {
-              "t": "Otpust.",
-              "src": "machine",
-              "h": "70afe9eff3f2"
-            },
-            "helpStartTitle": {
-              "t": "Poènite ovde: tri koraka.",
-              "src": "machine",
-              "h": "789320b4831d"
             },
             "helpStart1": {
               "t": "Pronađite značajku koju želite na mapi, kao što su parcela, put ili tačka.",
@@ -9590,11 +9475,6 @@
               "src": "machine",
               "h": "97b6677c9e1c"
             },
-            "helpTroubleTitle": {
-              "t": "Ako nešto nije u redu",
-              "src": "machine",
-              "h": "6f7fec3ff1e0"
-            },
             "helpTroubleNoMap": {
               "t": "Grafički element kaže da mapa nije odabrana: još nije spojena na mapu. Pitajte osobu koja je napravila aplikaciju da izabere mapu u postavkama grafičkog elementa.",
               "src": "machine",
@@ -9640,11 +9520,6 @@
               "src": "machine",
               "h": "db0e13ca36d6"
             },
-            "helpTipsTitle": {
-              "t": "Dobro je znati.",
-              "src": "machine",
-              "h": "79fc372dc790"
-            },
             "helpTips1": {
               "t": "Klikom na isto mesto, detalji se vraæaju.",
               "src": "machine",
@@ -9669,16 +9544,6 @@
               "t": "Konfigurisani identifikovani sloj",
               "src": "machine",
               "h": "01ed1cf4d370"
-            },
-            "unknownError": {
-              "t": "nepoznata greška",
-              "src": "machine",
-              "h": "af6321ca7a8b"
-            },
-            "unserializableError": {
-              "t": "Neserijalizacijska greška",
-              "src": "machine",
-              "h": "76e73551597a"
             }
           }
         },
@@ -13159,12 +13024,12 @@
         "bs": {
           "file": "195de8d1ac9d",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -13613,16 +13478,6 @@
               "t": "Okrugli($feature.Acres, 2) + jutar",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Pokaži vodič za pomoć",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Pokaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkog elementa",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
@@ -18269,12 +18124,12 @@
         "hr": {
           "file": "0ae97774f869",
           "counts": {
-            "esri": 14,
+            "esri": 16,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 91,
+            "machine": 89,
             "stale": 0,
             "missing": 0
           },
@@ -18723,16 +18578,6 @@
               "t": "Okrugli ($feature.Acres, 2) + hektara",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Prikaži vodič pomoći",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Prikaži gumb s upitnikom koji otvara vodič za pomoć widgetu",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },
@@ -26104,12 +25949,12 @@
         "sr": {
           "file": "3756529c753f",
           "counts": {
-            "esri": 13,
+            "esri": 15,
             "esri-check": 1,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 92,
+            "machine": 90,
             "stale": 0,
             "missing": 0
           },
@@ -26563,16 +26408,6 @@
               "t": "Okrugli($feature.Acres, 2) + jutar",
               "src": "machine",
               "h": "654483b25c9b"
-            },
-            "showHelpGuide": {
-              "t": "Pokaži vodič za pomoć",
-              "src": "machine",
-              "h": "03e9f0b81336"
-            },
-            "showTheQuestionMarkButtonThat": {
-              "t": "Prikaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkom elementu",
-              "src": "machine",
-              "h": "62c4e81a84ca"
             }
           }
         },

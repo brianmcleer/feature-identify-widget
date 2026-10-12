@@ -69,7 +69,7 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Detalji pokazuju u grafičkom elementu umjesto preko mape: prozor mape se ne može otvoriti na ovom uređaju. Ovo se događa na nekim telefonima i prvi rezultat je prikazan u grafičkom elementu umjesto toga.",
         helpTroubleDiagnostic: "Crna kutija malog teksta sjedi na dnu ekrana: uključen je dijagnostički pogled. Pitajte osobu koja je napravila aplikaciju da je isključi u postavkama grafičkog elementa.",
         helpTroubleContact: "Još uvijek zapeo? Kontaktirajte GIS diviziju i pomenite element Identifikacije osobina i ovu aplikaciju.",
-        helpTipsTitle: "Dobro je znati.",
+        helpTipsTitle: "Dobro je znati",
         helpTips1: "Klikom na isto mjesto, detalji se vraćaju.",
         helpTips2: "Zumiraj prije nego klikneš gdje osobine sjede zajedno. Dobiješ kraću, jasniju listu.",
         helpTips3: "Ništa što kliknete ovdje ne mijenja podatke.",

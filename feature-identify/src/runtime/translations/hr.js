@@ -69,7 +69,7 @@ System.register([], function (e) {
         helpTroubleNoPopup: "Detalji pokazuju u widget umjesto preko karte: prozor mape nije mogao otvoriti na ovom uređaju. To se događa na nekim telefonima i prvi rezultat je prikazan u widget umjesto.",
         helpTroubleDiagnostic: "Crna kutija malog teksta sjedi na dnu zaslona: dijagnostički pogled je uključen. Pitajte osobu koja je izradila aplikaciju da je isključi u postavkama widgeta.",
         helpTroubleContact: "Još uvijek zaglavi? Kontaktirajte GIS Division i spomenuti značaj Identificirati widget i ovu aplikaciju.",
-        helpTipsTitle: "Dobro je znati.",
+        helpTipsTitle: "Dobro je znati",
         helpTips1: "Klikom na isto mjesto, detalji se vraćaju ravno natrag.",
         helpTips2: "Zumiraj prije nego klikneš gdje značajke sjede zajedno. Dobiješ kraći, jasniji popis.",
         helpTips3: "Ništa što kliknete ovdje ne mijenja podatke. Samo ih čitate.",
