@@ -81,11 +81,32 @@ type SettledResult<T> =
   | { status: 'fulfilled', value: T }
   | { status: 'rejected', reason: any }
 
+/** Below this width or height (px) the widget treats itself as hidden. */
+const COMPACT_SIZE_PX = 40
+
 const Widget = (props: WidgetProps): React.ReactElement => {
   __setIntl((props as any).intl)
   const { config, useMapWidgetIds, intl, state, id: widgetId } = props
 
   const [loading, setLoading] = React.useState(false)
+  // Placed as a hidden 0 x 0 widget, Experience Builder still gives the layout
+  // item a 16 x 16 px minimum, which showed up as a white square with a help
+  // button. When the widget box is that small it draws nothing of its own.
+  const rootRef = React.useRef<HTMLDivElement>(null)
+  const [compact, setCompact] = React.useState(false)
+  React.useEffect(() => {
+    const el = rootRef.current
+    if (!el) return
+    const measure = (): void => {
+      const r = el.getBoundingClientRect()
+      setCompact(r.width < COMPACT_SIZE_PX || r.height < COMPACT_SIZE_PX)
+    }
+    measure()
+    if (typeof ResizeObserver === 'undefined') return
+    const ro = new ResizeObserver(measure)
+    ro.observe(el)
+    return () => { ro.disconnect() }
+  }, [])
   const [popupFallback, setPopupFallback] = React.useState(false)
   const [clickedOnce, setClickedOnce] = React.useState(false)
   const [noResult, setNoResult] = React.useState(false)
@@ -2752,6 +2773,8 @@ const Widget = (props: WidgetProps): React.ReactElement => {
     .fi-error { color: #8e2600; }
     .fi-warning { color: #6f4e00; background: #fff6d9; }
     .fi-hint { color: #6e6e6e; }
+
+    &.fi-compact { background: transparent; box-shadow: none; }
   `
 
   const mapSelected = useMapWidgetIds && useMapWidgetIds.length > 0
@@ -2776,7 +2799,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
   }
 
   return (
-    <div css={style} className='jimu-widget'>
+    <div css={style} className={compact ? 'jimu-widget fi-compact' : 'jimu-widget'} ref={rootRef}>
       {mapSelected && (
         <JimuMapViewComponent
           useMapWidgetId={useMapWidgetIds[0]}
@@ -2784,6 +2807,20 @@ const Widget = (props: WidgetProps): React.ReactElement => {
         />
       )}
 
+      {compact && (
+        <HelpPopup
+          open={helpOpen}
+          onClose={closeHelp}
+          sections={buildHelpSections(t, helpFeatures)}
+          title={t('helpTitle')}
+          intro={t('helpIntro')}
+          searchPlaceholder={t('helpSearchPlaceholder')}
+          noMatches={t('helpNoMatches')}
+          closeLabel={t('close')}
+        />
+      )}
+
+      {!compact && (<React.Fragment>
       {/* Help button, top right of the widget. */}
       <div className='fi-help-row'>
         {props.config?.showHelp !== false && (
@@ -2875,6 +2912,7 @@ const Widget = (props: WidgetProps): React.ReactElement => {
           </div>
         </React.Fragment>
       )}
+      </React.Fragment>)}
 
       {isDebugEnabled() && debugLines.length > 0 && typeof document !== 'undefined' &&
         ReactDOM.createPortal(

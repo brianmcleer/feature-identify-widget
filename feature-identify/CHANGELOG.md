@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.4 (2026-11-25)
+
+- Fixed: placed as a hidden 0 x 0 widget, Feature Identify showed a small white square with a help button in the corner of the map. Experience Builder gives every layout item a 16 x 16 px minimum, so the widget now draws nothing of its own (no background, shadow, help button, first-run hint or messages) when its box is under 40 px wide or tall. Map clicks, popups and the diagnostic overlay work as before.
+
 ## 1.3.3 (2026-09-18)
 
 - Settings: a **Show help guide** option. Turn it off and the question-mark button and the first-run hint both disappear; the guide itself is untouched. Undefined means on, so apps configured before this release keep their help button.

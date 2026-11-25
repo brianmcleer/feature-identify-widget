@@ -30,6 +30,7 @@ For each click the widget:
 ## Key features
 
 - Help guide: a question button at the top right opens a short, searchable, plain-language guide that adapts to the options the app author enabled, and a one-time hint points new users at it.
+- Hidden placement: size the widget 0 x 0 on the map and it draws nothing. Experience Builder keeps a 16 x 16 px minimum on every layout item, so under 40 px the widget drops its background, help button and messages; map clicks and popups keep working.
 - One coordinated popup pipeline per click, with request cancellation and stale-click protection.
 - Native web map popup templates, field formatting, Arcade content, media, and popup actions are preserved for map results.
 - Per-layer configuration: each configured REST layer has its own name, title field or title expression, hidden fields, format rules, and Arcade expressions. Layers can be enabled, disabled, and reordered. Older single-URL configurations are converted automatically.
